@@ -10,7 +10,7 @@ export declare const joiUtil: {
      * @param {joiUtilOptions | undefined} joiUtilOptions
      * @returns {T} expected object after validation
      */
-    sanitize: <T>(objectToValidate: Partial<T>, schema: import("joi").AnySchema | import("joi").ArraySchema | import("joi").AlternativesSchema | import("joi").BinarySchema | import("joi").BooleanSchema | import("joi").DateSchema | import("joi").FunctionSchema | import("joi").NumberSchema | import("joi").StringSchema | import("joi").LinkSchema | import("joi").SymbolSchema | ObjectSchema<any> | ObjectSchema<T>, joiUtilOptions?: joiUtilOptions | undefined) => T;
+    sanitize: <T>(objectToValidate: Partial<T>, schema: Schema<any> | ObjectSchema<T>, joiUtilOptions?: joiUtilOptions | undefined) => T;
     /**
      * Only validate properties specified in validation schema
      * @param {Partial<T>} objectToValidate
@@ -18,7 +18,7 @@ export declare const joiUtil: {
      * @param {joiUtilOptions | undefined} joiUtilOptions
      * @returns {T} expected object after validation
      */
-    validate: <T_1>(objectToValidate: Partial<T_1>, schema: import("joi").AnySchema | import("joi").ArraySchema | import("joi").AlternativesSchema | import("joi").BinarySchema | import("joi").BooleanSchema | import("joi").DateSchema | import("joi").FunctionSchema | import("joi").NumberSchema | import("joi").StringSchema | import("joi").LinkSchema | import("joi").SymbolSchema | ObjectSchema<any> | ObjectSchema<T_1>, joiUtilOptions?: joiUtilOptions | undefined) => T_1;
-    _validate: <T_2>(objectToValidate: Partial<T_2>, schema: import("joi").AnySchema | import("joi").ArraySchema | import("joi").AlternativesSchema | import("joi").BinarySchema | import("joi").BooleanSchema | import("joi").DateSchema | import("joi").FunctionSchema | import("joi").NumberSchema | import("joi").StringSchema | import("joi").LinkSchema | import("joi").SymbolSchema | ObjectSchema<any> | ObjectSchema<T_2>, validationOptions: ValidationOptions, options?: joiUtilOptions | undefined) => T_2;
+    validate: <T_1>(objectToValidate: Partial<T_1>, schema: Schema<any> | ObjectSchema<T_1>, joiUtilOptions?: joiUtilOptions | undefined) => T_1;
+    _validate: <T_2>(objectToValidate: Partial<T_2>, schema: Schema<any> | ObjectSchema<T_2>, validationOptions: ValidationOptions, options?: joiUtilOptions | undefined) => T_2;
 };
 //# sourceMappingURL=joi-util.d.ts.map

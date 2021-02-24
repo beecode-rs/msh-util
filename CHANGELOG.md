@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/beecode-rs/msh-node-util/compare/v1.0.0...v1.0.1) (2021-02-24)
+
+
+### Bug Fixes
+
+* rename utils, update packages, build ([160a302](https://github.com/beecode-rs/msh-node-util/commit/160a302fc1e65c5fbfcbad1d35b6a8f69b1b01ae))
+
 # 1.0.0 (2021-02-24)
 
 
