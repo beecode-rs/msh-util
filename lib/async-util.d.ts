@@ -1,4 +1,4 @@
-export declare const async: {
+export declare const asyncUtil: {
     /**
      * Wrap async express http request end return promise or call next on catch
      * @param _target
@@ -7,4 +7,4 @@ export declare const async: {
      */
     httpErrorHandler: (_target: any, _key: string, descriptor: TypedPropertyDescriptor<any>) => any;
 };
-//# sourceMappingURL=async.d.ts.map
+//# sourceMappingURL=async-util.d.ts.map

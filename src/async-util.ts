@@ -1,4 +1,4 @@
-export const async = {
+export const asyncUtil = {
   /**
    * Wrap async express http request end return promise or call next on catch
    * @param _target
