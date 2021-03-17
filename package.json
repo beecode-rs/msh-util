@@ -95,5 +95,5 @@
     "test:unit": "mocha ./src/{**/,/}*.test.ts"
   },
   "typings": "./lib/index.d.ts",
-  "version": "1.0.2"
+  "version": "1.0.3"
 }
