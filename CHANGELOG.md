@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/beecode-rs/msh-node-util/compare/v1.1.0...v1.1.1) (2021-04-13)
+
+
+### Bug Fixes
+
+* async timeout ([989a454](https://github.com/beecode-rs/msh-node-util/commit/989a454290031e3feb38fde39ffcaeeeb429d2ab))
+
 # [1.1.0](https://github.com/beecode-rs/msh-node-util/compare/v1.0.3...v1.1.0) (2021-04-13)
 
 
