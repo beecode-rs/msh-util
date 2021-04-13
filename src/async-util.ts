@@ -13,5 +13,5 @@ export const asyncUtil = {
     }
     return descriptor
   },
-  timeout: (t: number): Promise<NodeJS.Timeout> => new Promise((resolve) => setTimeout(resolve, t)),
+  timeout: (t: number): Promise<void> => new Promise((resolve) => setTimeout(resolve, t)),
 }
