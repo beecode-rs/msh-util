@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/beecode-rs/msh-node-util/compare/v1.1.2...v2.0.0) (2021-11-15)
+
+
+### Features
+
+* add objectUtil and typeUtil ([af328ce](https://github.com/beecode-rs/msh-node-util/commit/af328ce37c69d9ce76fceacb0ce54f762ce01d08))
+
+
+### BREAKING CHANGES
+
+* remove index
+
 ## [1.1.2](https://github.com/beecode-rs/msh-node-util/compare/v1.1.1...v1.1.2) (2021-04-16)
 
 
