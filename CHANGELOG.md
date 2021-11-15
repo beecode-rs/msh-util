@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/beecode-rs/msh-node-util/compare/v2.0.0...v2.1.0) (2021-11-15)
+
+
+### Features
+
+* add cacheUtil (memoize) ([4f7fe7d](https://github.com/beecode-rs/msh-node-util/commit/4f7fe7d5779acca3eab72225bf2f6d8549dc674c))
+
 # [2.0.0](https://github.com/beecode-rs/msh-node-util/compare/v1.1.2...v2.0.0) (2021-11-15)
 
 
