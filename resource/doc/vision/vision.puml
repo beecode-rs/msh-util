@@ -1,0 +1,81 @@
+@startuml
+    object "ValidationOptions" as validation_options_7f808940 {
+      joi.ts
+    }
+    object "cloneDeep" as clone_deep_91af3a80 {
+      lodash.clonedeep.ts
+    }
+    object "add" as add_b4d4e82e {
+      date-fns.ts
+    }
+    object "parse" as parse_b4d4e82e {
+      date-fns.ts
+    }
+    folder "src" as src_b874d07 {
+      object "asyncUtil" as async_util_8c3dccae {
+        + httpErrorHandler(_target: any,\n _key: string,\n descriptor: TypedPropertyDescriptor<any>): any
+        + timeout(t: number): Promise<void>
+      }
+      card joi_util_options_68a048a4 [
+        joiUtilOptions
+        ---
+        {
+          logger: any
+        }
+      ]
+      object "joiUtil" as joi_util_68a048a4 {
+        # _validate(objectToValidate: Partial<T>,\n schema: Schema | ObjectSchema<T>,\n validationOptions: ValidationOptions,\n options?: joiUtilOptions): T
+        + sanitize(objectToValidate: Partial<T>,\n schema: Schema | ObjectSchema<T>,\n joiUtilOptions?: joiUtilOptions): T
+        + validate(objectToValidate: Partial<T>,\n schema: Schema | ObjectSchema<T>,\n joiUtilOptions?: joiUtilOptions): T
+      }
+      card object_type_a28a167d [
+        ObjectType
+        ---
+        { [k: string]: any }
+      ]
+      object "objectUtil" as object_util_a28a167d {
+        + deepClone(objectToClone: T): T
+        + stringifyOrNullUndefined(obj: ObjectType): string | null | undefined
+      }
+      object "regexUtil" as regex_util_4ac1c785 {
+        + uuid: string
+      }
+      card duration_unit_c35fc59d [
+        DurationUnit
+        ---
+        "'seconds' | 'minutes' | 'hours' | 'days' | 'weeks' | 'months' | 'years'"
+      ]
+      card add_by_options_c35fc59d [
+        AddByOptions
+        ---
+        {
+          unit: DurationUnit
+          value: number
+        }
+      ]
+      object "timeUtil" as time_util_c35fc59d {
+        + addToDate(addBy: AddByOptions,\n date = new Date()): Date
+        + dateToUnix(date = new Date()): number
+        + dateToUnixSec(date = new Date()): number
+        + unixSecToDate(unix: number): Date
+        + unixToDate(unix: number): Date
+      }
+      object "typeUtil" as type_util_3bdc4f90 {
+        + exhaustiveCheck(message: string,\n _: never): Error
+      }
+    }
+    folder "@beecode" as beecode_583ca8ca {
+      object "error" as error_be941202 {
+        @beecode/msh-node-error.ts
+      }
+    }
+  joi_util_68a048a4 -up-> error_be941202
+  joi_util_68a048a4 -up-> validation_options_7f808940
+  joi_util_68a048a4 -up-> joi_util_options_68a048a4
+  joi_util_68a048a4 -up-> joi_util_68a048a4
+  object_util_a28a167d -up-> clone_deep_91af3a80
+  object_util_a28a167d -up-> object_type_a28a167d
+  time_util_c35fc59d -up-> add_b4d4e82e
+  time_util_c35fc59d -up-> parse_b4d4e82e
+  time_util_c35fc59d -up-> add_by_options_c35fc59d
+@enduml

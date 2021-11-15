@@ -1,8 +1,13 @@
+import { ObjectType } from './object-util'
 import { error } from '@beecode/msh-node-error'
 import { ObjectSchema, Schema, ValidationOptions } from 'joi'
 
+export interface JoiLogger {
+  warn(msg: string, obj: ObjectType): void
+}
+
 export type joiUtilOptions = {
-  logger: any
+  logger?: JoiLogger
 }
 
 export const joiUtil = {

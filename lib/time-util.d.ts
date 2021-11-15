@@ -8,5 +8,6 @@ export declare const timeUtil: {
     dateToUnixSec: (date?: Date) => number;
     addToDate: (addBy: AddByOptions, date?: Date) => Date;
     unixToDate: (unix: number) => Date;
+    unixSecToDate: (unix: number) => Date;
 };
 //# sourceMappingURL=time-util.d.ts.map

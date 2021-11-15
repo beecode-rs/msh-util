@@ -1,6 +1,10 @@
+import { ObjectType } from './object-util';
 import { ObjectSchema, Schema, ValidationOptions } from 'joi';
+export interface JoiLogger {
+    warn(msg: string, obj: ObjectType): void;
+}
 export declare type joiUtilOptions = {
-    logger: any;
+    logger?: JoiLogger;
 };
 export declare const joiUtil: {
     /**

@@ -11,4 +11,5 @@ export const timeUtil = {
   dateToUnixSec: (date = new Date()): number => +format(date, 't'),
   addToDate: (addBy: AddByOptions, date = new Date()): Date => add(date, { [addBy.unit]: addBy.value }),
   unixToDate: (unix: number): Date => parse(unix.toString(), 'T', new Date()),
+  unixSecToDate: (unix: number): Date => parse(unix.toString(), 't', new Date()),
 }
