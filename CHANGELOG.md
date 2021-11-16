@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/beecode-rs/msh-node-util/compare/v2.1.0...v2.2.0) (2021-11-16)
+
+
+### Features
+
+* added cacheUtil.singleton ([e3c54ed](https://github.com/beecode-rs/msh-node-util/commit/e3c54ed72faf7fed03cfaa84c0c5fa102adbd970))
+
 # [2.1.0](https://github.com/beecode-rs/msh-node-util/compare/v2.0.0...v2.1.0) (2021-11-15)
 
 
