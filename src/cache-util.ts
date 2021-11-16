@@ -1,16 +1,29 @@
-export type AnyFunction = (...args: any[]) => any
+export type AnyFunction<R = any> = (...args: any[]) => R
+export type AnyFunctionNoParams<R = any> = () => R
 
 export const cacheUtil = {
-  memoize: <T extends AnyFunction>(fun: T): T => {
-    const cache: any = {}
-    return ((...args: any[]): ReturnType<T> => {
-      const stringifiedArgs = JSON.stringify(args)
+  memoize: <T extends AnyFunction<R>, R = any>(fun: T): T => {
+    const cache: { [k: string]: R } = {}
+    return ((...args: Parameters<T>): R => {
+      const key = JSON.stringify(args)
 
-      if (stringifiedArgs in cache) return cache[stringifiedArgs] as ReturnType<T>
+      if (key in cache) return cache[key]
 
       const result = fun(...args)
-      cache[stringifiedArgs] = result
-      return result as ReturnType<T>
+      cache[key] = result
+      return result
     }) as T
+  },
+  singleton: <R = any>(fun: AnyFunctionNoParams<R>): AnyFunctionNoParams<R> => {
+    const cache: { [k: string]: R } = {}
+    const key = 'singleton'
+
+    return (): R => {
+      if (key in cache) return cache[key]
+
+      const result = fun()
+      cache[key] = result
+      return result
+    }
   },
 }
