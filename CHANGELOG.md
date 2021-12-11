@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/beecode-rs/msh-node-util/compare/v2.2.1...v2.3.0) (2021-12-11)
+
+
+### Features
+
+* entity cache ([6e0eae3](https://github.com/beecode-rs/msh-node-util/commit/6e0eae3830d6c42b8da1d953056bde58bb001f68))
+
 ## [2.2.1](https://github.com/beecode-rs/msh-node-util/compare/v2.2.0...v2.2.1) (2021-11-21)
 
 
