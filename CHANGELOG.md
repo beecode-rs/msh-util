@@ -1,3 +1,10 @@
+## [2.3.1](https://github.com/beecode-rs/msh-node-util/compare/v2.3.0...v2.3.1) (2021-12-23)
+
+
+### Bug Fixes
+
+* update package.json ([569ee11](https://github.com/beecode-rs/msh-node-util/commit/569ee1183dd1f1c697a904eec3806e36c0d4f42b))
+
 # [2.3.0](https://github.com/beecode-rs/msh-node-util/compare/v2.2.1...v2.3.0) (2021-12-11)
 
 
