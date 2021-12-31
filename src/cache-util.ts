@@ -8,22 +8,15 @@ export const cacheUtil = {
       const key = JSON.stringify(args)
 
       if (key in cache) return cache[key]
-
-      const result = fun(...args)
-      cache[key] = result
-      return result
+      return (cache[key] = fun(...args))
     }) as T
   },
   singleton: <R = any>(fun: AnyFunctionNoParams<R>): AnyFunctionNoParams<R> => {
-    const cache: { [k: string]: R } = {}
-    const key = 'singleton'
+    const cache: { singleton?: R } = {}
 
     return (): R => {
-      if (key in cache) return cache[key]
-
-      const result = fun()
-      cache[key] = result
-      return result
+      if ('singleton' in cache) return cache.singleton!
+      return (cache.singleton = fun())
     }
   },
 }
