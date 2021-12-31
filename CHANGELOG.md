@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/beecode-rs/msh-node-util/compare/v2.3.1...v2.4.0) (2021-12-31)
+
+
+### Features
+
+* async singleton added ([809d74c](https://github.com/beecode-rs/msh-node-util/commit/809d74c755a3f56702c0b9a32931d647572c6525))
+
 ## [2.3.1](https://github.com/beecode-rs/msh-node-util/compare/v2.3.0...v2.3.1) (2021-12-23)
 
 
