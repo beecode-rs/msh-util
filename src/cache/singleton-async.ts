@@ -3,7 +3,7 @@ type AnyFunctionNoParamsPromise<R = any> = () => Promise<R>
 export class SingletonAsync<R = any> {
   protected _cache: {
     singleton?: R
-    resolvers?: ((value: R | PromiseLike<R>) => void)[]
+    promises?: { resolve: (value: R | PromiseLike<R>) => void; reject: (reason?: any) => void }[]
   } = {}
 
   protected _factory: AnyFunctionNoParamsPromise<R>
@@ -16,8 +16,9 @@ export class SingletonAsync<R = any> {
    * Empty cached value.
    */
   public cleanCache(): void {
-    delete this._cache.resolvers
     delete this._cache.singleton
+    if (this._cache.promises) this._cache.promises.forEach((promise) => promise.reject(new Error('Cache was cleaned')))
+    delete this._cache.promises
   }
 
   /**
@@ -26,18 +27,18 @@ export class SingletonAsync<R = any> {
    */
   public async promise(): Promise<R> {
     if ('singleton' in this._cache) return this._cache.singleton!
-    if ('resolvers' in this._cache) {
-      return new Promise<R>((resolve) => {
-        this._cache.resolvers!.push(resolve)
+    if ('promises' in this._cache) {
+      return new Promise<R>((resolve, reject) => {
+        this._cache.promises!.push({ resolve, reject })
       })
     }
 
-    this._cache.resolvers = []
+    this._cache.promises = []
     const result = await this._factory()
     this._cache.singleton = result
 
-    this._cache.resolvers.forEach((resolve) => resolve(result))
-    delete this._cache.resolvers
+    this._cache.promises.forEach((promise) => promise.resolve(result))
+    delete this._cache.promises
 
     return result
   }
