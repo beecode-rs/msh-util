@@ -13,6 +13,7 @@ export declare class SingletonAsync<R = any> {
      * Empty cached value.
      */
     cleanCache(): void;
+    protected _rejectPromises(): void;
     /**
      * Return singleton value in a promise. If there is no cached value then try to get it from factory.
      * @returns {Promise<R>}

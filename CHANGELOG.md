@@ -1,3 +1,10 @@
+## [2.5.3](https://github.com/beecode-rs/msh-node-util/compare/v2.5.2...v2.5.3) (2022-01-02)
+
+
+### Bug Fixes
+
+* singleton async, reject all promises on unsuccessful factory exec ([6094d7a](https://github.com/beecode-rs/msh-node-util/commit/6094d7a4f2af05b690af2adfb7b5592903d6e9ce))
+
 ## [2.5.2](https://github.com/beecode-rs/msh-node-util/compare/v2.5.1...v2.5.2) (2022-01-02)
 
 
