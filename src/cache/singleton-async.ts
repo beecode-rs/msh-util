@@ -12,11 +12,18 @@ export class SingletonAsync<R = any> {
     this._factory = factory
   }
 
+  /**
+   * Empty cached value.
+   */
   public cleanCache(): void {
     delete this._cache.resolvers
     delete this._cache.singleton
   }
 
+  /**
+   * Return singleton value in a promise. If there is no cached value then try to get it from factory.
+   * @returns {Promise<R>}
+   */
   public async promise(): Promise<R> {
     if ('singleton' in this._cache) return this._cache.singleton!
     if ('resolvers' in this._cache) {
@@ -31,6 +38,15 @@ export class SingletonAsync<R = any> {
     delete this._cache.resolvers
 
     return result
+  }
+
+  /**
+   * Return cached value, if there is no value cached return undefined.
+   * @returns {R | undefined}
+   */
+  public cached(): R | undefined {
+    if ('singleton' in this._cache) return this._cache.singleton!
+    return undefined
   }
 }
 
