@@ -32,9 +32,11 @@ export class SingletonAsync<R = any> {
       })
     }
 
-    const result = (this._cache.singleton = await this._factory())
+    this._cache.resolvers = []
+    const result = await this._factory()
+    this._cache.singleton = result
 
-    ;(this._cache.resolvers ?? []).forEach((resolve) => resolve(result))
+    this._cache.resolvers.forEach((resolve) => resolve(result))
     delete this._cache.resolvers
 
     return result
