@@ -1,3 +1,10 @@
+# [2.5.0](https://github.com/beecode-rs/msh-node-util/compare/v2.4.0...v2.5.0) (2022-01-02)
+
+
+### Features
+
+* add get cached value from SingletonAsync, +docs ([17a6c0e](https://github.com/beecode-rs/msh-node-util/commit/17a6c0e19d784347cc113e04cdf76bcf42103eed))
+
 # [2.4.0](https://github.com/beecode-rs/msh-node-util/compare/v2.3.1...v2.4.0) (2021-12-31)
 
 
