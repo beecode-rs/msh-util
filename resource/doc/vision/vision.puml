@@ -1,4 +1,7 @@
 @startuml
+    object "Subject" as subject_6f9d8abf {
+      rxjs.ts
+    }
     object "ValidationOptions" as validation_options_7f808940 {
       joi.ts
     }
@@ -16,11 +19,28 @@
         + httpErrorHandler(_target: any,\n _key: string,\n descriptor: TypedPropertyDescriptor<any>): any
         + timeout(t: number): Promise<void>
       }
+      card any_function_514a3aa4 [
+        AnyFunction
+        ---
+        (...args: any[]) => R
+      ]
+      card any_function_no_params_514a3aa4 [
+        AnyFunctionNoParams
+        ---
+        () => R
+      ]
+      object "cacheUtil" as cache_util_514a3aa4 {
+        + memoize(fun: T): T
+        + singleton(fun: AnyFunctionNoParams<R>): AnyFunctionNoParams<R>
+      }
+      interface "JoiLogger" as joi_logger_68a048a4 {
+        + warn(msg: string,\n obj: ObjectType): void
+      }
       card joi_util_options_68a048a4 [
         joiUtilOptions
         ---
         {
-          logger: any
+          logger?: JoiLogger
         }
       ]
       object "joiUtil" as joi_util_68a048a4 {
@@ -35,7 +55,7 @@
       ]
       object "objectUtil" as object_util_a28a167d {
         + deepClone(objectToClone: T): T
-        + stringifyOrNullUndefined(obj: ObjectType): string | null | undefined
+        + stringifyOrNullUndefined(obj?: ObjectType | null): string | null | undefined
       }
       object "regexUtil" as regex_util_4ac1c785 {
         + uuid: string
@@ -63,18 +83,83 @@
       object "typeUtil" as type_util_3bdc4f90 {
         + exhaustiveCheck(message: string,\n _: never): Error
       }
+      folder "cache" as cache_ea5c2344 {
+        card any_function_no_params_promise_e3e67746 [
+          AnyFunctionNoParamsPromise
+          ---
+          () => Promise<R>
+        ]
+        class "SingletonAsync" as singleton_async_e3e67746 {
+          # _cache: { singleton?: R ; resolvers?: ((value: R | PromiseLike<R>) => void)[] }
+          # _factory: AnyFunctionNoParamsPromise<R>
+          + cached: R | undefined
+          + cleanCache: void
+          + constructor(factory: AnyFunctionNoParamsPromise<R>)
+          + promise: Promise<R>
+        }
+        object "singletonAsyncFactory" as singleton_async_factory_e3e67746 {
+        }
+      }
+      folder "entity-cache" as entity_cache_c60ace52 {
+        card cache_entity_592f4e2 [
+          CacheEntity
+          ---
+          { id: string; entity: ENTITY }
+        ]
+        card call_back_cache_entity_592f4e2 [
+          CallBackCacheEntity
+          ---
+          (cbParams: CacheEntity<ENTITY>) => void
+        ]
+        card cache_subscription_592f4e2 [
+          CacheSubscription
+          ---
+          { unsubscribe: () => void }
+        ]
+        class "EntityCacheMemory" as entity_cache_memory_592f4e2 {
+          # _calculateTimeout(timeoutOffsetMs?: number): number | undefined
+          # _memory: {\n [k: string]: {\n entity?: ENTITY;\n timeoutMs?: number \n} \n}
+          # _subject
+          # _timeoutExpired(timeoutMs?: number): boolean
+          + get(id: string): {\n needToFetch?: boolean;\n entity?: ENTITY \n}
+          + set(params: CacheEntity<ENTITY>,\n timeoutOffsetMs?: number): void
+          + subscribe(id: string,\n callback: (par: CacheEntity<ENTITY>) => void): CacheSubscription
+        }
+        abstract "EntityPromiseCacheService" as entity_promise_cache_service_eb0ef50c {
+          # _dao: EntityCacheMemory<ENTITY>
+          # {abstract} _entityAsync(id: ID): Promise<ENTITY>
+          # {abstract} _timeoutOffsetMs: number
+          # constructor(dao: EntityCacheMemory<ENTITY>)
+          + forceRefresh(id: ID): void
+          + subscribeToEntityChange(id: ID,\n callback: CallBackCacheEntity<ENTITY>): CacheSubscription
+        }
+      }
+    }
+    folder "rxjs" as rxjs_7c7990f6 {
+      object "filter" as filter_69308583 {
+        rxjs/operators.ts
+      }
     }
     folder "@beecode" as beecode_583ca8ca {
       object "error" as error_be941202 {
         @beecode/msh-node-error.ts
       }
     }
+  cache_util_514a3aa4 -up-> any_function_no_params_514a3aa4
+  singleton_async_e3e67746 -up-> any_function_no_params_promise_e3e67746
+  singleton_async_factory_e3e67746 -up-> singleton_async_e3e67746
+  entity_cache_memory_592f4e2 -up-> subject_6f9d8abf
+  entity_cache_memory_592f4e2 -up-> filter_69308583
+  entity_cache_memory_592f4e2 -up-> cache_entity_592f4e2
+  entity_cache_memory_592f4e2 -up-> cache_subscription_592f4e2
+  entity_promise_cache_service_eb0ef50c -up-> cache_subscription_592f4e2
+  entity_promise_cache_service_eb0ef50c -up-> call_back_cache_entity_592f4e2
+  entity_promise_cache_service_eb0ef50c -up-> entity_cache_memory_592f4e2
   joi_util_68a048a4 -up-> error_be941202
   joi_util_68a048a4 -up-> validation_options_7f808940
   joi_util_68a048a4 -up-> joi_util_options_68a048a4
   joi_util_68a048a4 -up-> joi_util_68a048a4
   object_util_a28a167d -up-> clone_deep_91af3a80
-  object_util_a28a167d -up-> object_type_a28a167d
   time_util_c35fc59d -up-> add_b4d4e82e
   time_util_c35fc59d -up-> parse_b4d4e82e
   time_util_c35fc59d -up-> add_by_options_c35fc59d
