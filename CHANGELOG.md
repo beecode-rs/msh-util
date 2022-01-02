@@ -1,3 +1,10 @@
+## [2.5.1](https://github.com/beecode-rs/msh-node-util/compare/v2.5.0...v2.5.1) (2022-01-02)
+
+
+### Bug Fixes
+
+* fix promise handler for SingletonAsync ([d396395](https://github.com/beecode-rs/msh-node-util/commit/d39639519beaed20eddb8fe7a359a7bb568d82b3))
+
 # [2.5.0](https://github.com/beecode-rs/msh-node-util/compare/v2.4.0...v2.5.0) (2022-01-02)
 
 
