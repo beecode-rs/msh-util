@@ -2,7 +2,10 @@ declare type AnyFunctionNoParamsPromise<R = any> = () => Promise<R>;
 export declare class SingletonAsync<R = any> {
     protected _cache: {
         singleton?: R;
-        resolvers?: ((value: R | PromiseLike<R>) => void)[];
+        promises?: {
+            resolve: (value: R | PromiseLike<R>) => void;
+            reject: (reason?: any) => void;
+        }[];
     };
     protected _factory: AnyFunctionNoParamsPromise<R>;
     constructor(factory: AnyFunctionNoParamsPromise<R>);

@@ -1,3 +1,10 @@
+## [2.5.2](https://github.com/beecode-rs/msh-node-util/compare/v2.5.1...v2.5.2) (2022-01-02)
+
+
+### Bug Fixes
+
+* reject all promises after cache is cleaned ([9670a6d](https://github.com/beecode-rs/msh-node-util/commit/9670a6d68e2fbf593f12c5caa1690a7b225c5b81))
+
 ## [2.5.1](https://github.com/beecode-rs/msh-node-util/compare/v2.5.0...v2.5.1) (2022-01-02)
 
 
