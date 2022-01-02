@@ -17,6 +17,10 @@ export class SingletonAsync<R = any> {
    */
   public cleanCache(): void {
     delete this._cache.singleton
+    this._rejectPromises()
+  }
+
+  protected _rejectPromises(): void {
     if (this._cache.promises) this._cache.promises.forEach((promise) => promise.reject(new Error('Cache was cleaned')))
     delete this._cache.promises
   }
@@ -34,7 +38,10 @@ export class SingletonAsync<R = any> {
     }
 
     this._cache.promises = []
-    const result = await this._factory()
+    const result = await this._factory().catch((err) => {
+      this._rejectPromises()
+      throw err
+    })
     this._cache.singleton = result
 
     this._cache.promises.forEach((promise) => promise.resolve(result))
