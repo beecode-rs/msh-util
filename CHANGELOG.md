@@ -1,3 +1,13 @@
+# [3.0.0](https://github.com/beecode-rs/msh-node-util/compare/v2.5.3...v3.0.0) (2022-01-04)
+
+
+* feat!: object prop null->undefined (deep) ([66b9bce](https://github.com/beecode-rs/msh-node-util/commit/66b9bce431ea81243a14ba41456df0f831878852))
+
+
+### BREAKING CHANGES
+
+* rename stringifyOrNullUndefined -> stringifySortOrNullOrUndefined
+
 ## [2.5.3](https://github.com/beecode-rs/msh-node-util/compare/v2.5.2...v2.5.3) (2022-01-02)
 
 
