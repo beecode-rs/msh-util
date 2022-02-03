@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/beecode-rs/msh-node-util/compare/v3.0.0...v3.1.0) (2022-02-03)
+
+
+### Features
+
+* single request promise added ([f9e0cfc](https://github.com/beecode-rs/msh-node-util/commit/f9e0cfcd4e1f7829ae35ecff05839be3b59854bc))
+
 # [3.0.0](https://github.com/beecode-rs/msh-node-util/compare/v2.5.3...v3.0.0) (2022-01-04)
 
 
