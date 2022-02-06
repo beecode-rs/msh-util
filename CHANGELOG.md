@@ -1,3 +1,10 @@
+# [3.2.0](https://github.com/beecode-rs/msh-node-util/compare/v3.1.0...v3.2.0) (2022-02-06)
+
+
+### Features
+
+* update typeUtil, exhaustive check ([b12be30](https://github.com/beecode-rs/msh-node-util/commit/b12be30c2c3ab392b720ae5853edaf47d7126564))
+
 # [3.1.0](https://github.com/beecode-rs/msh-node-util/compare/v3.0.0...v3.1.0) (2022-02-03)
 
 
