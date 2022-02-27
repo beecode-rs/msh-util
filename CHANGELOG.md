@@ -1,3 +1,10 @@
+## [3.2.1](https://github.com/beecode-rs/msh-node-util/compare/v3.2.0...v3.2.1) (2022-02-27)
+
+
+### Bug Fixes
+
+* update package.json ([c15646c](https://github.com/beecode-rs/msh-node-util/commit/c15646c08499725c6b4141bad9fc6fe8b418871e))
+
 # [3.2.0](https://github.com/beecode-rs/msh-node-util/compare/v3.1.0...v3.2.0) (2022-02-06)
 
 
