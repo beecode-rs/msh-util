@@ -1,3 +1,10 @@
+# [3.3.0](https://github.com/beecode-rs/msh-node-util/compare/v3.2.1...v3.3.0) (2022-03-19)
+
+
+### Features
+
+* add string and update object utils ([5e8bdda](https://github.com/beecode-rs/msh-node-util/commit/5e8bdda7a503b2f2cb89e418b845363444b4dbcd))
+
 ## [3.2.1](https://github.com/beecode-rs/msh-node-util/compare/v3.2.0...v3.2.1) (2022-02-27)
 
 
