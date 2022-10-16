@@ -1,3 +1,10 @@
+## [3.3.1](https://github.com/beecode-rs/msh-node-util/compare/v3.3.0...v3.3.1) (2022-10-16)
+
+
+### Bug Fixes
+
+* add src to release ([5cc20ea](https://github.com/beecode-rs/msh-node-util/commit/5cc20ea9b3419f39f0efe04ad12653c93a685317))
+
 # [3.3.0](https://github.com/beecode-rs/msh-node-util/compare/v3.2.1...v3.3.0) (2022-03-19)
 
 
