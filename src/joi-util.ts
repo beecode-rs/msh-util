@@ -6,7 +6,7 @@ export interface JoiLogger {
   warn(msg: string, obj: ObjectType): void
 }
 
-export type joiUtilOptions = {
+export type joiUtilOptions = ValidationOptions & {
   logger?: JoiLogger
 }
 
@@ -19,7 +19,7 @@ export const joiUtil = {
    * @returns {T} expected object after validation
    */
   sanitize: <T>(objectToValidate: Partial<T>, schema: Schema | ObjectSchema<T>, joiUtilOptions?: joiUtilOptions): T => {
-    return joiUtil._validate<T>(objectToValidate, schema, { stripUnknown: true }, joiUtilOptions)
+    return joiUtil._validate<T>(objectToValidate, schema, { ...joiUtilOptions, stripUnknown: true })
   },
   /**
    * Only validate properties specified in validation schema
@@ -29,14 +29,10 @@ export const joiUtil = {
    * @returns {T} expected object after validation
    */
   validate: <T>(objectToValidate: Partial<T>, schema: Schema | ObjectSchema<T>, joiUtilOptions?: joiUtilOptions): T => {
-    return joiUtil._validate<T>(objectToValidate, schema, {}, joiUtilOptions)
+    return joiUtil._validate<T>(objectToValidate, schema, joiUtilOptions)
   },
-  _validate: <T>(
-    objectToValidate: Partial<T>,
-    schema: Schema | ObjectSchema<T>,
-    validationOptions: ValidationOptions,
-    options?: joiUtilOptions
-  ): T => {
+  _validate: <T>(objectToValidate: Partial<T>, schema: Schema | ObjectSchema<T>, options?: joiUtilOptions): T => {
+    const { logger, ...validationOptions } = options ?? {}
     const { error: validationError, value, warning } = schema.validate(objectToValidate, validationOptions)
     if (validationError) throw error.client.badRequest(validationError.message.split('"').join("'"))
     if (warning && options?.logger?.warn) options.logger.warn('joiValidationUtil._validate', warning)
