@@ -1,5 +1,5 @@
 import { ObjectType } from './object-util'
-import { error } from '@beecode/msh-node-error'
+import { nodeError } from '@beecode/msh-node-error'
 import { ObjectSchema, Schema, ValidationOptions } from 'joi'
 
 export interface JoiLogger {
@@ -34,7 +34,7 @@ export const joiUtil = {
   _validate: <T>(objectToValidate: Partial<T>, schema: Schema | ObjectSchema<T>, options?: joiUtilOptions): T => {
     const { logger, ...validationOptions } = options ?? {}
     const { error: validationError, value, warning } = schema.validate(objectToValidate, validationOptions)
-    if (validationError) throw error.client.badRequest(validationError.message.split('"').join("'"))
+    if (validationError) throw nodeError.client.badRequest(validationError.message.split('"').join("'"), validationError)
     if (warning && options?.logger?.warn) options.logger.warn('joiValidationUtil._validate', warning)
     return value as T
   },
