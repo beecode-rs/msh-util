@@ -3,7 +3,7 @@ import { ObjectSchema, Schema, ValidationOptions } from 'joi';
 export interface JoiLogger {
     warn(msg: string, obj: ObjectType): void;
 }
-export declare type joiUtilOptions = {
+export declare type joiUtilOptions = ValidationOptions & {
     logger?: JoiLogger;
 };
 export declare const joiUtil: {
@@ -23,6 +23,6 @@ export declare const joiUtil: {
      * @returns {T} expected object after validation
      */
     validate: <T_1>(objectToValidate: Partial<T_1>, schema: Schema<any> | ObjectSchema<T_1>, joiUtilOptions?: joiUtilOptions | undefined) => T_1;
-    _validate: <T_2>(objectToValidate: Partial<T_2>, schema: Schema<any> | ObjectSchema<T_2>, validationOptions: ValidationOptions, options?: joiUtilOptions | undefined) => T_2;
+    _validate: <T_2>(objectToValidate: Partial<T_2>, schema: Schema<any> | ObjectSchema<T_2>, options?: joiUtilOptions | undefined) => T_2;
 };
 //# sourceMappingURL=joi-util.d.ts.map

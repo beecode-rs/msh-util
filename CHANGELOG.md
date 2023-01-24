@@ -1,3 +1,10 @@
+# [3.4.0](https://github.com/beecode-rs/msh-node-util/compare/v3.3.2...v3.4.0) (2023-01-24)
+
+
+### Features
+
+* expose joi validation options ([c5b42c8](https://github.com/beecode-rs/msh-node-util/commit/c5b42c8ac1c8e60dc388c83761a0a322780445a8))
+
 ## [3.3.2](https://github.com/beecode-rs/msh-node-util/compare/v3.3.1...v3.3.2) (2022-10-16)
 
 
