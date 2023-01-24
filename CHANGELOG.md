@@ -1,3 +1,10 @@
+# [3.5.0](https://github.com/beecode-rs/msh-node-util/compare/v3.4.0...v3.5.0) (2023-01-24)
+
+
+### Features
+
+* use errors with payload ([fa90f79](https://github.com/beecode-rs/msh-node-util/commit/fa90f798be3c213e0d54760a14ab52884441b6f6))
+
 # [3.4.0](https://github.com/beecode-rs/msh-node-util/compare/v3.3.2...v3.4.0) (2023-01-24)
 
 
