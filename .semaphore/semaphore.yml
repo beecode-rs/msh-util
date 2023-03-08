@@ -13,7 +13,7 @@ blocks:
       secrets:
         - name: bc-git-secret
         - name: bc-npm-secret
-        - name: bc-msh-node-util-secret
+        - name: bc-msh-util-secret
       env_vars:
         - name: NODE_ENV
           value: test
@@ -33,7 +33,7 @@ blocks:
       secrets:
         - name: bc-git-secret
         - name: bc-npm-secret
-        - name: bc-msh-node-util-secret
+        - name: bc-msh-util-secret
       jobs:
         - name: Build
           commands:
@@ -44,7 +44,7 @@ blocks:
             - npm config set git-tag-version false
             - npm run semantic-release
             - touch version.txt && cat version.txt
-            - cache store bc-msh-node-util-version-$SEMAPHORE_GIT_SHA version.txt
+            - cache store bc-msh-util-version-$SEMAPHORE_GIT_SHA version.txt
     skip:
       when: branch != 'main'
 

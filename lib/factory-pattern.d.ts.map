@@ -1,0 +1,1 @@
+{"version":3,"file":"factory-pattern.d.ts","sourceRoot":"","sources":["../src/factory-pattern.ts"],"names":[],"mappings":"AAAA,MAAM,MAAM,SAAS,CAAC,CAAC,GAAG,MAAM,IAAI,KAAK,GAAG,IAAI,EAAE,CAAC,SAAS;IAAE,KAAK,GAAG,IAAI,EAAE,MAAM,CAAC,GAAG,GAAG,CAAA;CAAE,GAAG,CAAC,GAAG,KAAK,EAAE,KAAK,CAAC,CAAA;AAE/G,eAAO,MAAM,cAAc,uGAI1B,CAAA"}

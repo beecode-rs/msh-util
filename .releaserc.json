@@ -20,5 +20,5 @@
     ]
   ],
   "preset": "angular",
-  "repositoryUrl": "git@github.com:beecode-rs/msh-node-util.git"
+  "repositoryUrl": "git@github.com:beecode-rs/msh-util.git"
 }
