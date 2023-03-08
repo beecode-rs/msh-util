@@ -1,6 +1,8 @@
-import { objectUtil } from './object-util'
+import { ObjectUtil } from './object-util'
 
 describe('objectUtil', () => {
+  const objectUtil = new ObjectUtil()
+
   const everyType = {
     number: 1,
     decimal: 1.12345,
@@ -11,6 +13,18 @@ describe('objectUtil', () => {
     date: new Date('2020-01-01'),
     boolean: true,
     nestedObject: { obj: 'test' },
+  }
+
+  const everyTypeReversed = {
+    nestedObject: { obj: 'test' },
+    boolean: true,
+    date: new Date('2020-01-01'),
+    emptyObj: {},
+    notANumber: NaN,
+    undefined: undefined,
+    string: 'string',
+    decimal: 1.12345,
+    number: 1,
   }
 
   describe('deepClone', () => {
@@ -26,17 +40,29 @@ describe('objectUtil', () => {
     })
   })
 
-  describe('deepNullToUndefined', () => {
+  describe('pickByList', () => {
     it.each([
-      [{ test: undefined }, { test: undefined }],
-      [{ test: null }, { test: undefined }],
-      [{ deep: { test: null } }, { deep: { test: undefined } }],
-      [{ deeper: { deep: { test: null } } }, { deeper: { deep: { test: undefined } } }],
-      [everyType, everyType],
-      [{ deep: everyType }, { deep: everyType }],
-      [{ deeper: { deep: everyType } }, { deeper: { deep: everyType } }],
-    ])('should convert null to undefined for %j', (withNulls, withUndefined) => {
-      expect(objectUtil.deepNullToUndefined(withNulls)).toEqual(withUndefined)
+      [['a', 'b'], { a: 1, b: '2', c: 3 }, { a: 1, b: '2' }],
+      [['a', 'c'], { a: 1, b: '2', c: 3 }, { a: 1, c: 3 }],
+    ])('should pick only this properties [%s] from object %s and return object %s', (propList, obj, result) => {
+      expect(objectUtil.pickByList(obj, propList)).toEqual(result)
+    })
+  })
+
+  describe('pickByObjectKeys', () => {
+    it.each([
+      [
+        { a: 1, b: '2', c: 3 },
+        { a: '', b: '' },
+        { a: 1, b: '2' },
+      ],
+      [
+        { a: 1, b: '2', c: 3 },
+        { a: '', c: '' },
+        { a: 1, c: 3 },
+      ],
+    ])('should pick form this %s using keys from %s and return %s', (obj, objWithPickKeys, result) => {
+      expect(objectUtil.pickByObjectKeys(obj, objWithPickKeys)).toEqual(result)
     })
   })
 
@@ -101,6 +127,55 @@ describe('objectUtil', () => {
       ],
     ])('should compare %j with result %j', (value, result) => {
       expect(objectUtil.stringifySortOrNullOrUndefined(value)).toEqual(result)
+    })
+  })
+
+  describe('deepEqual', () => {
+    it.each([
+      [null, null],
+      [undefined, undefined],
+      [{}, {}],
+      [everyType, everyType],
+      [{ deep: everyType }, { deep: everyType }],
+      [{ deeper: { deep: everyType } }, { deeper: { deep: everyType } }],
+    ])('should be deep equal compare %j with result %j', (value, result) => {
+      expect(objectUtil.deepEqual(value, result)).toBeTruthy()
+    })
+
+    it.each([
+      [{}, { a: 1 }],
+      [everyType, { ...everyType, a: 1 }],
+      [{ deep: everyType }, { deep: everyType, a: 1 }],
+      [{ deeper: { deep: everyType } }, { deeper: { deep: everyType }, a: 1 }],
+    ])('should not deep equal compare %j with result %j', (value, result) => {
+      expect(objectUtil.deepEqual(value, result)).toBeFalsy()
+    })
+
+    it.each([
+      [
+        { a: 1, b: 2 },
+        { b: 2, a: 1 },
+      ],
+      [
+        { a: { a: 1, b: 2 }, b: everyType },
+        { b: everyTypeReversed, a: { b: 2, a: 1 } },
+      ],
+    ])('should be deep equal even if in different order compare %j with result %j', (value, result) => {
+      expect(objectUtil.deepEqual(value, result)).toBeTruthy()
+    })
+  })
+
+  describe('deepNullToUndefined', () => {
+    it.each([
+      [{ test: undefined }, { test: undefined }],
+      [{ test: null }, { test: undefined }],
+      [{ deep: { test: null } }, { deep: { test: undefined } }],
+      [{ deeper: { deep: { test: null } } }, { deeper: { deep: { test: undefined } } }],
+      [everyType, everyType],
+      [{ deep: everyType }, { deep: everyType }],
+      [{ deeper: { deep: everyType } }, { deeper: { deep: everyType } }],
+    ])('should convert null to undefined for %j', (withNulls, withUndefined) => {
+      expect(objectUtil.deepNullToUndefined(withNulls)).toEqual(withUndefined)
     })
   })
 })

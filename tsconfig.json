@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "alwaysStrict": true,
+    "baseUrl": ".",
     "declaration": true,
     "declarationMap": true,
     "esModuleInterop": true,
@@ -11,7 +12,10 @@
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": "./lib",
+    "outDir": "lib",
+    "paths": {
+      "src/*": ["src/*"]
+    },
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
@@ -19,6 +23,5 @@
     "strictNullChecks": true,
     "target": "es2017"
   },
-  "exclude": ["./node_modules", "./lib", "./.idea", "./.semaphore", "./resource"],
-  "include": ["./src/**/*.ts"]
+  "include": ["src/**/*.ts", "test/**/*.ts"]
 }

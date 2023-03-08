@@ -1,0 +1,1 @@
+{"version":3,"file":"factory-pattern.js","sourceRoot":"","sources":["../src/factory-pattern.ts"],"names":[],"mappings":";;;AAEO,MAAM,cAAc,GAAG,CAAsB,SAAY,EAA4D,EAAE;IAC5H,OAAO,CAAC,GAAG,IAA8B,EAAmB,EAAE;QAC5D,OAAO,IAAI,SAAS,CAAC,GAAG,IAAI,CAAoB,CAAA;IAClD,CAAC,CAAA;AACH,CAAC,CAAA;AAJY,QAAA,cAAc,kBAI1B"}

@@ -6,13 +6,13 @@
     "src/**/*.ts"
   ],
   "exclude": [
-    ".idea/**",
-    "lib/**",
-    "node_modules/**",
-    "resource/**",
     "**/*.d.ts",
+    "**/*.js",
+    "**/*.spec.ts",
     "**/*.test.ts",
-    "src/test/**/*.ts"
+    "**/__mocks__/**/*",
+    "**/*.test.tsx",
+    "**/__tests__/**/*"
   ],
   "sourceMap": true,
   "reporter": [
