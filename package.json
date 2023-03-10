@@ -62,6 +62,8 @@
     "ts-node": "10.9.1",
     "tsc-alias": "1.8.2",
     "tsc-watch": "6.0.0",
+    "typedoc": "0.23.26",
+    "typedoc-plugin-markdown": "3.14.0",
     "typescript": "4.9.5"
   },
   "engines": {
@@ -94,6 +96,7 @@
     "commit": "git-cz",
     "coverage": "nyc npm run test:unit",
     "coverage:publish": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "doc:api": "npx typedoc",
     "doc:toc": "npx markdown-toc -i ./README.md",
     "eslint": "eslint . --ext .ts --quiet",
     "eslint:fix": "npm run eslint -- --fix",
@@ -109,7 +112,7 @@
     "semantic-release:check": "npm run semantic-release -- --dry-run --no-ci",
     "test": "npm run test:unit && npm run test:int ",
     "test:int": "jest --config=./test/jest.config.json",
-    "test:unit": "jest",
+    "test:unit": "TZ=utc jest",
     "tsc": "tsc -p ./tsconfig-build.json",
     "tsc:alias": "tsc-alias",
     "tsc:check": "npm run tsc -- --noEmit",

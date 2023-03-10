@@ -22,10 +22,10 @@ export class SingleThresholdPromise<T> {
     promises?: { resolve: (value: T | PromiseLike<T>) => void; reject: (reason?: any) => void }[]
   } = {}
 
-  protected _factory: AnyFunctionPromiseNoParams<T>
+  protected _factoryFn: AnyFunctionPromiseNoParams<T>
 
-  constructor(factory: AnyFunctionPromiseNoParams<T>) {
-    this._factory = factory
+  constructor(factoryFn: AnyFunctionPromiseNoParams<T>) {
+    this._factoryFn = factoryFn
   }
 
   protected _rejectPromises(): void {
@@ -41,7 +41,7 @@ export class SingleThresholdPromise<T> {
     }
 
     this._cache.promises = []
-    const result = await this._factory().catch((err) => {
+    const result = await this._factoryFn().catch((err) => {
       this._rejectPromises()
       throw err
     })

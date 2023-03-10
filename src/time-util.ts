@@ -1,13 +1,17 @@
-import { add, format, parse } from 'date-fns'
+import add from 'date-fns/add'
+import addMilliseconds from 'date-fns/addMilliseconds'
+import format from 'date-fns/format'
+import parse from 'date-fns/parse'
 
 export enum DurationUnit {
-  SECOND = 'second',
-  MINUTE = 'minute',
-  HOUR = 'hour',
-  DAY = 'day',
-  WEEK = 'week',
-  MONTH = 'month',
-  YEAR = 'year',
+  MILLISECOND = 'MILLISECOND',
+  SECOND = 'SECOND',
+  MINUTE = 'MINUTE',
+  HOUR = 'HOUR',
+  DAY = 'DAY',
+  WEEK = 'WEEK',
+  MONTH = 'MONTH',
+  YEAR = 'YEAR',
 }
 
 export type DurationUnitType = `${DurationUnit}`
@@ -80,12 +84,13 @@ export class TimeUtil {
    * @example
    * // timeUtil.now().toISOString() === 2023-03-08T19:45:01.991Z
    * const timeUtil = new TimeUtil()
-   * console.log(timeUtil.addToDate({date: timeUtil.now(), unit: 'day', value: 1 }).toISOString()) // 2023-03-09T19:45:01.991Z
+   * console.log(timeUtil.addToDate({date: timeUtil.now(), unit: 'DAY', value: 1 }).toISOString()) // 2023-03-09T19:45:01.991Z
    * console.log(timeUtil.addToDate({date: timeUtil.now(), unit: DurationUnit.MONTH, value: -1 }).toISOString()) //2023-02-08T19:45:01.991Z
    */
-  addToDate(params: { unit: DurationUnitType; value: number; date: Date }): Date {
+  addToDate(params: { unit: DurationUnitType | DurationUnit; value: number; date: Date }): Date {
     const { date, unit, value } = params
+    if (`${unit}` === 'MILLISECOND') return addMilliseconds(date, value)
 
-    return add(date, { [`${unit}s`]: value })
+    return add(date, { [`${unit.toLowerCase()}s`]: value })
   }
 }
