@@ -1,4 +1,4 @@
-[@beecode/msh-util](../README.md) / [Exports](../modules.md) / EntityCachePromiseService
+[@beecode/msh-util](../README.md) / EntityCachePromiseService
 
 # Class: EntityCachePromiseService<ENTITY, ID\>
 
@@ -30,7 +30,7 @@
 
 ### constructor
 
-• `Protected` **new EntityCachePromiseService**<`ENTITY`, `ID`\>(`dao`)
+• `Protected` **new EntityCachePromiseService**<`ENTITY`, `ID`\>(`dao?`)
 
 #### Type parameters
 
@@ -43,11 +43,11 @@
 
 | Name | Type |
 | :------ | :------ |
-| `dao` | [`EntityCacheMemory`](EntityCacheMemory.md)<`ENTITY`\> |
+| `dao?` | [`EntityCacheMemory`](EntityCacheMemory.md)<`ENTITY`\> |
 
 #### Defined in
 
-[entity-cache/promise-service.ts:9](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/promise-service.ts#L9)
+[entity-cache/promise-service.ts:9](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/promise-service.ts#L9)
 
 ## Properties
 
@@ -57,7 +57,7 @@
 
 #### Defined in
 
-[entity-cache/promise-service.ts:4](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/promise-service.ts#L4)
+[entity-cache/promise-service.ts:4](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/promise-service.ts#L4)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[entity-cache/promise-service.ts:6](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/promise-service.ts#L6)
+[entity-cache/promise-service.ts:6](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/promise-service.ts#L6)
 
 ## Methods
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[entity-cache/promise-service.ts:7](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/promise-service.ts#L7)
+[entity-cache/promise-service.ts:7](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/promise-service.ts#L7)
 
 ___
 
@@ -107,13 +107,13 @@ ___
 
 #### Defined in
 
-[entity-cache/promise-service.ts:29](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/promise-service.ts#L29)
+[entity-cache/promise-service.ts:29](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/promise-service.ts#L29)
 
 ___
 
 ### subscribeToEntityChangeById
 
-▸ **subscribeToEntityChangeById**(`id`, `callback`): [`EntityCacheSubscription`](../modules.md#entitycachesubscription)
+▸ **subscribeToEntityChangeById**(`id`, `callback`): [`EntityCacheSubscription`](../README.md#entitycachesubscription)
 
 Subscribe to entity cache change and retrieve cached value if not undefined
 
@@ -122,12 +122,12 @@ Subscribe to entity cache change and retrieve cached value if not undefined
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `id` | `ID` | entity unique identifier |
-| `callback` | [`EntityCacheCallBack`](../modules.md#entitycachecallback)<`ENTITY`\> |  |
+| `callback` | [`EntityCacheCallBack`](../README.md#entitycachecallback)<`ENTITY`\> |  |
 
 #### Returns
 
-[`EntityCacheSubscription`](../modules.md#entitycachesubscription)
+[`EntityCacheSubscription`](../README.md#entitycachesubscription)
 
 #### Defined in
 
-[entity-cache/promise-service.ts:19](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/promise-service.ts#L19)
+[entity-cache/promise-service.ts:19](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/promise-service.ts#L19)

@@ -1,4 +1,4 @@
-[@beecode/msh-util](../README.md) / [Exports](../modules.md) / JoiLogger
+[@beecode/msh-util](../README.md) / JoiLogger
 
 # Interface: JoiLogger
 
@@ -19,7 +19,7 @@
 | Name | Type |
 | :------ | :------ |
 | `msg` | `string` |
-| `obj` | [`ObjectType`](../modules.md#objecttype) |
+| `obj` | [`ObjectType`](../README.md#objecttype) |
 
 #### Returns
 
@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[joi-util.ts:5](https://github.com/beecode-rs/msh-util/blob/241d250/src/joi-util.ts#L5)
+[joi-util.ts:5](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/joi-util.ts#L5)

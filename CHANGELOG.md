@@ -1,3 +1,6 @@
+> # Renamed `msh-node-util` > `msh-util` 
+> Reset version to 1.0.0
+
 # [3.5.0](https://github.com/beecode-rs/msh-node-util/compare/v3.4.0...v3.5.0) (2023-01-24)
 
 

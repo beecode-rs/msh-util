@@ -24,7 +24,7 @@
 							"fileName": "time-util.ts",
 							"line": 11,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L11"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L11"
 						}
 					],
 					"type": {
@@ -43,7 +43,7 @@
 							"fileName": "time-util.ts",
 							"line": 10,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L10"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L10"
 						}
 					],
 					"type": {
@@ -62,7 +62,7 @@
 							"fileName": "time-util.ts",
 							"line": 7,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L7"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L7"
 						}
 					],
 					"type": {
@@ -81,7 +81,7 @@
 							"fileName": "time-util.ts",
 							"line": 9,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L9"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L9"
 						}
 					],
 					"type": {
@@ -100,7 +100,7 @@
 							"fileName": "time-util.ts",
 							"line": 13,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L13"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L13"
 						}
 					],
 					"type": {
@@ -119,7 +119,7 @@
 							"fileName": "time-util.ts",
 							"line": 8,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L8"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L8"
 						}
 					],
 					"type": {
@@ -138,7 +138,7 @@
 							"fileName": "time-util.ts",
 							"line": 12,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L12"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L12"
 						}
 					],
 					"type": {
@@ -157,7 +157,7 @@
 							"fileName": "time-util.ts",
 							"line": 14,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L14"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L14"
 						}
 					],
 					"type": {
@@ -186,7 +186,7 @@
 					"fileName": "time-util.ts",
 					"line": 6,
 					"character": 12,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L6"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L6"
 				}
 			]
 		},
@@ -247,7 +247,7 @@
 							"fileName": "entity-cache/memory.ts",
 							"line": 12,
 							"character": 12,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L12"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L12"
 						}
 					],
 					"type": {
@@ -263,7 +263,7 @@
 									"fileName": "entity-cache/memory.ts",
 									"line": 12,
 									"character": 21,
-									"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L12"
+									"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L12"
 								}
 							],
 							"indexSignature": {
@@ -306,7 +306,7 @@
 														"fileName": "entity-cache/memory.ts",
 														"line": 12,
 														"character": 38,
-														"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L12"
+														"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L12"
 													}
 												],
 												"type": {
@@ -328,7 +328,7 @@
 														"fileName": "entity-cache/memory.ts",
 														"line": 12,
 														"character": 55,
-														"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L12"
+														"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L12"
 													}
 												],
 												"type": {
@@ -351,7 +351,7 @@
 												"fileName": "entity-cache/memory.ts",
 												"line": 12,
 												"character": 36,
-												"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L12"
+												"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L12"
 											}
 										]
 									}
@@ -374,7 +374,7 @@
 							"fileName": "entity-cache/memory.ts",
 							"line": 13,
 							"character": 12,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L13"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L13"
 						}
 					],
 					"type": {
@@ -412,7 +412,7 @@
 							"fileName": "entity-cache/memory.ts",
 							"line": 40,
 							"character": 12,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L40"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L40"
 						}
 					],
 					"signatures": [
@@ -466,7 +466,7 @@
 							"fileName": "entity-cache/memory.ts",
 							"line": 47,
 							"character": 12,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L47"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L47"
 						}
 					],
 					"signatures": [
@@ -509,7 +509,7 @@
 							"fileName": "entity-cache/memory.ts",
 							"line": 15,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L15"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L15"
 						}
 					],
 					"signatures": [
@@ -554,7 +554,7 @@
 													"fileName": "entity-cache/memory.ts",
 													"line": 15,
 													"character": 48,
-													"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L15"
+													"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L15"
 												}
 											],
 											"type": {
@@ -576,7 +576,7 @@
 													"fileName": "entity-cache/memory.ts",
 													"line": 15,
 													"character": 25,
-													"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L15"
+													"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L15"
 												}
 											],
 											"type": {
@@ -599,7 +599,7 @@
 											"fileName": "entity-cache/memory.ts",
 											"line": 15,
 											"character": 23,
-											"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L15"
+											"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L15"
 										}
 									]
 								}
@@ -618,7 +618,7 @@
 							"fileName": "entity-cache/memory.ts",
 							"line": 29,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L29"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L29"
 						}
 					],
 					"signatures": [
@@ -680,7 +680,7 @@
 							"fileName": "entity-cache/memory.ts",
 							"line": 36,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L36"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L36"
 						}
 					],
 					"signatures": [
@@ -721,7 +721,7 @@
 													"fileName": "entity-cache/memory.ts",
 													"line": 36,
 													"character": 38,
-													"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L36"
+													"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L36"
 												}
 											],
 											"signatures": [
@@ -801,7 +801,7 @@
 					"fileName": "entity-cache/memory.ts",
 					"line": 11,
 					"character": 13,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L11"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L11"
 				}
 			],
 			"typeParameters": [
@@ -836,7 +836,7 @@
 							"fileName": "entity-cache/promise-service.ts",
 							"line": 9,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/promise-service.ts#L9"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/promise-service.ts#L9"
 						}
 					],
 					"signatures": [
@@ -885,7 +885,9 @@
 									"name": "dao",
 									"kind": 32768,
 									"kindString": "Parameter",
-									"flags": {},
+									"flags": {
+										"isOptional": true
+									},
 									"type": {
 										"type": "reference",
 										"id": 36,
@@ -934,7 +936,7 @@
 							"fileName": "entity-cache/promise-service.ts",
 							"line": 4,
 							"character": 21,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/promise-service.ts#L4"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/promise-service.ts#L4"
 						}
 					],
 					"type": {
@@ -966,7 +968,7 @@
 							"fileName": "entity-cache/promise-service.ts",
 							"line": 6,
 							"character": 30,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/promise-service.ts#L6"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/promise-service.ts#L6"
 						}
 					],
 					"type": {
@@ -988,7 +990,7 @@
 							"fileName": "entity-cache/promise-service.ts",
 							"line": 7,
 							"character": 21,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/promise-service.ts#L7"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/promise-service.ts#L7"
 						}
 					],
 					"signatures": [
@@ -1039,7 +1041,7 @@
 							"fileName": "entity-cache/promise-service.ts",
 							"line": 29,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/promise-service.ts#L29"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/promise-service.ts#L29"
 						}
 					],
 					"signatures": [
@@ -1081,7 +1083,7 @@
 							"fileName": "entity-cache/promise-service.ts",
 							"line": 19,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/promise-service.ts#L19"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/promise-service.ts#L19"
 						}
 					],
 					"signatures": [
@@ -1183,7 +1185,7 @@
 					"fileName": "entity-cache/promise-service.ts",
 					"line": 3,
 					"character": 22,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/promise-service.ts#L3"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/promise-service.ts#L3"
 				}
 			],
 			"typeParameters": [
@@ -1238,7 +1240,7 @@
 							"fileName": "joi-util.ts",
 							"line": 14,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/joi-util.ts#L14"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/joi-util.ts#L14"
 						}
 					],
 					"signatures": [
@@ -1316,7 +1318,7 @@
 							"fileName": "joi-util.ts",
 							"line": 13,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/joi-util.ts#L13"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/joi-util.ts#L13"
 						}
 					],
 					"type": {
@@ -1345,7 +1347,7 @@
 					"fileName": "joi-util.ts",
 					"line": 12,
 					"character": 13,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/joi-util.ts#L12"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/joi-util.ts#L12"
 				}
 			],
 			"typeParameters": [
@@ -1426,7 +1428,7 @@
 							"fileName": "joi-util.ts",
 							"line": 65,
 							"character": 12,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/joi-util.ts#L65"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/joi-util.ts#L65"
 						}
 					],
 					"signatures": [
@@ -1528,7 +1530,7 @@
 							"fileName": "joi-util.ts",
 							"line": 48,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/joi-util.ts#L48"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/joi-util.ts#L48"
 						}
 					],
 					"signatures": [
@@ -1649,7 +1651,7 @@
 							"fileName": "joi-util.ts",
 							"line": 61,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/joi-util.ts#L61"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/joi-util.ts#L61"
 						}
 					],
 					"signatures": [
@@ -1781,7 +1783,7 @@
 					"fileName": "joi-util.ts",
 					"line": 38,
 					"character": 13,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/joi-util.ts#L38"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/joi-util.ts#L38"
 				}
 			]
 		},
@@ -1824,7 +1826,7 @@
 							"fileName": "object-util.ts",
 							"line": 13,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/object-util.ts#L13"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L13"
 						}
 					],
 					"signatures": [
@@ -1895,7 +1897,7 @@
 							"fileName": "object-util.ts",
 							"line": 82,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/object-util.ts#L82"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L82"
 						}
 					],
 					"signatures": [
@@ -1961,7 +1963,7 @@
 							"fileName": "object-util.ts",
 							"line": 94,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/object-util.ts#L94"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L94"
 						}
 					],
 					"signatures": [
@@ -2041,7 +2043,7 @@
 							"fileName": "object-util.ts",
 							"line": 25,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/object-util.ts#L25"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L25"
 						}
 					],
 					"signatures": [
@@ -2172,7 +2174,7 @@
 							"fileName": "object-util.ts",
 							"line": 46,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/object-util.ts#L46"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L46"
 						}
 					],
 					"signatures": [
@@ -2309,7 +2311,7 @@
 							"fileName": "object-util.ts",
 							"line": 63,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/object-util.ts#L63"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L63"
 						}
 					],
 					"signatures": [
@@ -2416,7 +2418,7 @@
 					"fileName": "object-util.ts",
 					"line": 6,
 					"character": 13,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/object-util.ts#L6"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L6"
 				}
 			]
 		},
@@ -2457,7 +2459,7 @@
 							"fileName": "single-threshold-promise.ts",
 							"line": 27,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/single-threshold-promise.ts#L27"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/single-threshold-promise.ts#L27"
 						}
 					],
 					"signatures": [
@@ -2524,7 +2526,7 @@
 							"fileName": "single-threshold-promise.ts",
 							"line": 21,
 							"character": 12,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/single-threshold-promise.ts#L21"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/single-threshold-promise.ts#L21"
 						}
 					],
 					"type": {
@@ -2549,7 +2551,7 @@
 											"fileName": "single-threshold-promise.ts",
 											"line": 22,
 											"character": 4,
-											"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/single-threshold-promise.ts#L22"
+											"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/single-threshold-promise.ts#L22"
 										}
 									],
 									"type": {
@@ -2574,7 +2576,7 @@
 																"fileName": "single-threshold-promise.ts",
 																"line": 22,
 																"character": 63,
-																"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/single-threshold-promise.ts#L22"
+																"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/single-threshold-promise.ts#L22"
 															}
 														],
 														"type": {
@@ -2590,7 +2592,7 @@
 																		"fileName": "single-threshold-promise.ts",
 																		"line": 22,
 																		"character": 71,
-																		"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/single-threshold-promise.ts#L22"
+																		"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/single-threshold-promise.ts#L22"
 																	}
 																],
 																"signatures": [
@@ -2635,7 +2637,7 @@
 																"fileName": "single-threshold-promise.ts",
 																"line": 22,
 																"character": 17,
-																"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/single-threshold-promise.ts#L22"
+																"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/single-threshold-promise.ts#L22"
 															}
 														],
 														"type": {
@@ -2651,7 +2653,7 @@
 																		"fileName": "single-threshold-promise.ts",
 																		"line": 22,
 																		"character": 26,
-																		"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/single-threshold-promise.ts#L22"
+																		"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/single-threshold-promise.ts#L22"
 																	}
 																],
 																"signatures": [
@@ -2717,7 +2719,7 @@
 														"fileName": "single-threshold-promise.ts",
 														"line": 22,
 														"character": 15,
-														"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/single-threshold-promise.ts#L22"
+														"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/single-threshold-promise.ts#L22"
 													}
 												]
 											}
@@ -2738,7 +2740,7 @@
 									"fileName": "single-threshold-promise.ts",
 									"line": 21,
 									"character": 20,
-									"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/single-threshold-promise.ts#L21"
+									"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/single-threshold-promise.ts#L21"
 								}
 							]
 						}
@@ -2758,7 +2760,7 @@
 							"fileName": "single-threshold-promise.ts",
 							"line": 25,
 							"character": 12,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/single-threshold-promise.ts#L25"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/single-threshold-promise.ts#L25"
 						}
 					],
 					"type": {
@@ -2786,7 +2788,7 @@
 							"fileName": "single-threshold-promise.ts",
 							"line": 31,
 							"character": 12,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/single-threshold-promise.ts#L31"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/single-threshold-promise.ts#L31"
 						}
 					],
 					"signatures": [
@@ -2814,7 +2816,7 @@
 							"fileName": "single-threshold-promise.ts",
 							"line": 36,
 							"character": 8,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/single-threshold-promise.ts#L36"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/single-threshold-promise.ts#L36"
 						}
 					],
 					"signatures": [
@@ -2868,7 +2870,7 @@
 					"fileName": "single-threshold-promise.ts",
 					"line": 20,
 					"character": 13,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/single-threshold-promise.ts#L20"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/single-threshold-promise.ts#L20"
 				}
 			],
 			"typeParameters": [
@@ -2918,7 +2920,7 @@
 							"fileName": "singleton/async.ts",
 							"line": 29,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/singleton/async.ts#L29"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L29"
 						}
 					],
 					"signatures": [
@@ -2985,7 +2987,7 @@
 							"fileName": "singleton/async.ts",
 							"line": 22,
 							"character": 12,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/singleton/async.ts#L22"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L22"
 						}
 					],
 					"type": {
@@ -3010,7 +3012,7 @@
 											"fileName": "singleton/async.ts",
 											"line": 24,
 											"character": 4,
-											"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/singleton/async.ts#L24"
+											"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L24"
 										}
 									],
 									"type": {
@@ -3035,7 +3037,7 @@
 																"fileName": "singleton/async.ts",
 																"line": 24,
 																"character": 63,
-																"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/singleton/async.ts#L24"
+																"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L24"
 															}
 														],
 														"type": {
@@ -3051,7 +3053,7 @@
 																		"fileName": "singleton/async.ts",
 																		"line": 24,
 																		"character": 71,
-																		"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/singleton/async.ts#L24"
+																		"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L24"
 																	}
 																],
 																"signatures": [
@@ -3096,7 +3098,7 @@
 																"fileName": "singleton/async.ts",
 																"line": 24,
 																"character": 17,
-																"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/singleton/async.ts#L24"
+																"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L24"
 															}
 														],
 														"type": {
@@ -3112,7 +3114,7 @@
 																		"fileName": "singleton/async.ts",
 																		"line": 24,
 																		"character": 26,
-																		"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/singleton/async.ts#L24"
+																		"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L24"
 																	}
 																],
 																"signatures": [
@@ -3178,7 +3180,7 @@
 														"fileName": "singleton/async.ts",
 														"line": 24,
 														"character": 15,
-														"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/singleton/async.ts#L24"
+														"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L24"
 													}
 												]
 											}
@@ -3198,7 +3200,7 @@
 											"fileName": "singleton/async.ts",
 											"line": 23,
 											"character": 4,
-											"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/singleton/async.ts#L23"
+											"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L23"
 										}
 									],
 									"type": {
@@ -3222,7 +3224,7 @@
 									"fileName": "singleton/async.ts",
 									"line": 22,
 									"character": 20,
-									"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/singleton/async.ts#L22"
+									"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L22"
 								}
 							]
 						}
@@ -3242,7 +3244,7 @@
 							"fileName": "singleton/async.ts",
 							"line": 27,
 							"character": 12,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/singleton/async.ts#L27"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L27"
 						}
 					],
 					"type": {
@@ -3270,7 +3272,7 @@
 							"fileName": "singleton/async.ts",
 							"line": 41,
 							"character": 12,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/singleton/async.ts#L41"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L41"
 						}
 					],
 					"signatures": [
@@ -3307,7 +3309,7 @@
 															"fileName": "singleton/async.ts",
 															"line": 41,
 															"character": 38,
-															"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/singleton/async.ts#L41"
+															"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L41"
 														}
 													],
 													"type": {
@@ -3331,7 +3333,7 @@
 													"fileName": "singleton/async.ts",
 													"line": 41,
 													"character": 36,
-													"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/singleton/async.ts#L41"
+													"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L41"
 												}
 											]
 										}
@@ -3356,7 +3358,7 @@
 							"fileName": "singleton/async.ts",
 							"line": 79,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/singleton/async.ts#L79"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L79"
 						}
 					],
 					"signatures": [
@@ -3408,7 +3410,7 @@
 							"fileName": "singleton/async.ts",
 							"line": 36,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/singleton/async.ts#L36"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L36"
 						}
 					],
 					"signatures": [
@@ -3444,7 +3446,7 @@
 							"fileName": "singleton/async.ts",
 							"line": 53,
 							"character": 8,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/singleton/async.ts#L53"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L53"
 						}
 					],
 					"signatures": [
@@ -3514,7 +3516,7 @@
 					"fileName": "singleton/async.ts",
 					"line": 21,
 					"character": 13,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/singleton/async.ts#L21"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L21"
 				}
 			],
 			"typeParameters": [
@@ -3566,7 +3568,7 @@
 							"fileName": "time-util.ts",
 							"line": 90,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L90"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L90"
 						}
 					],
 					"signatures": [
@@ -3626,7 +3628,7 @@
 															"fileName": "time-util.ts",
 															"line": 90,
 															"character": 76,
-															"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L90"
+															"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L90"
 														}
 													],
 													"type": {
@@ -3647,7 +3649,7 @@
 															"fileName": "time-util.ts",
 															"line": 90,
 															"character": 22,
-															"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L90"
+															"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L90"
 														}
 													],
 													"type": {
@@ -3704,7 +3706,7 @@
 															"fileName": "time-util.ts",
 															"line": 90,
 															"character": 61,
-															"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L90"
+															"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L90"
 														}
 													],
 													"type": {
@@ -3728,7 +3730,7 @@
 													"fileName": "time-util.ts",
 													"line": 90,
 													"character": 20,
-													"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L90"
+													"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L90"
 												}
 											]
 										}
@@ -3755,7 +3757,7 @@
 							"fileName": "time-util.ts",
 							"line": 39,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L39"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L39"
 						}
 					],
 					"signatures": [
@@ -3821,7 +3823,7 @@
 							"fileName": "time-util.ts",
 							"line": 52,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L52"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L52"
 						}
 					],
 					"signatures": [
@@ -3887,7 +3889,7 @@
 							"fileName": "time-util.ts",
 							"line": 26,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L26"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L26"
 						}
 					],
 					"signatures": [
@@ -3940,7 +3942,7 @@
 							"fileName": "time-util.ts",
 							"line": 76,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L76"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L76"
 						}
 					],
 					"signatures": [
@@ -4006,7 +4008,7 @@
 							"fileName": "time-util.ts",
 							"line": 64,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L64"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L64"
 						}
 					],
 					"signatures": [
@@ -4086,7 +4088,7 @@
 					"fileName": "time-util.ts",
 					"line": 19,
 					"character": 13,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L19"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L19"
 				}
 			]
 		},
@@ -4108,7 +4110,7 @@
 							"fileName": "joi-util.ts",
 							"line": 5,
 							"character": 2,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/joi-util.ts#L5"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/joi-util.ts#L5"
 						}
 					],
 					"signatures": [
@@ -4164,7 +4166,7 @@
 					"fileName": "joi-util.ts",
 					"line": 4,
 					"character": 17,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/joi-util.ts#L4"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/joi-util.ts#L4"
 				}
 			]
 		},
@@ -4179,7 +4181,7 @@
 					"fileName": "class-factory-pattern.ts",
 					"line": 1,
 					"character": 12,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/class-factory-pattern.ts#L1"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/class-factory-pattern.ts#L1"
 				}
 			],
 			"typeParameters": [
@@ -4208,7 +4210,7 @@
 							"fileName": "class-factory-pattern.ts",
 							"line": 1,
 							"character": 36,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/class-factory-pattern.ts#L1"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/class-factory-pattern.ts#L1"
 						}
 					],
 					"signatures": [
@@ -4247,7 +4249,7 @@
 														"fileName": "class-factory-pattern.ts",
 														"line": 1,
 														"character": 60,
-														"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/class-factory-pattern.ts#L1"
+														"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/class-factory-pattern.ts#L1"
 													}
 												],
 												"signatures": [
@@ -4315,7 +4317,7 @@
 					"fileName": "time-util.ts",
 					"line": 17,
 					"character": 12,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L17"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L17"
 				}
 			],
 			"type": {
@@ -4344,7 +4346,7 @@
 					"fileName": "entity-cache/memory.ts",
 					"line": 5,
 					"character": 12,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L5"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L5"
 				}
 			],
 			"typeParameters": [
@@ -4376,7 +4378,7 @@
 									"fileName": "entity-cache/memory.ts",
 									"line": 5,
 									"character": 48,
-									"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L5"
+									"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L5"
 								}
 							],
 							"type": {
@@ -4396,7 +4398,7 @@
 									"fileName": "entity-cache/memory.ts",
 									"line": 5,
 									"character": 36,
-									"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L5"
+									"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L5"
 								}
 							],
 							"type": {
@@ -4419,7 +4421,7 @@
 							"fileName": "entity-cache/memory.ts",
 							"line": 5,
 							"character": 34,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L5"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L5"
 						}
 					]
 				}
@@ -4436,7 +4438,7 @@
 					"fileName": "entity-cache/memory.ts",
 					"line": 7,
 					"character": 12,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L7"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L7"
 				}
 			],
 			"typeParameters": [
@@ -4461,7 +4463,7 @@
 							"fileName": "entity-cache/memory.ts",
 							"line": 7,
 							"character": 42,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L7"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L7"
 						}
 					],
 					"signatures": [
@@ -4512,7 +4514,7 @@
 					"fileName": "entity-cache/memory.ts",
 					"line": 9,
 					"character": 12,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L9"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L9"
 				}
 			],
 			"type": {
@@ -4535,7 +4537,7 @@
 									"fileName": "entity-cache/memory.ts",
 									"line": 9,
 									"character": 40,
-									"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L9"
+									"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L9"
 								}
 							],
 							"type": {
@@ -4551,7 +4553,7 @@
 											"fileName": "entity-cache/memory.ts",
 											"line": 9,
 											"character": 53,
-											"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L9"
+											"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L9"
 										}
 									],
 									"signatures": [
@@ -4584,7 +4586,7 @@
 							"fileName": "entity-cache/memory.ts",
 							"line": 9,
 							"character": 38,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L9"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L9"
 						}
 					]
 				}
@@ -4601,7 +4603,7 @@
 					"fileName": "object-util.ts",
 					"line": 4,
 					"character": 12,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/object-util.ts#L4"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L4"
 				}
 			],
 			"type": {
@@ -4617,7 +4619,7 @@
 							"fileName": "object-util.ts",
 							"line": 4,
 							"character": 25,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/object-util.ts#L4"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L4"
 						}
 					],
 					"indexSignature": {
@@ -4657,7 +4659,7 @@
 					"fileName": "joi-util.ts",
 					"line": 8,
 					"character": 12,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/joi-util.ts#L8"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/joi-util.ts#L8"
 				}
 			],
 			"type": {
@@ -4691,7 +4693,7 @@
 											"fileName": "joi-util.ts",
 											"line": 9,
 											"character": 2,
-											"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/joi-util.ts#L9"
+											"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/joi-util.ts#L9"
 										}
 									],
 									"type": {
@@ -4714,7 +4716,7 @@
 									"fileName": "joi-util.ts",
 									"line": 8,
 									"character": 49,
-									"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/joi-util.ts#L8"
+									"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/joi-util.ts#L8"
 								}
 							]
 						}
@@ -4735,7 +4737,7 @@
 					"fileName": "regex-util.ts",
 					"line": 1,
 					"character": 13,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/regex-util.ts#L1"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/regex-util.ts#L1"
 				}
 			],
 			"type": {
@@ -4758,7 +4760,7 @@
 									"fileName": "regex-util.ts",
 									"line": 10,
 									"character": 2,
-									"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/regex-util.ts#L10"
+									"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/regex-util.ts#L10"
 								}
 							],
 							"type": {
@@ -4774,7 +4776,7 @@
 											"fileName": "regex-util.ts",
 											"line": 10,
 											"character": 8,
-											"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/regex-util.ts#L10"
+											"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/regex-util.ts#L10"
 										}
 									],
 									"signatures": [
@@ -4839,7 +4841,7 @@
 							"fileName": "regex-util.ts",
 							"line": 1,
 							"character": 25,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/regex-util.ts#L1"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/regex-util.ts#L1"
 						}
 					]
 				}
@@ -4859,7 +4861,7 @@
 					"fileName": "string-util.ts",
 					"line": 1,
 					"character": 13,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/string-util.ts#L1"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/string-util.ts#L1"
 				}
 			],
 			"type": {
@@ -4882,7 +4884,7 @@
 									"fileName": "string-util.ts",
 									"line": 8,
 									"character": 2,
-									"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/string-util.ts#L8"
+									"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/string-util.ts#L8"
 								}
 							],
 							"type": {
@@ -4898,7 +4900,7 @@
 											"fileName": "string-util.ts",
 											"line": 8,
 											"character": 16,
-											"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/string-util.ts#L8"
+											"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/string-util.ts#L8"
 										}
 									],
 									"signatures": [
@@ -4955,7 +4957,7 @@
 							"fileName": "string-util.ts",
 							"line": 1,
 							"character": 26,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/string-util.ts#L1"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/string-util.ts#L1"
 						}
 					]
 				}
@@ -4975,7 +4977,7 @@
 					"fileName": "type-util.ts",
 					"line": 1,
 					"character": 13,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/type-util.ts#L1"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/type-util.ts#L1"
 				}
 			],
 			"type": {
@@ -4998,7 +5000,7 @@
 									"fileName": "type-util.ts",
 									"line": 51,
 									"character": 2,
-									"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/type-util.ts#L51"
+									"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/type-util.ts#L51"
 								}
 							],
 							"type": {
@@ -5014,7 +5016,7 @@
 											"fileName": "type-util.ts",
 											"line": 51,
 											"character": 19,
-											"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/type-util.ts#L51"
+											"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/type-util.ts#L51"
 										}
 									],
 									"signatures": [
@@ -5094,7 +5096,7 @@
 									"fileName": "type-util.ts",
 									"line": 26,
 									"character": 2,
-									"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/type-util.ts#L26"
+									"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/type-util.ts#L26"
 								}
 							],
 							"type": {
@@ -5110,7 +5112,7 @@
 											"fileName": "type-util.ts",
 											"line": 26,
 											"character": 21,
-											"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/type-util.ts#L26"
+											"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/type-util.ts#L26"
 										}
 									],
 									"signatures": [
@@ -5192,7 +5194,7 @@
 							"fileName": "type-util.ts",
 							"line": 1,
 							"character": 24,
-							"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/type-util.ts#L1"
+							"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/type-util.ts#L1"
 						}
 					]
 				}
@@ -5210,7 +5212,7 @@
 					"fileName": "class-factory-pattern.ts",
 					"line": 23,
 					"character": 13,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/class-factory-pattern.ts#L23"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/class-factory-pattern.ts#L23"
 				}
 			],
 			"signatures": [
@@ -5306,7 +5308,7 @@
 									"fileName": "class-factory-pattern.ts",
 									"line": 25,
 									"character": 4,
-									"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/class-factory-pattern.ts#L25"
+									"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/class-factory-pattern.ts#L25"
 								}
 							],
 							"signatures": [
@@ -5371,7 +5373,7 @@
 					"fileName": "express/error-handler.ts",
 					"line": 16,
 					"character": 13,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/express/error-handler.ts#L16"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/express/error-handler.ts#L16"
 				}
 			],
 			"signatures": [
@@ -5461,7 +5463,7 @@
 					"fileName": "memoize-factory.ts",
 					"line": 16,
 					"character": 13,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/memoize-factory.ts#L16"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/memoize-factory.ts#L16"
 				}
 			],
 			"signatures": [
@@ -5554,7 +5556,7 @@
 					"fileName": "singleton/pattern.ts",
 					"line": 34,
 					"character": 13,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/singleton/pattern.ts#L34"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/pattern.ts#L34"
 				}
 			],
 			"signatures": [
@@ -5654,7 +5656,7 @@
 					"fileName": "timeout.ts",
 					"line": 14,
 					"character": 13,
-					"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/timeout.ts#L14"
+					"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/timeout.ts#L14"
 				}
 			],
 			"signatures": [
@@ -5781,7 +5783,7 @@
 			"fileName": "index.ts",
 			"line": 1,
 			"character": 0,
-			"url": "https://github.com/beecode-rs/msh-util/blob/241d250/src/index.ts#L1"
+			"url": "https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/index.ts#L1"
 		}
 	]
 }

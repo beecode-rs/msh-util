@@ -1,4 +1,4 @@
-[@beecode/msh-util](../README.md) / [Exports](../modules.md) / ObjectUtil
+[@beecode/msh-util](../README.md) / ObjectUtil
 
 # Class: ObjectUtil
 
@@ -35,7 +35,7 @@ Deep clone object. Returned object will have no references to the object passed 
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends [`ObjectType`](../modules.md#objecttype) |
+| `T` | extends [`ObjectType`](../README.md#objecttype) |
 
 #### Parameters
 
@@ -49,7 +49,7 @@ Deep clone object. Returned object will have no references to the object passed 
 
 #### Defined in
 
-[object-util.ts:13](https://github.com/beecode-rs/msh-util/blob/241d250/src/object-util.ts#L13)
+[object-util.ts:13](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L13)
 
 ___
 
@@ -72,7 +72,7 @@ We are converting objects to string (or null or undefined) and comparing if the 
 
 #### Defined in
 
-[object-util.ts:82](https://github.com/beecode-rs/msh-util/blob/241d250/src/object-util.ts#L82)
+[object-util.ts:82](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L82)
 
 ___
 
@@ -92,7 +92,7 @@ console.log(new ObjectUtil().deepNullToUndefined({ a: null, b: { c: null } })) /
 
 | Name | Type |
 | :------ | :------ |
-| `T` | extends [`ObjectType`](../modules.md#objecttype) |
+| `T` | extends [`ObjectType`](../README.md#objecttype) |
 
 #### Parameters
 
@@ -106,7 +106,7 @@ console.log(new ObjectUtil().deepNullToUndefined({ a: null, b: { c: null } })) /
 
 #### Defined in
 
-[object-util.ts:94](https://github.com/beecode-rs/msh-util/blob/241d250/src/object-util.ts#L94)
+[object-util.ts:94](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L94)
 
 ___
 
@@ -136,7 +136,7 @@ Pick only properties from the property list. It is only allowed to pick properti
 
 #### Defined in
 
-[object-util.ts:25](https://github.com/beecode-rs/msh-util/blob/241d250/src/object-util.ts#L25)
+[object-util.ts:25](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L25)
 
 ___
 
@@ -158,7 +158,7 @@ Pick objects properties using keys from the second object.
 | Name | Type |
 | :------ | :------ |
 | `obj` | `T` |
-| `objWithPickKeys` | [`ObjectType`](../modules.md#objecttype) \| `Partial`<`T`\> |
+| `objWithPickKeys` | [`ObjectType`](../README.md#objecttype) \| `Partial`<`T`\> |
 
 #### Returns
 
@@ -166,7 +166,7 @@ Pick objects properties using keys from the second object.
 
 #### Defined in
 
-[object-util.ts:46](https://github.com/beecode-rs/msh-util/blob/241d250/src/object-util.ts#L46)
+[object-util.ts:46](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L46)
 
 ___
 
@@ -189,7 +189,7 @@ console.log(new ObjectUtil().stringifySortOrNullOrUndefined({ a: 1 })) // '{\n\t
 
 | Name | Type |
 | :------ | :------ |
-| `obj?` | ``null`` \| [`ObjectType`](../modules.md#objecttype) |
+| `obj?` | ``null`` \| [`ObjectType`](../README.md#objecttype) |
 
 #### Returns
 
@@ -197,4 +197,4 @@ console.log(new ObjectUtil().stringifySortOrNullOrUndefined({ a: 1 })) // '{\n\t
 
 #### Defined in
 
-[object-util.ts:63](https://github.com/beecode-rs/msh-util/blob/241d250/src/object-util.ts#L63)
+[object-util.ts:63](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L63)

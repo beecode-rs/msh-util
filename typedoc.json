@@ -1,15 +1,9 @@
 {
   "$schema": "https://typedoc.org/schema.json",
-  "entryPoints": [
-    "./src/index.ts"
-  ],
-  "exclude": [
-    "node_modules/**/*",
-    "**/*.test.ts"
-  ],
-  "out": "resource/doc/api",
+  "entryPoints": ["./src/index.ts"],
+  "exclude": ["node_modules/**/*", "**/*.test.ts"],
   "json": "resource/doc/api/docs.json",
-  "plugin": [
-    "typedoc-plugin-markdown"
-  ]
+  "out": "resource/doc/api",
+  "plugin": ["typedoc-plugin-markdown"],
+  "readme": "none"
 }

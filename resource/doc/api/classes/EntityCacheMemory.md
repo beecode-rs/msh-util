@@ -1,4 +1,4 @@
-[@beecode/msh-util](../README.md) / [Exports](../modules.md) / EntityCacheMemory
+[@beecode/msh-util](../README.md) / EntityCacheMemory
 
 # Class: EntityCacheMemory<ENTITY\>
 
@@ -51,17 +51,17 @@
 
 #### Defined in
 
-[entity-cache/memory.ts:12](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L12)
+[entity-cache/memory.ts:12](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L12)
 
 ___
 
 ### \_subject
 
-• `Protected` **\_subject**: `Subject`<[`EntityCache`](../modules.md#entitycache)<`ENTITY`\>\>
+• `Protected` **\_subject**: `Subject`<[`EntityCache`](../README.md#entitycache)<`ENTITY`\>\>
 
 #### Defined in
 
-[entity-cache/memory.ts:13](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L13)
+[entity-cache/memory.ts:13](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L13)
 
 ## Methods
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[entity-cache/memory.ts:40](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L40)
+[entity-cache/memory.ts:40](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L40)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[entity-cache/memory.ts:47](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L47)
+[entity-cache/memory.ts:47](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L47)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[entity-cache/memory.ts:15](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L15)
+[entity-cache/memory.ts:15](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L15)
 
 ___
 
@@ -138,7 +138,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `params` | [`EntityCache`](../modules.md#entitycache)<`ENTITY`\> |
+| `params` | [`EntityCache`](../README.md#entitycache)<`ENTITY`\> |
 | `timeoutOffsetMs?` | `number` |
 
 #### Returns
@@ -147,25 +147,25 @@ ___
 
 #### Defined in
 
-[entity-cache/memory.ts:29](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L29)
+[entity-cache/memory.ts:29](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L29)
 
 ___
 
 ### subscribeById
 
-▸ **subscribeById**(`id`, `callback`): [`EntityCacheSubscription`](../modules.md#entitycachesubscription)
+▸ **subscribeById**(`id`, `callback`): [`EntityCacheSubscription`](../README.md#entitycachesubscription)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `id` | `string` |
-| `callback` | (`par`: [`EntityCache`](../modules.md#entitycache)<`ENTITY`\>) => `void` |
+| `callback` | (`par`: [`EntityCache`](../README.md#entitycache)<`ENTITY`\>) => `void` |
 
 #### Returns
 
-[`EntityCacheSubscription`](../modules.md#entitycachesubscription)
+[`EntityCacheSubscription`](../README.md#entitycachesubscription)
 
 #### Defined in
 
-[entity-cache/memory.ts:36](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L36)
+[entity-cache/memory.ts:36](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L36)
