@@ -6,8 +6,8 @@ export abstract class EntityCachePromiseService<ENTITY, ID extends string | numb
   protected abstract readonly _timeoutOffsetMs?: number
   protected abstract _entityAsync(id: ID): Promise<ENTITY>
 
-  protected constructor(dao: EntityCacheMemory<ENTITY>) {
-    this._dao = dao
+  protected constructor(dao?: EntityCacheMemory<ENTITY>) {
+    this._dao = dao ?? new EntityCacheMemory<ENTITY>()
   }
 
   /**

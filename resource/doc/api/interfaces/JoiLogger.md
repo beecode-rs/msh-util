@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[joi-util.ts:5](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/joi-util.ts#L5)
+[joi-util.ts:5](https://github.com/beecode-rs/msh-util/blob/241d250/src/joi-util.ts#L5)

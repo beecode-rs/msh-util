@@ -8,7 +8,7 @@ export * from 'src/singleton/async'
 
 export * from 'src/singleton/pattern'
 
-export * from 'src/factory-pattern'
+export * from 'src/class-factory-pattern'
 
 export * from 'src/joi-util'
 

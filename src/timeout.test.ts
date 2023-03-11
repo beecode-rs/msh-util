@@ -1,4 +1,4 @@
-import { timeout } from './timeout'
+import { timeout } from 'src/timeout'
 
 describe('timeout', () => {
   const fn_one = jest.fn()

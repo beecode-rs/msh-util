@@ -1,11 +1,12 @@
 export declare enum DurationUnit {
-    SECOND = "second",
-    MINUTE = "minute",
-    HOUR = "hour",
-    DAY = "day",
-    WEEK = "week",
-    MONTH = "month",
-    YEAR = "year"
+    MILLISECOND = "MILLISECOND",
+    SECOND = "SECOND",
+    MINUTE = "MINUTE",
+    HOUR = "HOUR",
+    DAY = "DAY",
+    WEEK = "WEEK",
+    MONTH = "MONTH",
+    YEAR = "YEAR"
 }
 export type DurationUnitType = `${DurationUnit}`;
 export declare class TimeUtil {
@@ -61,11 +62,11 @@ export declare class TimeUtil {
      * @example
      * // timeUtil.now().toISOString() === 2023-03-08T19:45:01.991Z
      * const timeUtil = new TimeUtil()
-     * console.log(timeUtil.addToDate({date: timeUtil.now(), unit: 'day', value: 1 }).toISOString()) // 2023-03-09T19:45:01.991Z
+     * console.log(timeUtil.addToDate({date: timeUtil.now(), unit: 'DAY', value: 1 }).toISOString()) // 2023-03-09T19:45:01.991Z
      * console.log(timeUtil.addToDate({date: timeUtil.now(), unit: DurationUnit.MONTH, value: -1 }).toISOString()) //2023-02-08T19:45:01.991Z
      */
     addToDate(params: {
-        unit: DurationUnitType;
+        unit: DurationUnitType | DurationUnit;
         value: number;
         date: Date;
     }): Date;

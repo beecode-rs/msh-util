@@ -1,4 +1,4 @@
-import { singletonPattern } from './pattern'
+import { singletonPattern } from 'src/singleton/pattern'
 
 describe('singletonPattern', () => {
   it('should call factory function only once', () => {

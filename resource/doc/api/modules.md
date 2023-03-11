@@ -41,8 +41,8 @@
 
 ### Functions
 
+- [classFactoryPattern](modules.md#classfactorypattern)
 - [expressErrorHandler](modules.md#expresserrorhandler)
-- [factoryPattern](modules.md#factorypattern)
 - [memoizeFactory](modules.md#memoizefactory)
 - [singletonPattern](modules.md#singletonpattern)
 - [timeout](modules.md#timeout)
@@ -71,7 +71,7 @@
 
 #### Defined in
 
-[factory-pattern.ts:1](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/factory-pattern.ts#L1)
+[class-factory-pattern.ts:1](https://github.com/beecode-rs/msh-util/blob/241d250/src/class-factory-pattern.ts#L1)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[time-util.ts:13](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/time-util.ts#L13)
+[time-util.ts:17](https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L17)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[entity-cache/memory.ts:5](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/entity-cache/memory.ts#L5)
+[entity-cache/memory.ts:5](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L5)
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-[entity-cache/memory.ts:7](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/entity-cache/memory.ts#L7)
+[entity-cache/memory.ts:7](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L7)
 
 ___
 
@@ -150,7 +150,7 @@ ___
 
 #### Defined in
 
-[entity-cache/memory.ts:9](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/entity-cache/memory.ts#L9)
+[entity-cache/memory.ts:9](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L9)
 
 ___
 
@@ -164,7 +164,7 @@ ___
 
 #### Defined in
 
-[object-util.ts:4](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/object-util.ts#L4)
+[object-util.ts:4](https://github.com/beecode-rs/msh-util/blob/241d250/src/object-util.ts#L4)
 
 ___
 
@@ -174,7 +174,7 @@ ___
 
 #### Defined in
 
-[joi-util.ts:8](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/joi-util.ts#L8)
+[joi-util.ts:8](https://github.com/beecode-rs/msh-util/blob/241d250/src/joi-util.ts#L8)
 
 ## Variables
 
@@ -190,7 +190,7 @@ ___
 
 #### Defined in
 
-[regex-util.ts:1](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/regex-util.ts#L1)
+[regex-util.ts:1](https://github.com/beecode-rs/msh-util/blob/241d250/src/regex-util.ts#L1)
 
 ___
 
@@ -206,7 +206,7 @@ ___
 
 #### Defined in
 
-[string-util.ts:1](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/string-util.ts#L1)
+[string-util.ts:1](https://github.com/beecode-rs/msh-util/blob/241d250/src/string-util.ts#L1)
 
 ___
 
@@ -223,50 +223,33 @@ ___
 
 #### Defined in
 
-[type-util.ts:1](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/type-util.ts#L1)
+[type-util.ts:1](https://github.com/beecode-rs/msh-util/blob/241d250/src/type-util.ts#L1)
 
 ## Functions
 
-### expressErrorHandler
+### classFactoryPattern
 
-▸ **expressErrorHandler**(`_target`, `_key`, `descriptor`): `any`
+▸ **classFactoryPattern**<`C`\>(`classType`): (...`args`: `ConstructorParameters`<`C`\>) => `InstanceType`<`C`\>
 
-Wrap async express http request end return promise or call next on catch
+This is a wrapper that easily converts class constructor call (`new className(..constructorParams)`) into function call (`classNameFactory(..constructorParams)`)
 
 **`Example`**
 
 ```ts
-export class RootController {
- /@ErrorHandler
-  async login(req: Request, res: Response): Promise<void> {
-    const { username, password } = validationUtil().sanitize(req.body, postLoginBodySchema)
-    const result = await authorizationUseCase.login({ username, password })
-    res.json(result)
+export class SomeClass {
+  protected _a: string
+
+  constructor(params: { a: string }) {
+    const { a } = params
+    this._a = a
   }
 }
+
+export const someClassFactory = classFactoryPattern(SomeClass)
+
+// using
+const someClassInstance = someClassFactory({ a: 'test' })
 ```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `_target` | `any` |
-| `_key` | `string` |
-| `descriptor` | `TypedPropertyDescriptor`<`any`\> |
-
-#### Returns
-
-`any`
-
-#### Defined in
-
-[express/error-handler.ts:16](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/express/error-handler.ts#L16)
-
-___
-
-### factoryPattern
-
-▸ **factoryPattern**<`C`\>(`classType`): (...`args`: `ConstructorParameters`<`C`\>) => `InstanceType`<`C`\>
 
 #### Type parameters
 
@@ -298,7 +281,44 @@ ___
 
 #### Defined in
 
-[factory-pattern.ts:3](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/factory-pattern.ts#L3)
+[class-factory-pattern.ts:23](https://github.com/beecode-rs/msh-util/blob/241d250/src/class-factory-pattern.ts#L23)
+
+___
+
+### expressErrorHandler
+
+▸ **expressErrorHandler**(`_target`, `_key`, `descriptor`): `any`
+
+Wrap async express http request end return promise or call next on catch
+
+**`Example`**
+
+```ts
+export class RootController {
+ /@expressErrorHandler
+  async login(req: Request, res: Response): Promise<void> {
+    const { username, password } = validationUtil().sanitize(req.body, postLoginBodySchema)
+    const result = await authorizationUseCase.login({ username, password })
+    res.json(result)
+  }
+}
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `_target` | `any` |
+| `_key` | `string` |
+| `descriptor` | `TypedPropertyDescriptor`<`any`\> |
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[express/error-handler.ts:16](https://github.com/beecode-rs/msh-util/blob/241d250/src/express/error-handler.ts#L16)
 
 ___
 
@@ -337,7 +357,7 @@ sumTwoNumbersMemoize(5 + 10) // 15
 
 #### Defined in
 
-[memoize-factory.ts:16](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/memoize-factory.ts#L16)
+[memoize-factory.ts:16](https://github.com/beecode-rs/msh-util/blob/241d250/src/memoize-factory.ts#L16)
 
 ___
 
@@ -396,7 +416,7 @@ Function result that returns cached value.
 
 #### Defined in
 
-[singleton/pattern.ts:34](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/singleton/pattern.ts#L34)
+[singleton/pattern.ts:34](https://github.com/beecode-rs/msh-util/blob/241d250/src/singleton/pattern.ts#L34)
 
 ___
 
@@ -428,4 +448,4 @@ const lightBlink = (): void => {
 
 #### Defined in
 
-[timeout.ts:14](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/timeout.ts#L14)
+[timeout.ts:14](https://github.com/beecode-rs/msh-util/blob/241d250/src/timeout.ts#L14)

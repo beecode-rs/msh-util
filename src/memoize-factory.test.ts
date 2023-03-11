@@ -1,4 +1,4 @@
-import { memoizeFactory } from './memoize-factory'
+import { memoizeFactory } from 'src/memoize-factory'
 
 describe('memoizeFactory', () => {
   const fake_factoryFn = jest.fn()

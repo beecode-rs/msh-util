@@ -1,4 +1,4 @@
-import { SingleThresholdPromise } from './single-threshold-promise'
+import { SingleThresholdPromise } from 'src/single-threshold-promise'
 import { timeout } from 'src/timeout'
 
 describe('SingleThresholdPromise', () => {

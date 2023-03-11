@@ -1,4 +1,4 @@
-import { regexUtil } from './regex-util'
+import { regexUtil } from 'src/regex-util'
 
 describe('regexUtil', () => {
   it.each([
@@ -13,11 +13,11 @@ describe('regexUtil', () => {
     ['02f243d8-3225-460b-9df7-30380d96971d'],
     ['f27571d4-8c4a-4c9a-8899-932d0fa7a68c'],
     ['b87a9f9c-c7c2-4aa2-85af-87221cebce9d'],
-  ])('should pass regex expression check %s', (uuidString) => {
+  ])('%#. should pass regex expression check %s', (uuidString) => {
     expect(new RegExp(regexUtil.uuid()).test(uuidString)).toBeTruthy()
   })
   it.each([['a'], ['test'], [123], [{}], [{ uuid: '3510e9f1-08f6-4c5a-86a9-66e91c6093b7' }], [new Date()]])(
-    'should pass regex expression check %s',
+    '%#. should pass regex expression check %s',
     (uuidString) => {
       expect(new RegExp(regexUtil.uuid()).test(uuidString.toString())).toBeFalsy()
     }
