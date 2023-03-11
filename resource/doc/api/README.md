@@ -1,46 +1,451 @@
-@beecode/msh-util / [Exports](modules.md)
+@beecode/msh-util
 
-[![Build Status](https://beecode.semaphoreci.com/badges/msh-node-util/branches/main.svg?style=shields)](https://beecode.semaphoreci.com/projects/msh-node-util)
-[![codecov](https://codecov.io/gh/beecode-rs/msh-node-util/branch/main/graph/badge.svg?token=fHc0YaxEiB)](https://codecov.io/gh/beecode-rs/msh-node-util)
-[![GitHub license](https://img.shields.io/github/license/beecode-rs/msh-node-util)](https://github.com/beecode-rs/msh-node-util/blob/main/LICENSE)  
-[![NPM](https://nodei.co/npm/@beecode/msh-node-util.png)](https://nodei.co/npm/@beecode/msh-node-util)
+# @beecode/msh-util
 
-# msh-node-util
+## Table of contents
 
-Micro-service helper: node error
+### Enumerations
 
-This project is intended to be used in typescript project.
+- [DurationUnit](enums/DurationUnit.md)
 
-<!-- toc -->
+### Classes
 
-- [Install](#install)
-- [Diagram](#diagram)
-- [Usage](#usage)
-  * [joiUtil](#joiutil)
+- [EntityCacheMemory](classes/EntityCacheMemory.md)
+- [EntityCachePromiseService](classes/EntityCachePromiseService.md)
+- [ErrorWithPayload](classes/ErrorWithPayload.md)
+- [JoiUtil](classes/JoiUtil.md)
+- [ObjectUtil](classes/ObjectUtil.md)
+- [SingleThresholdPromise](classes/SingleThresholdPromise.md)
+- [SingletonAsync](classes/SingletonAsync.md)
+- [TimeUtil](classes/TimeUtil.md)
 
-<!-- tocstop -->
+### Interfaces
 
-## Install
+- [JoiLogger](interfaces/JoiLogger.md)
 
-`npm i @beecode/msh-node-util`
+### Type Aliases
 
-## Diagram
+- [ClassType](README.md#classtype)
+- [DurationUnitType](README.md#durationunittype)
+- [EntityCache](README.md#entitycache)
+- [EntityCacheCallBack](README.md#entitycachecallback)
+- [EntityCacheSubscription](README.md#entitycachesubscription)
+- [ObjectType](README.md#objecttype)
+- [joiUtilOptions](README.md#joiutiloptions)
 
-![vision-diagram](resource/doc/vision/vision.svg)
+### Variables
 
-## Usage
+- [regexUtil](README.md#regexutil)
+- [stringUtil](README.md#stringutil)
+- [typeUtil](README.md#typeutil)
 
-### joiUtil
+### Functions
 
-```typescript
-import { joiUtil } from '@beecode/msh-node-util/lib/joi-util'
-import { ObjectSchema, Schema } from 'joi'
-import { logger } from 'src/util/logger'
+- [classFactoryPattern](README.md#classfactorypattern)
+- [expressErrorHandler](README.md#expresserrorhandler)
+- [memoizeFactory](README.md#memoizefactory)
+- [singletonPattern](README.md#singletonpattern)
+- [timeout](README.md#timeout)
 
-export const validationUtil = {
-  sanitize: <T>(objectToValidate: Partial<T> | any, schema: Schema<T> | ObjectSchema<T>): T =>
-    joiUtil.sanitize(objectToValidate, schema, { logger }),
-  validate: <T>(objectToValidate: Partial<T> | any, schema: Schema<T> | ObjectSchema<T>): T =>
-    joiUtil.validate(objectToValidate, schema, { logger }),
+## Type Aliases
+
+### ClassType
+
+Ƭ **ClassType**<`T`\>: (...`args`: `T` extends (...`args`: `P`) => `any` ? `P` : `never`[]) => `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | `object` |
+
+#### Type declaration
+
+• (`...args`)
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...args` | `T` extends (...`args`: `P`) => `any` ? `P` : `never`[] |
+
+#### Defined in
+
+[class-factory-pattern.ts:1](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/class-factory-pattern.ts#L1)
+
+___
+
+### DurationUnitType
+
+Ƭ **DurationUnitType**: \`${DurationUnit}\`
+
+#### Defined in
+
+[time-util.ts:17](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L17)
+
+___
+
+### EntityCache
+
+Ƭ **EntityCache**<`ENTITY`\>: `Object`
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `ENTITY` |
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `entity` | `ENTITY` |
+| `id` | `string` |
+
+#### Defined in
+
+[entity-cache/memory.ts:5](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L5)
+
+___
+
+### EntityCacheCallBack
+
+Ƭ **EntityCacheCallBack**<`ENTITY`\>: (`cbParams`: [`EntityCache`](README.md#entitycache)<`ENTITY`\>) => `void`
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `ENTITY` |
+
+#### Type declaration
+
+▸ (`cbParams`): `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `cbParams` | [`EntityCache`](README.md#entitycache)<`ENTITY`\> |
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[entity-cache/memory.ts:7](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L7)
+
+___
+
+### EntityCacheSubscription
+
+Ƭ **EntityCacheSubscription**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `unsubscribe` | () => `void` |
+
+#### Defined in
+
+[entity-cache/memory.ts:9](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L9)
+
+___
+
+### ObjectType
+
+Ƭ **ObjectType**: `Object`
+
+#### Index signature
+
+▪ [k: `string`]: `any`
+
+#### Defined in
+
+[object-util.ts:4](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L4)
+
+___
+
+### joiUtilOptions
+
+Ƭ **joiUtilOptions**: `ValidationOptions` & { `logger?`: [`JoiLogger`](interfaces/JoiLogger.md)  }
+
+#### Defined in
+
+[joi-util.ts:8](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/joi-util.ts#L8)
+
+## Variables
+
+### regexUtil
+
+• `Const` **regexUtil**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `uuid` | () => `string` |
+
+#### Defined in
+
+[regex-util.ts:1](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/regex-util.ts#L1)
+
+___
+
+### stringUtil
+
+• `Const` **stringUtil**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `generateUUID` | () => `string` |
+
+#### Defined in
+
+[string-util.ts:1](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/string-util.ts#L1)
+
+___
+
+### typeUtil
+
+• `Const` **typeUtil**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `exhaustiveError` | (`message`: `string`, `_`: `never`) => `Error` |
+| `exhaustiveMessage` | (`message`: `string`, `_`: `never`) => `string` |
+
+#### Defined in
+
+[type-util.ts:1](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/type-util.ts#L1)
+
+## Functions
+
+### classFactoryPattern
+
+▸ **classFactoryPattern**<`C`\>(`classType`): (...`args`: `ConstructorParameters`<`C`\>) => `InstanceType`<`C`\>
+
+This is a wrapper that easily converts class constructor call (`new className(..constructorParams)`) into function call (`classNameFactory(..constructorParams)`)
+
+**`Example`**
+
+```ts
+export class SomeClass {
+  protected _a: string
+
+  constructor(params: { a: string }) {
+    const { a } = params
+    this._a = a
+  }
+}
+
+export const someClassFactory = classFactoryPattern(SomeClass)
+
+// using
+const someClassInstance = someClassFactory({ a: 'test' })
+```
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `C` | extends [`ClassType`](README.md#classtype)<`object`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `classType` | `C` |
+
+#### Returns
+
+`fn`
+
+▸ (`...args`): `InstanceType`<`C`\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...args` | `ConstructorParameters`<`C`\> |
+
+##### Returns
+
+`InstanceType`<`C`\>
+
+#### Defined in
+
+[class-factory-pattern.ts:23](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/class-factory-pattern.ts#L23)
+
+___
+
+### expressErrorHandler
+
+▸ **expressErrorHandler**(`_target`, `_key`, `descriptor`): `any`
+
+Wrap async express http request end return promise or call next on catch
+
+**`Example`**
+
+```ts
+export class RootController {
+ /@expressErrorHandler
+  async login(req: Request, res: Response): Promise<void> {
+    const { username, password } = validationUtil().sanitize(req.body, postLoginBodySchema)
+    const result = await authorizationUseCase.login({ username, password })
+    res.json(result)
+  }
 }
 ```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `_target` | `any` |
+| `_key` | `string` |
+| `descriptor` | `TypedPropertyDescriptor`<`any`\> |
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[express/error-handler.ts:16](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/express/error-handler.ts#L16)
+
+___
+
+### memoizeFactory
+
+▸ **memoizeFactory**<`F`, `R`\>(`factoryFn`): `F`
+
+This is a simple implementation of memoize function that caches result against the parameter passed that are passed to the
+function so it never runs the same calculation twice.
+
+**`Example`**
+
+```ts
+export const sumTwoNumbersMemoize = memoizeFactory((a:number, b:number): number => a + b)
+
+// using
+sumTwoNumbersMemoize(5 + 10) // 15
+```
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `F` | extends `AnyFunction`<`R`\> |
+| `R` | `R` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `factoryFn` | `F` |
+
+#### Returns
+
+`F`
+
+#### Defined in
+
+[memoize-factory.ts:16](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/memoize-factory.ts#L16)
+
+___
+
+### singletonPattern
+
+▸ **singletonPattern**<`R`\>(`factoryFn`): `AnyFunctionNoParams`<`R`\>
+
+Singleton patter wrapper function
+
+**`Example`**
+
+```ts
+export class SomeClass {
+  constructor(protected _param: string){ }
+  get param(): string {
+    return this._param
+  }
+}
+export const someClassSingleton = singletonPattern((): SomeClass => {
+  return new SomeClass('some param value')
+})
+
+// using
+console.log('param: ', someClassSingleton().param) // param: some param value
+
+///////////////////////////////////////////
+// Or we can use it with simple function //
+///////////////////////////////////////////
+export const config = singletonPattern(() => {
+  return {
+    env: process.NODE_ENV,
+  } as const
+})
+
+// using
+console.log('NODE_ENV: ', config().env) // NODE_ENV: prod
+```
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `R` |
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `factoryFn` | `AnyFunctionNoParams`<`R`\> | Factory function that is used to generate value that is going to be cached and return by singleton. |
+
+#### Returns
+
+`AnyFunctionNoParams`<`R`\>
+
+Function result that returns cached value.
+
+#### Defined in
+
+[singleton/pattern.ts:34](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/pattern.ts#L34)
+
+___
+
+### timeout
+
+▸ **timeout**(`ms`): `Promise`<`void`\>
+
+**`Example`**
+
+```ts
+const lightBlink = (): void => {
+  turnLightOn()
+  timeout(3000) // wait for 3 seconds
+  turnLightOff()
+  timeout(3000) // wait for 3 seconds
+  turnLightOn()
+}
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `ms` | `number` | The time, in milliseconds that the timer should wait before the specified function or code is executed. If this parameter is omitted, a value of 0 is used, meaning execute "immediately", or more accurately, the next event cycle. |
+
+#### Returns
+
+`Promise`<`void`\>
+
+#### Defined in
+
+[timeout.ts:14](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/timeout.ts#L14)

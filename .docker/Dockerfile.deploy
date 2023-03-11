@@ -1,0 +1,14 @@
+FROM bc-msh-util:latest
+
+ARG VERSION
+ARG NPM_TOKEN
+ARG CI
+ARG DEPLOY_CHANNEL
+
+ENV CI=${CI}
+ENV NPM_TOKEN=${NPM_TOKEN}
+
+RUN npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}" && \
+    npm run bump-version -- $VERSION-$DEPLOY_CHANNEL && \
+    git tag v$VERSION-$DEPLOY_CHANNEL && \
+    git push origin --tags
