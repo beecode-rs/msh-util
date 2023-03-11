@@ -1,4 +1,4 @@
-import { ObjectUtil } from './object-util'
+import { ObjectUtil } from 'src/object-util'
 
 describe('objectUtil', () => {
   const objectUtil = new ObjectUtil()
@@ -35,7 +35,7 @@ describe('objectUtil', () => {
       [everyType],
       [{ deep: everyType }],
       [{ deeper: { deep: everyType } }],
-    ])('should clone %j', (obj) => {
+    ])('%#. should clone %j', (obj) => {
       expect(objectUtil.deepClone(obj)).not.toBe(obj)
     })
   })
@@ -44,7 +44,7 @@ describe('objectUtil', () => {
     it.each([
       [['a', 'b'], { a: 1, b: '2', c: 3 }, { a: 1, b: '2' }],
       [['a', 'c'], { a: 1, b: '2', c: 3 }, { a: 1, c: 3 }],
-    ])('should pick only this properties [%s] from object %s and return object %s', (propList, obj, result) => {
+    ])('%#. should pick only this properties [%s] from object %s and return object %s', (propList, obj, result) => {
       expect(objectUtil.pickByList(obj, propList)).toEqual(result)
     })
   })
@@ -61,7 +61,7 @@ describe('objectUtil', () => {
         { a: '', c: '' },
         { a: 1, c: 3 },
       ],
-    ])('should pick form this %s using keys from %s and return %s', (obj, objWithPickKeys, result) => {
+    ])('%#. should pick form this %s using keys from %s and return %s', (obj, objWithPickKeys, result) => {
       expect(objectUtil.pickByObjectKeys(obj, objWithPickKeys)).toEqual(result)
     })
   })
@@ -125,7 +125,7 @@ describe('objectUtil', () => {
   }
 }`,
       ],
-    ])('should compare %j with result %j', (value, result) => {
+    ])('%#. should compare %j with result %j', (value, result) => {
       expect(objectUtil.stringifySortOrNullOrUndefined(value)).toEqual(result)
     })
   })
@@ -138,7 +138,7 @@ describe('objectUtil', () => {
       [everyType, everyType],
       [{ deep: everyType }, { deep: everyType }],
       [{ deeper: { deep: everyType } }, { deeper: { deep: everyType } }],
-    ])('should be deep equal compare %j with result %j', (value, result) => {
+    ])('%#. should be deep equal compare %j with result %j', (value, result) => {
       expect(objectUtil.deepEqual(value, result)).toBeTruthy()
     })
 
@@ -147,7 +147,7 @@ describe('objectUtil', () => {
       [everyType, { ...everyType, a: 1 }],
       [{ deep: everyType }, { deep: everyType, a: 1 }],
       [{ deeper: { deep: everyType } }, { deeper: { deep: everyType }, a: 1 }],
-    ])('should not deep equal compare %j with result %j', (value, result) => {
+    ])('%#. should not deep equal compare %j with result %j', (value, result) => {
       expect(objectUtil.deepEqual(value, result)).toBeFalsy()
     })
 
@@ -160,7 +160,7 @@ describe('objectUtil', () => {
         { a: { a: 1, b: 2 }, b: everyType },
         { b: everyTypeReversed, a: { b: 2, a: 1 } },
       ],
-    ])('should be deep equal even if in different order compare %j with result %j', (value, result) => {
+    ])('%#. should be deep equal even if in different order compare %j with result %j', (value, result) => {
       expect(objectUtil.deepEqual(value, result)).toBeTruthy()
     })
   })
@@ -174,7 +174,7 @@ describe('objectUtil', () => {
       [everyType, everyType],
       [{ deep: everyType }, { deep: everyType }],
       [{ deeper: { deep: everyType } }, { deeper: { deep: everyType } }],
-    ])('should convert null to undefined for %j', (withNulls, withUndefined) => {
+    ])('%#. should convert null to undefined for %j', (withNulls, withUndefined) => {
       expect(objectUtil.deepNullToUndefined(withNulls)).toEqual(withUndefined)
     })
   })

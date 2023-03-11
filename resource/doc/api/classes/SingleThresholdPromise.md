@@ -37,7 +37,7 @@ export const authService = {
 ### Properties
 
 - [\_cache](SingleThresholdPromise.md#_cache)
-- [\_factory](SingleThresholdPromise.md#_factory)
+- [\_factoryFn](SingleThresholdPromise.md#_factoryfn)
 
 ### Methods
 
@@ -48,7 +48,7 @@ export const authService = {
 
 ### constructor
 
-• **new SingleThresholdPromise**<`T`\>(`factory`)
+• **new SingleThresholdPromise**<`T`\>(`factoryFn`)
 
 #### Type parameters
 
@@ -60,11 +60,11 @@ export const authService = {
 
 | Name | Type |
 | :------ | :------ |
-| `factory` | `AnyFunctionPromiseNoParams`<`T`\> |
+| `factoryFn` | `AnyFunctionPromiseNoParams`<`T`\> |
 
 #### Defined in
 
-[single-threshold-promise.ts:27](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/single-threshold-promise.ts#L27)
+[single-threshold-promise.ts:27](https://github.com/beecode-rs/msh-util/blob/241d250/src/single-threshold-promise.ts#L27)
 
 ## Properties
 
@@ -80,17 +80,17 @@ export const authService = {
 
 #### Defined in
 
-[single-threshold-promise.ts:21](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/single-threshold-promise.ts#L21)
+[single-threshold-promise.ts:21](https://github.com/beecode-rs/msh-util/blob/241d250/src/single-threshold-promise.ts#L21)
 
 ___
 
-### \_factory
+### \_factoryFn
 
-• `Protected` **\_factory**: `AnyFunctionPromiseNoParams`<`T`\>
+• `Protected` **\_factoryFn**: `AnyFunctionPromiseNoParams`<`T`\>
 
 #### Defined in
 
-[single-threshold-promise.ts:25](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/single-threshold-promise.ts#L25)
+[single-threshold-promise.ts:25](https://github.com/beecode-rs/msh-util/blob/241d250/src/single-threshold-promise.ts#L25)
 
 ## Methods
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[single-threshold-promise.ts:31](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/single-threshold-promise.ts#L31)
+[single-threshold-promise.ts:31](https://github.com/beecode-rs/msh-util/blob/241d250/src/single-threshold-promise.ts#L31)
 
 ___
 
@@ -118,4 +118,4 @@ ___
 
 #### Defined in
 
-[single-threshold-promise.ts:36](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/single-threshold-promise.ts#L36)
+[single-threshold-promise.ts:36](https://github.com/beecode-rs/msh-util/blob/241d250/src/single-threshold-promise.ts#L36)

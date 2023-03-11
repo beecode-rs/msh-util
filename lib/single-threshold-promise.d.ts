@@ -23,8 +23,8 @@ export declare class SingleThresholdPromise<T> {
             reject: (reason?: any) => void;
         }[];
     };
-    protected _factory: AnyFunctionPromiseNoParams<T>;
-    constructor(factory: AnyFunctionPromiseNoParams<T>);
+    protected _factoryFn: AnyFunctionPromiseNoParams<T>;
+    constructor(factoryFn: AnyFunctionPromiseNoParams<T>);
     protected _rejectPromises(): void;
     promise(): Promise<T>;
 }

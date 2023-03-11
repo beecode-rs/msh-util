@@ -1,4 +1,4 @@
-import { DurationUnit, DurationUnitType, TimeUtil } from './time-util'
+import { DurationUnit, DurationUnitType, TimeUtil } from 'src/time-util'
 
 describe('TimeUtil', () => {
   const constantNowDate = new Date('2022-01-01T00:00:00.000Z')
@@ -80,7 +80,7 @@ describe('TimeUtil', () => {
       ['MONTH', -1, new Date('2021-12-01T00:00:00.000Z')],
       ['YEAR', -1, new Date('2021-01-01T00:00:00.000Z')],
     ] as [DurationUnitType | DurationUnit, number, Date][])(
-      'should increase date by unit %s and value %s and get date $s',
+      '%#. should increase date by unit %s and value %s and get date $s',
       (unit, value, expected) => {
         expect(timeUtil.addToDate({ unit, value, date: timeUtil.now() })).toEqual(expected)
       }

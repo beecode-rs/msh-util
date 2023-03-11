@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[entity-cache/memory.ts:12](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/entity-cache/memory.ts#L12)
+[entity-cache/memory.ts:12](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L12)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[entity-cache/memory.ts:13](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/entity-cache/memory.ts#L13)
+[entity-cache/memory.ts:13](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L13)
 
 ## Methods
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[entity-cache/memory.ts:40](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/entity-cache/memory.ts#L40)
+[entity-cache/memory.ts:40](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L40)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[entity-cache/memory.ts:47](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/entity-cache/memory.ts#L47)
+[entity-cache/memory.ts:47](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L47)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[entity-cache/memory.ts:15](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/entity-cache/memory.ts#L15)
+[entity-cache/memory.ts:15](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L15)
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 #### Defined in
 
-[entity-cache/memory.ts:29](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/entity-cache/memory.ts#L29)
+[entity-cache/memory.ts:29](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L29)
 
 ___
 
@@ -168,4 +168,4 @@ ___
 
 #### Defined in
 
-[entity-cache/memory.ts:36](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/entity-cache/memory.ts#L36)
+[entity-cache/memory.ts:36](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/memory.ts#L36)

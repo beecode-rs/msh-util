@@ -36,7 +36,7 @@ Change the value of date by unit/value pare.
 ```ts
 // timeUtil.now().toISOString() === 2023-03-08T19:45:01.991Z
 const timeUtil = new TimeUtil()
-console.log(timeUtil.addToDate({date: timeUtil.now(), unit: 'day', value: 1 }).toISOString()) // 2023-03-09T19:45:01.991Z
+console.log(timeUtil.addToDate({date: timeUtil.now(), unit: 'DAY', value: 1 }).toISOString()) // 2023-03-09T19:45:01.991Z
 console.log(timeUtil.addToDate({date: timeUtil.now(), unit: DurationUnit.MONTH, value: -1 }).toISOString()) //2023-02-08T19:45:01.991Z
 ```
 
@@ -46,7 +46,7 @@ console.log(timeUtil.addToDate({date: timeUtil.now(), unit: DurationUnit.MONTH, 
 | :------ | :------ |
 | `params` | `Object` |
 | `params.date` | `Date` |
-| `params.unit` | ``"second"`` \| ``"minute"`` \| ``"hour"`` \| ``"day"`` \| ``"week"`` \| ``"month"`` \| ``"year"`` |
+| `params.unit` | [`DurationUnit`](../enums/DurationUnit.md) \| ``"MILLISECOND"`` \| ``"SECOND"`` \| ``"MINUTE"`` \| ``"HOUR"`` \| ``"DAY"`` \| ``"WEEK"`` \| ``"MONTH"`` \| ``"YEAR"`` |
 | `params.value` | `number` |
 
 #### Returns
@@ -55,7 +55,7 @@ console.log(timeUtil.addToDate({date: timeUtil.now(), unit: DurationUnit.MONTH, 
 
 #### Defined in
 
-[time-util.ts:86](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/time-util.ts#L86)
+[time-util.ts:90](https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L90)
 
 ___
 
@@ -85,7 +85,7 @@ console.log(timeUtil.dateToUnix(timeUtil.now())) // 1678304701991
 
 #### Defined in
 
-[time-util.ts:35](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/time-util.ts#L35)
+[time-util.ts:39](https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L39)
 
 ___
 
@@ -115,7 +115,7 @@ console.log(timeUtil.dateToUnix(timeUtil.now())) // 1678304701
 
 #### Defined in
 
-[time-util.ts:48](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/time-util.ts#L48)
+[time-util.ts:52](https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L52)
 
 ___
 
@@ -137,7 +137,7 @@ console.log(new TimeUtil().now().toISOString()) // 2023-03-08T19:45:01.991Z
 
 #### Defined in
 
-[time-util.ts:22](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/time-util.ts#L22)
+[time-util.ts:26](https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L26)
 
 ___
 
@@ -166,7 +166,7 @@ console.log(timeUtil.unixToDate(1678304701).toISOString()) // 2023-03-08T19:45:0
 
 #### Defined in
 
-[time-util.ts:72](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/time-util.ts#L72)
+[time-util.ts:76](https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L76)
 
 ___
 
@@ -195,4 +195,4 @@ console.log(timeUtil.unixToDate(1678304701991).toISOString()) // 2023-03-08T19:4
 
 #### Defined in
 
-[time-util.ts:60](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/time-util.ts#L60)
+[time-util.ts:64](https://github.com/beecode-rs/msh-util/blob/241d250/src/time-util.ts#L64)

@@ -1,4 +1,4 @@
-import { SingletonAsync } from './async'
+import { SingletonAsync } from 'src/singleton/async'
 import { timeout } from 'src/timeout'
 
 describe('SingletonAsync', () => {

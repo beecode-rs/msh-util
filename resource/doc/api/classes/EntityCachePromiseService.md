@@ -47,7 +47,7 @@
 
 #### Defined in
 
-[entity-cache/promise-service.ts:9](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/entity-cache/promise-service.ts#L9)
+[entity-cache/promise-service.ts:9](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/promise-service.ts#L9)
 
 ## Properties
 
@@ -57,7 +57,7 @@
 
 #### Defined in
 
-[entity-cache/promise-service.ts:4](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/entity-cache/promise-service.ts#L4)
+[entity-cache/promise-service.ts:4](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/promise-service.ts#L4)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[entity-cache/promise-service.ts:6](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/entity-cache/promise-service.ts#L6)
+[entity-cache/promise-service.ts:6](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/promise-service.ts#L6)
 
 ## Methods
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[entity-cache/promise-service.ts:7](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/entity-cache/promise-service.ts#L7)
+[entity-cache/promise-service.ts:7](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/promise-service.ts#L7)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[entity-cache/promise-service.ts:29](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/entity-cache/promise-service.ts#L29)
+[entity-cache/promise-service.ts:29](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/promise-service.ts#L29)
 
 ___
 
@@ -130,4 +130,4 @@ Subscribe to entity cache change and retrieve cached value if not undefined
 
 #### Defined in
 
-[entity-cache/promise-service.ts:19](https://github.com/beecode-rs/msh-util/blob/d5f403f/src/entity-cache/promise-service.ts#L19)
+[entity-cache/promise-service.ts:19](https://github.com/beecode-rs/msh-util/blob/241d250/src/entity-cache/promise-service.ts#L19)

@@ -5,7 +5,7 @@
  * @param descriptor
  * @example
  * export class RootController {
- *  /@ErrorHandler
+ *  /@expressErrorHandler
  *   async login(req: Request, res: Response): Promise<void> {
  *     const { username, password } = validationUtil().sanitize(req.body, postLoginBodySchema)
  *     const result = await authorizationUseCase.login({ username, password })

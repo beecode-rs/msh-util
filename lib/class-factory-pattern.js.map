@@ -1,0 +1,1 @@
+{"version":3,"file":"class-factory-pattern.js","sourceRoot":"","sources":["../src/class-factory-pattern.ts"],"names":[],"mappings":";;;AAEA;;;;;;;;;;;;;;;;;;;GAmBG;AACI,MAAM,mBAAmB,GAAG,CACjC,SAAY,EAC8C,EAAE;IAC5D,OAAO,CAAC,GAAG,IAA8B,EAAmB,EAAE;QAC5D,OAAO,IAAI,SAAS,CAAC,GAAG,IAAI,CAAoB,CAAA;IAClD,CAAC,CAAA;AACH,CAAC,CAAA;AANY,QAAA,mBAAmB,uBAM/B"}
