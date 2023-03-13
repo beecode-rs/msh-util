@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[time-util.ts:11](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L11)
+[time-util.ts:11](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L11)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[time-util.ts:10](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L10)
+[time-util.ts:10](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L10)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[time-util.ts:7](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L7)
+[time-util.ts:7](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L7)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[time-util.ts:9](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L9)
+[time-util.ts:9](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L9)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[time-util.ts:13](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L13)
+[time-util.ts:13](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L13)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[time-util.ts:8](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L8)
+[time-util.ts:8](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L8)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[time-util.ts:12](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L12)
+[time-util.ts:12](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L12)
 
 ___
 
@@ -93,4 +93,4 @@ ___
 
 #### Defined in
 
-[time-util.ts:14](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L14)
+[time-util.ts:14](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L14)

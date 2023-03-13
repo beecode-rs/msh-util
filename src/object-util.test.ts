@@ -66,11 +66,16 @@ describe('objectUtil', () => {
     })
   })
 
-  describe('stringifySortOrNullOrUndefined', () => {
+  describe('deepStringify', () => {
     it.each([
-      [null, null],
-      [undefined, undefined],
       [{}, '{}'],
+      [
+        { b: 2, a: 1 },
+        `{
+  a: 1,
+  b: 2
+}`,
+      ],
       [
         everyType,
         `{
@@ -125,8 +130,89 @@ describe('objectUtil', () => {
   }
 }`,
       ],
-    ])('%#. should compare %j with result %j', (value, result) => {
-      expect(objectUtil.stringifySortOrNullOrUndefined(value)).toEqual(result)
+    ])('%#. should compare %j and sort with result %j', (value, result) => {
+      expect(objectUtil.deepStringify(value, { isSorted: true })).toEqual(result)
+    })
+
+    it.each([
+      [
+        { b: 2, a: 1 },
+        `{
+  a: 1,
+  b: 2
+}`,
+      ],
+      [
+        everyType,
+        `{
+  boolean: true,
+  date: 2020-01-01T00:00:00.000Z,
+  decimal: 1.12345,
+  emptyObj: {},
+  nestedObject: {
+    obj: 'test'
+  },
+  notANumber: NaN,
+  number: 1,
+  string: 'string',
+  undefined: undefined
+}`,
+      ],
+      [
+        { deep: everyType },
+        `{
+  deep: {
+    boolean: true,
+    date: 2020-01-01T00:00:00.000Z,
+    decimal: 1.12345,
+    emptyObj: {},
+    nestedObject: {
+      obj: 'test'
+    },
+    notANumber: NaN,
+    number: 1,
+    string: 'string',
+    undefined: undefined
+  }
+}`,
+      ],
+      [
+        { deeper: { deep: everyType } },
+        `{
+  deeper: {
+    deep: {
+      boolean: true,
+      date: 2020-01-01T00:00:00.000Z,
+      decimal: 1.12345,
+      emptyObj: {},
+      nestedObject: {
+        obj: 'test'
+      },
+      notANumber: NaN,
+      number: 1,
+      string: 'string',
+      undefined: undefined
+    }
+  }
+}`,
+      ],
+    ])('%#. should compare %j with result %j and not be equal because it is not sorted ', (value, result) => {
+      expect(objectUtil.deepStringify(value)).not.toEqual(result)
+    })
+
+    it.each([
+      [null, 'null'],
+      [undefined, 'undefined'],
+      [123, '123'],
+      [[123], `[ 123 ]`],
+      ['test', "'test'"],
+      (() => {
+        const date = new Date()
+
+        return [date, date.toISOString()]
+      })(),
+    ])('%#. should compare %j with result %j with compact enabled', (value, result) => {
+      expect(objectUtil.deepStringify(value, { compact: true })).toEqual(result)
     })
   })
 

@@ -1,7 +1,3 @@
-export * from 'src/entity-cache/promise-service'
-
-export * from 'src/entity-cache/memory'
-
 export * from 'src/express/error-handler'
 
 export * from 'src/singleton/async'

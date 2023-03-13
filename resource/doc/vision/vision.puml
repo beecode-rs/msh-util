@@ -43,12 +43,12 @@
         deepClone(objectToClone: T): T
         deepEqual(a: any,\n     b: any): boolean
         deepNullToUndefined(objectWithNulls: T): T
+        deepStringify(obj: any,\n     options?: {\n     isSorted?: boolean;\n     compact?: boolean | number \n}): string
         pickByList(obj: T,\n     keyList: (L | string)[]): Pick<T,\n     L>
         pickByObjectKeys(obj: T,\n     objWithPickKeys: Partial<T> | ObjectType): Pick<T,\n     L>
-        stringifySortOrNullOrUndefined(obj?: ObjectType | null): string | null | undefined
       }
       object "regexUtil" as regex_util_4ac1c785 {
-        + uuid: string
+        + uuid: const
       }
       class "SingleThresholdPromise" as single_threshold_promise_174db0f3 {
         # _cache: {\n    promises?: { resolve: (value: T | PromiseLike<T>) => void; reject: (reason?: any) => void }[]\n  }
@@ -88,40 +88,6 @@
       object "typeUtil" as type_util_3bdc4f90 {
         + exhaustiveError(message: string,\n     _: never): Error
         + exhaustiveMessage(message: string,\n     _: never): string
-      }
-      folder "entity-cache" as entity_cache_c60ace52 {
-        card entity_cache_6fc31f5 [
-          EntityCache
-          ---
-          { id: string; entity: ENTITY }
-        ]
-        card entity_cache_call_back_6fc31f5 [
-          EntityCacheCallBack
-          ---
-          (cbParams: EntityCache<ENTITY>) => void
-        ]
-        card entity_cache_subscription_6fc31f5 [
-          EntityCacheSubscription
-          ---
-          { unsubscribe: () => void }
-        ]
-        class "EntityCacheMemory" as entity_cache_memory_6fc31f5 {
-          # _calculateTimeout(timeoutOffsetMs?: number): number | undefined
-          # _memory: {\n     [k: string]: {\n     entity?: ENTITY;\n     timeoutMs?: number \n} \n}
-          # _subject
-          # _timeoutExpired(timeoutMs?: number): boolean
-          getById(id: string): {\n     needToFetch?: boolean;\n     entity?: ENTITY \n}
-          set(params: EntityCache<ENTITY>,\n     timeoutOffsetMs?: number): void
-          subscribeById(id: string,\n     callback: (par: EntityCache<ENTITY>) => void): EntityCacheSubscription
-        }
-        abstract "EntityCachePromiseService" as entity_cache_promise_service_90748edb {
-          # _dao: EntityCacheMemory<ENTITY>
-          # {abstract} _entityAsync(id: ID): Promise<ENTITY>
-          # {abstract} _timeoutOffsetMs: number
-          # constructor(dao?: EntityCacheMemory<ENTITY>)
-          forceRefresh(id: ID): void
-          subscribeToEntityChangeById(id: ID,\n     callback: EntityCacheCallBack<ENTITY>): EntityCacheSubscription
-        }
       }
       folder "express" as express_4db1312 {
         object "expressErrorHandler" as express_error_handler_63417b19 {
@@ -167,16 +133,6 @@
         }
       }
     }
-    folder "rxjs" as rxjs_7c7990f6 {
-      object "filter" as filter_69308583 {
-        rxjs/operators.ts
-      }
-      folder "internal" as internal_2be5c17e {
-        object "Subject" as subject_cfb30004 {
-          rxjs/internal/Subject.ts
-        }
-      }
-    }
     folder "date-fns" as date_fns_5b922ce7 {
       object "add" as add_ad2961c0 {
         date-fns/add.ts
@@ -188,14 +144,6 @@
         date-fns/parse.ts
       }
     }
-  entity_cache_memory_6fc31f5 -up-> subject_cfb30004
-  entity_cache_memory_6fc31f5 -up-> filter_69308583
-  entity_cache_memory_6fc31f5 -up-> time_util_c35fc59d
-  entity_cache_memory_6fc31f5 -up-> entity_cache_6fc31f5
-  entity_cache_memory_6fc31f5 -up-> entity_cache_subscription_6fc31f5
-  entity_cache_promise_service_90748edb -up-> entity_cache_call_back_6fc31f5
-  entity_cache_promise_service_90748edb -up-> entity_cache_memory_6fc31f5
-  entity_cache_promise_service_90748edb -up-> entity_cache_subscription_6fc31f5
   joi_util_68a048a4 -up-> joi_util_options_68a048a4
   joi_util_68a048a4 -up-> error_with_payload_68a048a4
   object_util_a28a167d -up-> clone_deep_91af3a80

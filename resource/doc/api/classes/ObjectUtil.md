@@ -13,9 +13,9 @@
 - [deepClone](ObjectUtil.md#deepclone)
 - [deepEqual](ObjectUtil.md#deepequal)
 - [deepNullToUndefined](ObjectUtil.md#deepnulltoundefined)
+- [deepStringify](ObjectUtil.md#deepstringify)
 - [pickByList](ObjectUtil.md#pickbylist)
 - [pickByObjectKeys](ObjectUtil.md#pickbyobjectkeys)
-- [stringifySortOrNullOrUndefined](ObjectUtil.md#stringifysortornullorundefined)
 
 ## Constructors
 
@@ -49,7 +49,7 @@ Deep clone object. Returned object will have no references to the object passed 
 
 #### Defined in
 
-[object-util.ts:13](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L13)
+[object-util.ts:13](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/object-util.ts#L13)
 
 ___
 
@@ -72,7 +72,7 @@ We are converting objects to string (or null or undefined) and comparing if the 
 
 #### Defined in
 
-[object-util.ts:82](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L82)
+[object-util.ts:83](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/object-util.ts#L83)
 
 ___
 
@@ -106,7 +106,42 @@ console.log(new ObjectUtil().deepNullToUndefined({ a: null, b: { c: null } })) /
 
 #### Defined in
 
-[object-util.ts:94](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L94)
+[object-util.ts:95](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/object-util.ts#L95)
+
+___
+
+### deepStringify
+
+▸ **deepStringify**(`obj`, `options?`): `string`
+
+This function will do stringify deeper that JSON.stringify.
+
+**`Example`**
+
+console.log(new ObjectUtil().deepStringify(null)) // 'null'
+console.log(new ObjectUtil().deepStringify(undefined)) // 'undefined'
+console.log(new ObjectUtil().deepStringify({ a: 1 })) // '{\n\ta: 1\n}'
+// `{
+//   a:1
+// }`
+console.log(new ObjectUtil().deepStringify({ b: 1, a: 2 }, {isSorted:true, compact: true})) // { a: 2, b: 1 }
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `obj` | `any` |
+| `options?` | `Object` |
+| `options.compact?` | `number` \| `boolean` |
+| `options.isSorted?` | `boolean` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[object-util.ts:64](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/object-util.ts#L64)
 
 ___
 
@@ -136,7 +171,7 @@ Pick only properties from the property list. It is only allowed to pick properti
 
 #### Defined in
 
-[object-util.ts:25](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L25)
+[object-util.ts:25](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/object-util.ts#L25)
 
 ___
 
@@ -166,35 +201,4 @@ Pick objects properties using keys from the second object.
 
 #### Defined in
 
-[object-util.ts:46](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L46)
-
-___
-
-### stringifySortOrNullOrUndefined
-
-▸ **stringifySortOrNullOrUndefined**(`obj?`): `undefined` \| ``null`` \| `string`
-
-This function will do stringify deeper that JSON.stringify. If the object that you pass is null or undefined it will return that value (null or undefined) otherwise it will return string
-
-**`Example`**
-
-console.log(new ObjectUtil().stringifySortOrNullOrUndefined(null)) // null
-console.log(new ObjectUtil().stringifySortOrNullOrUndefined(undefined)) // undefined
-console.log(new ObjectUtil().stringifySortOrNullOrUndefined({ a: 1 })) // '{\n\ta: 1\n}'
-// `{
-//   a:1
-// }`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `obj?` | ``null`` \| [`ObjectType`](../README.md#objecttype) |
-
-#### Returns
-
-`undefined` \| ``null`` \| `string`
-
-#### Defined in
-
-[object-util.ts:63](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L63)
+[object-util.ts:46](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/object-util.ts#L46)
