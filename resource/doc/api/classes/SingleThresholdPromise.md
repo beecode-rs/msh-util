@@ -64,7 +64,7 @@ export const authService = {
 
 #### Defined in
 
-[single-threshold-promise.ts:27](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/single-threshold-promise.ts#L27)
+[single-threshold-promise.ts:27](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/single-threshold-promise.ts#L27)
 
 ## Properties
 
@@ -80,7 +80,7 @@ export const authService = {
 
 #### Defined in
 
-[single-threshold-promise.ts:21](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/single-threshold-promise.ts#L21)
+[single-threshold-promise.ts:21](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/single-threshold-promise.ts#L21)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[single-threshold-promise.ts:25](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/single-threshold-promise.ts#L25)
+[single-threshold-promise.ts:25](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/single-threshold-promise.ts#L25)
 
 ## Methods
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[single-threshold-promise.ts:31](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/single-threshold-promise.ts#L31)
+[single-threshold-promise.ts:31](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/single-threshold-promise.ts#L31)
 
 ___
 
@@ -118,4 +118,4 @@ ___
 
 #### Defined in
 
-[single-threshold-promise.ts:36](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/single-threshold-promise.ts#L36)
+[single-threshold-promise.ts:36](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/single-threshold-promise.ts#L36)

@@ -49,26 +49,27 @@ export class ObjectUtil {
     return this.pickByList<T, L>(obj, keys)
   }
   /**
-   * This function will do stringify deeper that JSON.stringify. If the object that you pass is null or undefined it will return that value (null or undefined) otherwise it will return string
-   * @param {ObjectType | null} obj
-   * @return {string | null | undefined}
+   * This function will do stringify deeper that JSON.stringify.
+   * @param {any} obj
+   * @return {string}
    * @example
-   * console.log(new ObjectUtil().stringifySortOrNullOrUndefined(null)) // null
-   * console.log(new ObjectUtil().stringifySortOrNullOrUndefined(undefined)) // undefined
-   * console.log(new ObjectUtil().stringifySortOrNullOrUndefined({ a: 1 })) // '{\n\ta: 1\n}'
+   * console.log(new ObjectUtil().deepStringify(null)) // 'null'
+   * console.log(new ObjectUtil().deepStringify(undefined)) // 'undefined'
+   * console.log(new ObjectUtil().deepStringify({ a: 1 })) // '{\n\ta: 1\n}'
    * // `{
    * //   a:1
    * // }`
+   * console.log(new ObjectUtil().deepStringify({ b: 1, a: 2 }, {isSorted:true, compact: true})) // { a: 2, b: 1 }
    */
-  stringifySortOrNullOrUndefined(obj?: ObjectType | null): string | null | undefined {
-    if (obj == null) return obj
+  deepStringify(obj: any, options?: { isSorted?: boolean; compact?: boolean | number }): string {
+    const { isSorted = false, compact = 0 } = options ?? {}
 
     return util.inspect(obj, {
       depth: Infinity,
-      sorted: true,
+      sorted: isSorted,
       maxArrayLength: Infinity,
       maxStringLength: Infinity,
-      compact: 0,
+      compact,
       breakLength: Infinity,
     })
   }
@@ -80,7 +81,7 @@ export class ObjectUtil {
    * @return {boolean}
    */
   deepEqual(a: any, b: any): boolean {
-    return this.stringifySortOrNullOrUndefined(a) === this.stringifySortOrNullOrUndefined(b)
+    return this.deepStringify(a, { isSorted: true, compact: true }) === this.deepStringify(b, { isSorted: true, compact: true })
   }
 
   /**

@@ -10,8 +10,6 @@
 
 ### Classes
 
-- [EntityCacheMemory](classes/EntityCacheMemory.md)
-- [EntityCachePromiseService](classes/EntityCachePromiseService.md)
 - [ErrorWithPayload](classes/ErrorWithPayload.md)
 - [JoiUtil](classes/JoiUtil.md)
 - [ObjectUtil](classes/ObjectUtil.md)
@@ -27,9 +25,6 @@
 
 - [ClassType](README.md#classtype)
 - [DurationUnitType](README.md#durationunittype)
-- [EntityCache](README.md#entitycache)
-- [EntityCacheCallBack](README.md#entitycachecallback)
-- [EntityCacheSubscription](README.md#entitycachesubscription)
 - [ObjectType](README.md#objecttype)
 - [joiUtilOptions](README.md#joiutiloptions)
 
@@ -71,7 +66,7 @@
 
 #### Defined in
 
-[class-factory-pattern.ts:1](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/class-factory-pattern.ts#L1)
+[class-factory-pattern.ts:1](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/class-factory-pattern.ts#L1)
 
 ___
 
@@ -81,76 +76,7 @@ ___
 
 #### Defined in
 
-[time-util.ts:17](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L17)
-
-___
-
-### EntityCache
-
-Ƭ **EntityCache**<`ENTITY`\>: `Object`
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `ENTITY` |
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `entity` | `ENTITY` |
-| `id` | `string` |
-
-#### Defined in
-
-[entity-cache/memory.ts:5](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L5)
-
-___
-
-### EntityCacheCallBack
-
-Ƭ **EntityCacheCallBack**<`ENTITY`\>: (`cbParams`: [`EntityCache`](README.md#entitycache)<`ENTITY`\>) => `void`
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `ENTITY` |
-
-#### Type declaration
-
-▸ (`cbParams`): `void`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `cbParams` | [`EntityCache`](README.md#entitycache)<`ENTITY`\> |
-
-##### Returns
-
-`void`
-
-#### Defined in
-
-[entity-cache/memory.ts:7](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L7)
-
-___
-
-### EntityCacheSubscription
-
-Ƭ **EntityCacheSubscription**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `unsubscribe` | () => `void` |
-
-#### Defined in
-
-[entity-cache/memory.ts:9](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/entity-cache/memory.ts#L9)
+[time-util.ts:17](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L17)
 
 ___
 
@@ -164,7 +90,7 @@ ___
 
 #### Defined in
 
-[object-util.ts:4](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/object-util.ts#L4)
+[object-util.ts:4](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/object-util.ts#L4)
 
 ___
 
@@ -174,7 +100,7 @@ ___
 
 #### Defined in
 
-[joi-util.ts:8](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/joi-util.ts#L8)
+[joi-util.ts:8](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/joi-util.ts#L8)
 
 ## Variables
 
@@ -184,13 +110,13 @@ ___
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `uuid` | () => `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `uuid` | ``"\\b[0-9a-f]{8}\\b-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-\\b[0-9a-f]{12}\\b"`` | This is a UUID regex expression. This is usually used in express router to constrict the values passed as a path parameter (if you are using UUID as your identifier). **`Example`** const { uuid } = regexUtil router.route(`/users/:userId(${uuid})`).get(getUsersById) //... |
 
 #### Defined in
 
-[regex-util.ts:1](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/regex-util.ts#L1)
+[regex-util.ts:1](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/regex-util.ts#L1)
 
 ___
 
@@ -206,7 +132,7 @@ ___
 
 #### Defined in
 
-[string-util.ts:1](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/string-util.ts#L1)
+[string-util.ts:1](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/string-util.ts#L1)
 
 ___
 
@@ -223,7 +149,7 @@ ___
 
 #### Defined in
 
-[type-util.ts:1](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/type-util.ts#L1)
+[type-util.ts:1](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/type-util.ts#L1)
 
 ## Functions
 
@@ -281,7 +207,7 @@ const someClassInstance = someClassFactory({ a: 'test' })
 
 #### Defined in
 
-[class-factory-pattern.ts:23](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/class-factory-pattern.ts#L23)
+[class-factory-pattern.ts:23](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/class-factory-pattern.ts#L23)
 
 ___
 
@@ -318,7 +244,7 @@ export class RootController {
 
 #### Defined in
 
-[express/error-handler.ts:16](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/express/error-handler.ts#L16)
+[express/error-handler.ts:16](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/express/error-handler.ts#L16)
 
 ___
 
@@ -357,7 +283,7 @@ sumTwoNumbersMemoize(5 + 10) // 15
 
 #### Defined in
 
-[memoize-factory.ts:16](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/memoize-factory.ts#L16)
+[memoize-factory.ts:16](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/memoize-factory.ts#L16)
 
 ___
 
@@ -416,7 +342,7 @@ Function result that returns cached value.
 
 #### Defined in
 
-[singleton/pattern.ts:34](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/pattern.ts#L34)
+[singleton/pattern.ts:34](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/pattern.ts#L34)
 
 ___
 
@@ -448,4 +374,4 @@ const lightBlink = (): void => {
 
 #### Defined in
 
-[timeout.ts:14](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/timeout.ts#L14)
+[timeout.ts:14](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/timeout.ts#L14)

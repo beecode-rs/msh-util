@@ -49,7 +49,7 @@ Error.constructor
 
 #### Defined in
 
-[joi-util.ts:14](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/joi-util.ts#L14)
+[joi-util.ts:14](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/joi-util.ts#L14)
 
 ## Properties
 
@@ -59,4 +59,4 @@ Error.constructor
 
 #### Defined in
 
-[joi-util.ts:13](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/joi-util.ts#L13)
+[joi-util.ts:13](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/joi-util.ts#L13)

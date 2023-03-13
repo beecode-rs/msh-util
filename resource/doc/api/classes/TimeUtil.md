@@ -55,7 +55,7 @@ console.log(timeUtil.addToDate({date: timeUtil.now(), unit: DurationUnit.MONTH, 
 
 #### Defined in
 
-[time-util.ts:90](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L90)
+[time-util.ts:90](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L90)
 
 ___
 
@@ -85,7 +85,7 @@ console.log(timeUtil.dateToUnix(timeUtil.now())) // 1678304701991
 
 #### Defined in
 
-[time-util.ts:39](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L39)
+[time-util.ts:39](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L39)
 
 ___
 
@@ -115,7 +115,7 @@ console.log(timeUtil.dateToUnix(timeUtil.now())) // 1678304701
 
 #### Defined in
 
-[time-util.ts:52](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L52)
+[time-util.ts:52](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L52)
 
 ___
 
@@ -137,7 +137,7 @@ console.log(new TimeUtil().now().toISOString()) // 2023-03-08T19:45:01.991Z
 
 #### Defined in
 
-[time-util.ts:26](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L26)
+[time-util.ts:26](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L26)
 
 ___
 
@@ -166,7 +166,7 @@ console.log(timeUtil.unixToDate(1678304701).toISOString()) // 2023-03-08T19:45:0
 
 #### Defined in
 
-[time-util.ts:76](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L76)
+[time-util.ts:76](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L76)
 
 ___
 
@@ -195,4 +195,4 @@ console.log(timeUtil.unixToDate(1678304701991).toISOString()) // 2023-03-08T19:4
 
 #### Defined in
 
-[time-util.ts:64](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/time-util.ts#L64)
+[time-util.ts:64](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L64)

@@ -7,4 +7,4 @@ vision \
  --printIgnorePaths='[
    "src/index",
    "src/types/type.d.ts"
- ]' \
+ ]'

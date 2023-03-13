@@ -13,6 +13,6 @@ describe('stringUtil', () => {
     [stringUtil.generateUUID()],
     [stringUtil.generateUUID()],
   ])('%#. should generate valid uuid %s', (uuid) => {
-    expect(new RegExp(regexUtil.uuid()).test(uuid)).toBeTruthy()
+    expect(new RegExp(regexUtil.uuid).test(uuid)).toBeTruthy()
   })
 })

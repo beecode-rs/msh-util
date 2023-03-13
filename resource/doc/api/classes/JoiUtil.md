@@ -67,7 +67,7 @@ const validObject = joiUtil.validate({ a: 'a', b: 1 }, someSchema)
 
 #### Defined in
 
-[joi-util.ts:65](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/joi-util.ts#L65)
+[joi-util.ts:65](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/joi-util.ts#L65)
 
 ___
 
@@ -99,7 +99,7 @@ expected object after validation
 
 #### Defined in
 
-[joi-util.ts:48](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/joi-util.ts#L48)
+[joi-util.ts:48](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/joi-util.ts#L48)
 
 ___
 
@@ -131,4 +131,4 @@ expected object after validation
 
 #### Defined in
 
-[joi-util.ts:61](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/joi-util.ts#L61)
+[joi-util.ts:61](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/joi-util.ts#L61)

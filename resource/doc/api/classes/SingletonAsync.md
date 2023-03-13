@@ -67,7 +67,7 @@ console.log(configSingleton().cache()) // { env: 'prod' }
 
 #### Defined in
 
-[singleton/async.ts:29](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L29)
+[singleton/async.ts:29](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L29)
 
 ## Properties
 
@@ -84,7 +84,7 @@ console.log(configSingleton().cache()) // { env: 'prod' }
 
 #### Defined in
 
-[singleton/async.ts:22](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L22)
+[singleton/async.ts:22](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L22)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[singleton/async.ts:27](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L27)
+[singleton/async.ts:27](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L27)
 
 ## Methods
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[singleton/async.ts:41](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L41)
+[singleton/async.ts:41](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L41)
 
 ___
 
@@ -131,7 +131,7 @@ Return cached value, if there is no value cached return undefined.
 
 #### Defined in
 
-[singleton/async.ts:79](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L79)
+[singleton/async.ts:79](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L79)
 
 ___
 
@@ -147,7 +147,7 @@ Empty cached value and reject any subscribed promise that is waiting for the ini
 
 #### Defined in
 
-[singleton/async.ts:36](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L36)
+[singleton/async.ts:36](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L36)
 
 ___
 
@@ -163,4 +163,4 @@ Return singleton value in a promise. If there is no cached value then try to get
 
 #### Defined in
 
-[singleton/async.ts:53](https://github.com/beecode-rs/msh-util/blob/2e4fee4/src/singleton/async.ts#L53)
+[singleton/async.ts:53](https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L53)
