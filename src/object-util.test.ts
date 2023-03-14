@@ -69,135 +69,40 @@ describe('objectUtil', () => {
   describe('deepStringify', () => {
     it.each([
       [{}, '{}'],
-      [
-        { b: 2, a: 1 },
-        `{
-  a: 1,
-  b: 2
-}`,
-      ],
+      [{ b: 2, a: 1 }, `{ a: 1, b: 2 }`],
       [
         everyType,
-        `{
-  boolean: true,
-  date: 2020-01-01T00:00:00.000Z,
-  decimal: 1.12345,
-  emptyObj: {},
-  nestedObject: {
-    obj: 'test'
-  },
-  notANumber: NaN,
-  number: 1,
-  string: 'string',
-  undefined: undefined
-}`,
+        `{ boolean: true, date: 2020-01-01T00:00:00.000Z, decimal: 1.12345, emptyObj: {}, nestedObject: { obj: 'test' }, notANumber: NaN, number: 1, string: 'string', undefined: undefined }`,
       ],
       [
         { deep: everyType },
-        `{
-  deep: {
-    boolean: true,
-    date: 2020-01-01T00:00:00.000Z,
-    decimal: 1.12345,
-    emptyObj: {},
-    nestedObject: {
-      obj: 'test'
-    },
-    notANumber: NaN,
-    number: 1,
-    string: 'string',
-    undefined: undefined
-  }
-}`,
+        `{ deep: { boolean: true, date: 2020-01-01T00:00:00.000Z, decimal: 1.12345, emptyObj: {}, nestedObject: { obj: 'test' }, notANumber: NaN, number: 1, string: 'string', undefined: undefined } }`,
       ],
       [
         { deeper: { deep: everyType } },
-        `{
-  deeper: {
-    deep: {
-      boolean: true,
-      date: 2020-01-01T00:00:00.000Z,
-      decimal: 1.12345,
-      emptyObj: {},
-      nestedObject: {
-        obj: 'test'
-      },
-      notANumber: NaN,
-      number: 1,
-      string: 'string',
-      undefined: undefined
-    }
-  }
-}`,
+        `{ deeper: { deep: { boolean: true, date: 2020-01-01T00:00:00.000Z, decimal: 1.12345, emptyObj: {}, nestedObject: { obj: 'test' }, notANumber: NaN, number: 1, string: 'string', undefined: undefined } } }`,
       ],
-    ])('%#. should compare %j and sort with result %j', (value, result) => {
-      expect(objectUtil.deepStringify(value, { isSorted: true })).toEqual(result)
+    ])('%#. should compare %j and sort with result %j', (value, expected) => {
+      expect(objectUtil.deepStringify(value, { isSorted: true })).toEqual(expected)
     })
 
     it.each([
-      [
-        { b: 2, a: 1 },
-        `{
-  a: 1,
-  b: 2
-}`,
-      ],
+      [{ b: 2, a: 1 }, `{ a: 1, b: 2 }`],
       [
         everyType,
-        `{
-  boolean: true,
-  date: 2020-01-01T00:00:00.000Z,
-  decimal: 1.12345,
-  emptyObj: {},
-  nestedObject: {
-    obj: 'test'
-  },
-  notANumber: NaN,
-  number: 1,
-  string: 'string',
-  undefined: undefined
-}`,
+        `{ boolean: true, date: 2020-01-01T00:00:00.000Z, decimal: 1.12345, emptyObj: {}, nestedObject: { obj: 'test' }, notANumber: NaN, number: 1, string: 'string', undefined: undefined }`,
       ],
       [
         { deep: everyType },
-        `{
-  deep: {
-    boolean: true,
-    date: 2020-01-01T00:00:00.000Z,
-    decimal: 1.12345,
-    emptyObj: {},
-    nestedObject: {
-      obj: 'test'
-    },
-    notANumber: NaN,
-    number: 1,
-    string: 'string',
-    undefined: undefined
-  }
-}`,
+        `{ deep: { boolean: true, date: 2020-01-01T00:00:00.000Z, decimal: 1.12345, emptyObj: {}, nestedObject: { obj: 'test' }, notANumber: NaN, number: 1, string: 'string', undefined: undefined } }`,
       ],
       [
         { deeper: { deep: everyType } },
-        `{
-  deeper: {
-    deep: {
-      boolean: true,
-      date: 2020-01-01T00:00:00.000Z,
-      decimal: 1.12345,
-      emptyObj: {},
-      nestedObject: {
-        obj: 'test'
-      },
-      notANumber: NaN,
-      number: 1,
-      string: 'string',
-      undefined: undefined
-    }
-  }
-}`,
+        `{ deeper: { deep: { boolean: true, date: 2020-01-01T00:00:00.000Z, decimal: 1.12345, emptyObj: {}, nestedObject: { obj: 'test' }, notANumber: NaN, number: 1, string: 'string', undefined: undefined } } }`,
       ],
-    ])('%#. should compare %j with result %j and not be equal because it is not sorted ', (value, result) => {
-      expect(objectUtil.deepStringify(value)).not.toEqual(result)
+    ])('%#. should compare %j with result %j and not be equal because it is not sorted', (value, expected) => {
+      expect(objectUtil.deepStringify(value, { isSorted: true })).toEqual(expected)
+      expect(objectUtil.deepStringify(value)).not.toEqual(expected)
     })
 
     it.each([
@@ -211,8 +116,194 @@ describe('objectUtil', () => {
 
         return [date, date.toISOString()]
       })(),
-    ])('%#. should compare %j with result %j with compact enabled', (value, result) => {
-      expect(objectUtil.deepStringify(value, { compact: true })).toEqual(result)
+    ])('%#. should compare %j with result %j with compact enabled', (value, expected) => {
+      expect(objectUtil.deepStringify(value)).toEqual(expected)
+    })
+
+    it.each([
+      [['d', 'c', 'b', 'a'], `[ 'a', 'b', 'c', 'd' ]`, `[ 'd', 'c', 'b', 'a' ]`],
+      [{ a: ['d', 'c', 'b', 'a'] }, `{ a: [ 'a', 'b', 'c', 'd' ]`, `{ a: [ 'd', 'c', 'b', 'a' ] }`],
+    ])('%# should not sort arrays', (arr, expectSorted, expectUnsorted) => {
+      expect(objectUtil.deepStringify(arr, { isSorted: true })).not.toEqual(expectSorted)
+      expect(objectUtil.deepStringify(arr, { isSorted: true })).toEqual(expectUnsorted)
+    })
+
+    it.each([
+      [
+        0,
+        `{
+  a: {
+    a1: {
+      a2: {
+        a3: {
+          a4: {
+            a5: 'level 5'
+          }
+        }
+      }
+    }
+  },
+  b: {
+    b1: {
+      b2: {
+        b3: {
+          b4: 'level 4'
+        }
+      }
+    }
+  },
+  c: [
+    'c0',
+    [
+      'c1',
+      [
+        'c2',
+        [
+          'c3',
+          [
+            'c4',
+            [
+              'c5'
+            ]
+          ]
+        ]
+      ]
+    ]
+  ]
+}`,
+      ],
+      [
+        1,
+        `{
+  a: {
+    a1: {
+      a2: {
+        a3: {
+          a4: { a5: 'level 5' }
+        }
+      }
+    }
+  },
+  b: {
+    b1: {
+      b2: {
+        b3: { b4: 'level 4' }
+      }
+    }
+  },
+  c: [
+    'c0',
+    [
+      'c1',
+      [
+        'c2',
+        [
+          'c3',
+          [
+            'c4',
+            [ 'c5' ]
+          ]
+        ]
+      ]
+    ]
+  ]
+}`,
+      ],
+      [
+        2,
+        `{
+  a: {
+    a1: {
+      a2: {
+        a3: { a4: { a5: 'level 5' } }
+      }
+    }
+  },
+  b: {
+    b1: {
+      b2: { b3: { b4: 'level 4' } }
+    }
+  },
+  c: [
+    'c0',
+    [
+      'c1',
+      [
+        'c2',
+        [
+          'c3',
+          [ 'c4', [ 'c5' ] ]
+        ]
+      ]
+    ]
+  ]
+}`,
+      ],
+      [
+        3,
+        `{
+  a: {
+    a1: {
+      a2: { a3: { a4: { a5: 'level 5' } } }
+    }
+  },
+  b: {
+    b1: { b2: { b3: { b4: 'level 4' } } }
+  },
+  c: [
+    'c0',
+    [
+      'c1',
+      [
+        'c2',
+        [ 'c3', [ 'c4', [ 'c5' ] ] ]
+      ]
+    ]
+  ]
+}`,
+      ],
+      [
+        4,
+        `{
+  a: {
+    a1: { a2: { a3: { a4: { a5: 'level 5' } } } }
+  },
+  b: { b1: { b2: { b3: { b4: 'level 4' } } } },
+  c: [
+    'c0',
+    [
+      'c1',
+      [ 'c2', [ 'c3', [ 'c4', [ 'c5' ] ] ] ]
+    ]
+  ]
+}`,
+      ],
+      [
+        5,
+        `{
+  a: { a1: { a2: { a3: { a4: { a5: 'level 5' } } } } },
+  b: { b1: { b2: { b3: { b4: 'level 4' } } } },
+  c: [
+    'c0',
+    [ 'c1', [ 'c2', [ 'c3', [ 'c4', [ 'c5' ] ] ] ] ]
+  ]
+}`,
+      ],
+      [
+        6,
+        `{
+  a: { a1: { a2: { a3: { a4: { a5: 'level 5' } } } } },
+  b: { b1: { b2: { b3: { b4: 'level 4' } } } },
+  c: [ 'c0', [ 'c1', [ 'c2', [ 'c3', [ 'c4', [ 'c5' ] ] ] ] ] ]
+}`,
+      ],
+    ])('%# should take object with 5 levels and compact it to level $s', (level, expected) => {
+      const obj = {
+        a: { a1: { a2: { a3: { a4: { a5: 'level 5' } } } } },
+        b: { b1: { b2: { b3: { b4: 'level 4' } } } },
+        c: ['c0', ['c1', ['c2', ['c3', ['c4', ['c5']]]]]],
+      }
+      expect(objectUtil.deepStringify(obj, { isPrettyPrinted: true, prettyPrintCompactLevel: level })).toEqual(expected)
     })
   })
 

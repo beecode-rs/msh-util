@@ -29,7 +29,9 @@ export class SingleThresholdPromise<T> {
   }
 
   protected _rejectPromises(): void {
-    if (this._cache.promises) this._cache.promises.forEach((promise) => promise.reject(new Error('Cache was cleaned')))
+    if (this._cache.promises) {
+      this._cache.promises.forEach((promise) => promise.reject(new Error('Cache was cleaned')))
+    }
     delete this._cache.promises
   }
 

@@ -18,8 +18,9 @@ export const memoizeFactory = <F extends AnyFunction<R>, R>(factoryFn: F): F => 
 
   return ((...args: Parameters<F>): R => {
     const key = JSON.stringify(args)
-
-    if (key in cache) return cache[key]
+    if (key in cache) {
+      return cache[key]
+    }
 
     return (cache[key] = factoryFn(...args))
   }) as F

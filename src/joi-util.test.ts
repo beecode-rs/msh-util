@@ -2,7 +2,6 @@ import Joi from 'joi'
 import { JoiUtil } from 'src/joi-util'
 
 describe('JoiUtil', () => {
-  const fake_logger = jest.fn()
   const joiUtil = new JoiUtil()
 
   const validObject = { a: 'string', b: true, c: 123, d: new Date() }
@@ -14,12 +13,6 @@ describe('JoiUtil', () => {
     c: Joi.number().required(),
     d: Joi.date().required(),
   })
-
-  beforeEach(() => {
-    fake_logger.mockImplementation()
-  })
-
-  afterEach(() => jest.resetAllMocks())
 
   describe('sanitize', () => {
     it('should return valid object', () => {
@@ -189,6 +182,11 @@ describe('JoiUtil', () => {
           },
         ])
       }
+    })
+
+    it('should allow unknown if flag is set and call logger with warn message', () => {
+      const result = joiUtil.validate({ ...validObject, unknownProp: 'test' }, joiSchema, { allowUnknown: true })
+      expect(result).toEqual({ ...validObject, unknownProp: 'test' })
     })
   })
 })

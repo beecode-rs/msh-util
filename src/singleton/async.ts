@@ -41,7 +41,9 @@ export class SingletonAsync<T> {
   protected _rejectPromises(params: { error: Error }): void {
     const { error } = params
 
-    if (this._cache.promises) this._cache.promises.forEach((promise) => promise.reject(error))
+    if (this._cache.promises) {
+      this._cache.promises.forEach((promise) => promise.reject(error))
+    }
     delete this._cache.promises
   }
 
@@ -51,7 +53,9 @@ export class SingletonAsync<T> {
    * @returns {Promise<T>}
    */
   async promise(): Promise<T> {
-    if ('singleton' in this._cache) return this._cache.singleton!
+    if ('singleton' in this._cache) {
+      return this._cache.singleton!
+    }
     if ('promises' in this._cache) {
       return new Promise<T>((resolve, reject) => {
         this._cache.promises!.push({ resolve, reject })
@@ -77,7 +81,9 @@ export class SingletonAsync<T> {
    * @returns {T | undefined}
    */
   cached(): T | undefined {
-    if ('singleton' in this._cache) return this._cache.singleton!
+    if ('singleton' in this._cache) {
+      return this._cache.singleton!
+    }
 
     return undefined
   }

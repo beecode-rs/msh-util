@@ -35,7 +35,9 @@ export const singletonPattern = <R>(factoryFn: AnyFunctionNoParams<R>): AnyFunct
   const cache: { singleton?: R } = {}
 
   return (): R => {
-    if ('singleton' in cache) return cache.singleton!
+    if ('singleton' in cache) {
+      return cache.singleton!
+    }
 
     return (cache.singleton = factoryFn())
   }
