@@ -48,10 +48,16 @@ export class ObjectUtil {
 
     return this.pickByList<T, L>(obj, keys)
   }
+
   /**
    * This function will do stringify deeper that JSON.stringify.
-   * @param {any} obj
-   * @return {string}
+   * @param {any} entity - entity thant needs to be stringify
+   * @param {object} [options] - available options
+   * @param {boolean} [options.isSortable=false] - if object property should be sorted
+   * @param {boolean} [options.isPrettyPrinted=false] - if object and array properties should be printed in a new row
+   * @param {number} [options.prettyPrintCompactLevel=0] - if pretty print is on define the level of deepest children that are not
+   * going to be pretty. It doesn't matter if the siblings doesn't have the same depth.
+   * @return {string} - strung result
    * @example
    * console.log(new ObjectUtil().deepStringify(null)) // 'null'
    * console.log(new ObjectUtil().deepStringify(undefined)) // 'undefined'
@@ -61,10 +67,15 @@ export class ObjectUtil {
    * // }`
    * console.log(new ObjectUtil().deepStringify({ b: 1, a: 2 }, {isSorted:true, compact: true})) // { a: 2, b: 1 }
    */
-  deepStringify(obj: any, options?: { isSorted?: boolean; compact?: boolean | number }): string {
-    const { isSorted = false, compact = 0 } = options ?? {}
+  deepStringify(
+    entity: any,
+    options?: { isSorted?: boolean; isPrettyPrinted?: boolean; prettyPrintCompactLevel?: number }
+  ): string {
+    const { isSorted = false, isPrettyPrinted = false, prettyPrintCompactLevel = 0 } = options ?? {}
 
-    return util.inspect(obj, {
+    const compact = isPrettyPrinted ? prettyPrintCompactLevel : true
+
+    return util.inspect(entity, {
       depth: Infinity,
       sorted: isSorted,
       maxArrayLength: Infinity,
@@ -81,7 +92,7 @@ export class ObjectUtil {
    * @return {boolean}
    */
   deepEqual(a: any, b: any): boolean {
-    return this.deepStringify(a, { isSorted: true, compact: true }) === this.deepStringify(b, { isSorted: true, compact: true })
+    return this.deepStringify(a, { isSorted: true }) === this.deepStringify(b, { isSorted: true })
   }
 
   /**

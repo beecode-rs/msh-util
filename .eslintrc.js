@@ -47,6 +47,7 @@ const config = {
   },
   plugins: ['@typescript-eslint', 'eslint-plugin-import', 'import', 'no-only-tests', 'prettier', 'no-loops'],
   rules: {
+    curly: 'error',
     'no-loops/no-loops': 'error',
     'padding-line-between-statements': [
       'error',
