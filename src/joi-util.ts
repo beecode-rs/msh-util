@@ -1,41 +1,65 @@
-import { ObjectType } from './object-util'
-import { nodeError } from '@beecode/msh-node-error'
 import { ObjectSchema, Schema, ValidationOptions } from 'joi'
 
-export interface JoiLogger {
-  warn(msg: string, obj: ObjectType): void
+export class ErrorWithPayload<T> extends Error {
+  payload: T
+
+  constructor(message: string, payload: T) {
+    super(message)
+    this.payload = payload
+  }
 }
 
-export type joiUtilOptions = ValidationOptions & {
-  logger?: JoiLogger
-}
-
-export const joiUtil = {
+/**
+ * This is a simple wrapper around Joi validation with two functions exposed validate and sanitize. If object is not valid function throws an error.
+ * @example
+ * type SomeType = {
+ *   a: string
+ *   b: number
+ * }
+ * const someSchema = Joi.object<SomeType>().keys({
+ *   a: Joi.string().required(),
+ *   b: Joi.number().required(),
+ * }).required()
+ *
+ * const joiUtil = new JoiUtil()
+ *
+ * // using
+ * const invalidObject = joiUtil.validate({}, someSchema) // validate throws an error
+ * const validObject = joiUtil.validate({ a: 'a', b: 1 }, someSchema)
+ */
+export class JoiUtil {
   /**
    * Validate and clean object
-   * @param {Partial<T>} objectToValidate
+   * @template T
+   * @template Joi
+   * @param {any} objectToValidate
    * @param {Joi.Schema | Joi.ObjectSchema<T>} schema
-   * @param {joiUtilOptions | undefined} joiUtilOptions
+   * @param {validationOptions} [validationOptions]
    * @returns {T} expected object after validation
    */
-  sanitize: <T>(objectToValidate: Partial<T>, schema: Schema | ObjectSchema<T>, joiUtilOptions?: joiUtilOptions): T => {
-    return joiUtil._validate<T>(objectToValidate, schema, { ...joiUtilOptions, stripUnknown: true })
-  },
+  sanitize<T>(objectToValidate: any, schema: Schema | ObjectSchema<T>, validationOptions?: ValidationOptions): T {
+    return this._validate<T>(objectToValidate, schema, { ...validationOptions, stripUnknown: true })
+  }
+
   /**
    * Only validate properties specified in validation schema
-   * @param {Partial<T>} objectToValidate
-   * @param {Joi.Schema | ObjectSchema<T>} schema
-   * @param {joiUtilOptions | undefined} joiUtilOptions
+   * @template T
+   * @template Joi
+   * @param {any} objectToValidate
+   * @param {Joi.Schema | Joi.ObjectSchema<T>} schema
+   * @param {validationOptions} [validationOptions]
    * @returns {T} expected object after validation
    */
-  validate: <T>(objectToValidate: Partial<T>, schema: Schema | ObjectSchema<T>, joiUtilOptions?: joiUtilOptions): T => {
-    return joiUtil._validate<T>(objectToValidate, schema, joiUtilOptions)
-  },
-  _validate: <T>(objectToValidate: Partial<T>, schema: Schema | ObjectSchema<T>, options?: joiUtilOptions): T => {
-    const { logger, ...validationOptions } = options ?? {}
-    const { error: validationError, value, warning } = schema.validate(objectToValidate, validationOptions)
-    if (validationError) throw nodeError.client.badRequest(validationError.message.split('"').join("'"), validationError)
-    if (warning && options?.logger?.warn) options.logger.warn('joiValidationUtil._validate', warning)
+  validate<T>(objectToValidate: any, schema: Schema | ObjectSchema<T>, validationOptions?: ValidationOptions): T {
+    return this._validate<T>(objectToValidate, schema, validationOptions)
+  }
+
+  protected _validate<T>(objectToValidate: any, schema: Schema | ObjectSchema<T>, validationOptions?: ValidationOptions): T {
+    const { error: validationError, value } = schema.validate(objectToValidate, validationOptions)
+    if (validationError) {
+      throw new ErrorWithPayload(validationError.message.split('"').join("'"), validationError)
+    }
+
     return value as T
-  },
+  }
 }

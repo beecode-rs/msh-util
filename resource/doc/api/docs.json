@@ -1,0 +1,4536 @@
+{
+	"id": 0,
+	"name": "@beecode/msh-util",
+	"kind": 1,
+	"kindString": "Project",
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 167,
+			"name": "DurationUnit",
+			"kind": 8,
+			"kindString": "Enumeration",
+			"flags": {},
+			"children": [
+				{
+					"id": 172,
+					"name": "DAY",
+					"kind": 16,
+					"kindString": "Enumeration Member",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "time-util.ts",
+							"line": 11,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L11"
+						}
+					],
+					"type": {
+						"type": "literal",
+						"value": "DAY"
+					}
+				},
+				{
+					"id": 171,
+					"name": "HOUR",
+					"kind": 16,
+					"kindString": "Enumeration Member",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "time-util.ts",
+							"line": 10,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L10"
+						}
+					],
+					"type": {
+						"type": "literal",
+						"value": "HOUR"
+					}
+				},
+				{
+					"id": 168,
+					"name": "MILLISECOND",
+					"kind": 16,
+					"kindString": "Enumeration Member",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "time-util.ts",
+							"line": 7,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L7"
+						}
+					],
+					"type": {
+						"type": "literal",
+						"value": "MILLISECOND"
+					}
+				},
+				{
+					"id": 170,
+					"name": "MINUTE",
+					"kind": 16,
+					"kindString": "Enumeration Member",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "time-util.ts",
+							"line": 9,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L9"
+						}
+					],
+					"type": {
+						"type": "literal",
+						"value": "MINUTE"
+					}
+				},
+				{
+					"id": 174,
+					"name": "MONTH",
+					"kind": 16,
+					"kindString": "Enumeration Member",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "time-util.ts",
+							"line": 13,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L13"
+						}
+					],
+					"type": {
+						"type": "literal",
+						"value": "MONTH"
+					}
+				},
+				{
+					"id": 169,
+					"name": "SECOND",
+					"kind": 16,
+					"kindString": "Enumeration Member",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "time-util.ts",
+							"line": 8,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L8"
+						}
+					],
+					"type": {
+						"type": "literal",
+						"value": "SECOND"
+					}
+				},
+				{
+					"id": 173,
+					"name": "WEEK",
+					"kind": 16,
+					"kindString": "Enumeration Member",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "time-util.ts",
+							"line": 12,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L12"
+						}
+					],
+					"type": {
+						"type": "literal",
+						"value": "WEEK"
+					}
+				},
+				{
+					"id": 175,
+					"name": "YEAR",
+					"kind": 16,
+					"kindString": "Enumeration Member",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "time-util.ts",
+							"line": 14,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L14"
+						}
+					],
+					"type": {
+						"type": "literal",
+						"value": "YEAR"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Enumeration Members",
+					"children": [
+						172,
+						171,
+						168,
+						170,
+						174,
+						169,
+						173,
+						175
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "time-util.ts",
+					"line": 6,
+					"character": 12,
+					"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L6"
+				}
+			]
+		},
+		{
+			"id": 64,
+			"name": "ErrorWithPayload",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"children": [
+				{
+					"id": 65,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "joi-util.ts",
+							"line": 14,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/joi-util.ts#L14"
+						}
+					],
+					"signatures": [
+						{
+							"id": 66,
+							"name": "new ErrorWithPayload",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"typeParameter": [
+								{
+									"id": 67,
+									"name": "T",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {}
+								}
+							],
+							"parameters": [
+								{
+									"id": 68,
+									"name": "message",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 69,
+									"name": "payload",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 67,
+										"name": "T"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 64,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 67,
+										"name": "T"
+									}
+								],
+								"name": "ErrorWithPayload"
+							},
+							"overwrites": {
+								"type": "reference",
+								"name": "Error.constructor"
+							}
+						}
+					],
+					"overwrites": {
+						"type": "reference",
+						"name": "Error.constructor"
+					}
+				},
+				{
+					"id": 70,
+					"name": "payload",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "joi-util.ts",
+							"line": 13,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/joi-util.ts#L13"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 67,
+						"name": "T"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						65
+					]
+				},
+				{
+					"title": "Properties",
+					"children": [
+						70
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "joi-util.ts",
+					"line": 12,
+					"character": 13,
+					"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/joi-util.ts#L12"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 71,
+					"name": "T",
+					"kind": 131072,
+					"kindString": "Type parameter",
+					"flags": {}
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"name": "Error",
+					"qualifiedName": "Error",
+					"package": "typescript"
+				}
+			]
+		},
+		{
+			"id": 72,
+			"name": "JoiUtil",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "This is a simple wrapper around Joi validation with two functions exposed validate and sanitize. If object is not valid function throws an error."
+					}
+				],
+				"blockTags": [
+					{
+						"tag": "@example",
+						"content": [
+							{
+								"kind": "code",
+								"text": "```ts\ntype SomeType = {\n  a: string\n  b: number\n}\nconst someSchema = Joi.object<SomeType>().keys({\n  a: Joi.string().required(),\n  b: Joi.number().required(),\n}).required()\n\nconst joiUtil = new JoiUtil()\n\n// using\nconst invalidObject = joiUtil.validate({}, someSchema) // validate throws an error\nconst validObject = joiUtil.validate({ a: 'a', b: 1 }, someSchema)\n```"
+							}
+						]
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 73,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 74,
+							"name": "new JoiUtil",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"id": 72,
+								"name": "JoiUtil"
+							}
+						}
+					]
+				},
+				{
+					"id": 87,
+					"name": "_validate",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isProtected": true
+					},
+					"sources": [
+						{
+							"fileName": "joi-util.ts",
+							"line": 65,
+							"character": 12,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/joi-util.ts#L65"
+						}
+					],
+					"signatures": [
+						{
+							"id": 88,
+							"name": "_validate",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"typeParameter": [
+								{
+									"id": 89,
+									"name": "T",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {}
+								}
+							],
+							"parameters": [
+								{
+									"id": 90,
+									"name": "objectToValidate",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								},
+								{
+									"id": 91,
+									"name": "schema",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "any"
+													}
+												],
+												"name": "Schema",
+												"qualifiedName": "Joi.Schema",
+												"package": "joi"
+											},
+											{
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "reference",
+														"id": 89,
+														"name": "T"
+													}
+												],
+												"name": "ObjectSchema",
+												"qualifiedName": "Joi.ObjectSchema",
+												"package": "joi"
+											}
+										]
+									}
+								},
+								{
+									"id": 92,
+									"name": "options",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "reference",
+										"id": 61,
+										"name": "joiUtilOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 89,
+								"name": "T"
+							}
+						}
+					]
+				},
+				{
+					"id": 75,
+					"name": "sanitize",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "joi-util.ts",
+							"line": 48,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/joi-util.ts#L48"
+						}
+					],
+					"signatures": [
+						{
+							"id": 76,
+							"name": "sanitize",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Validate and clean object"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "expected object after validation"
+											}
+										]
+									}
+								]
+							},
+							"typeParameter": [
+								{
+									"id": 77,
+									"name": "T",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {}
+								}
+							],
+							"parameters": [
+								{
+									"id": 78,
+									"name": "objectToValidate",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								},
+								{
+									"id": 79,
+									"name": "schema",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "any"
+													}
+												],
+												"name": "Schema",
+												"qualifiedName": "Joi.Schema",
+												"package": "joi"
+											},
+											{
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "reference",
+														"id": 77,
+														"name": "T"
+													}
+												],
+												"name": "ObjectSchema",
+												"qualifiedName": "Joi.ObjectSchema",
+												"package": "joi"
+											}
+										]
+									}
+								},
+								{
+									"id": 80,
+									"name": "joiUtilOptions",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "reference",
+										"id": 61,
+										"name": "joiUtilOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 77,
+								"name": "T"
+							}
+						}
+					]
+				},
+				{
+					"id": 81,
+					"name": "validate",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "joi-util.ts",
+							"line": 61,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/joi-util.ts#L61"
+						}
+					],
+					"signatures": [
+						{
+							"id": 82,
+							"name": "validate",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Only validate properties specified in validation schema"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": [
+											{
+												"kind": "text",
+												"text": "expected object after validation"
+											}
+										]
+									}
+								]
+							},
+							"typeParameter": [
+								{
+									"id": 83,
+									"name": "T",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {}
+								}
+							],
+							"parameters": [
+								{
+									"id": 84,
+									"name": "objectToValidate",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								},
+								{
+									"id": 85,
+									"name": "schema",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "any"
+													}
+												],
+												"name": "Schema",
+												"qualifiedName": "Joi.Schema",
+												"package": "joi"
+											},
+											{
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "reference",
+														"id": 83,
+														"name": "T"
+													}
+												],
+												"name": "ObjectSchema",
+												"qualifiedName": "Joi.ObjectSchema",
+												"package": "joi"
+											}
+										]
+									}
+								},
+								{
+									"id": 86,
+									"name": "joiUtilOptions",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "reference",
+										"id": 61,
+										"name": "joiUtilOptions"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 83,
+								"name": "T"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						73
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						87,
+						75,
+						81
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "joi-util.ts",
+					"line": 38,
+					"character": 13,
+					"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/joi-util.ts#L38"
+				}
+			]
+		},
+		{
+			"id": 102,
+			"name": "ObjectUtil",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"children": [
+				{
+					"id": 103,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 104,
+							"name": "new ObjectUtil",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"id": 102,
+								"name": "ObjectUtil"
+							}
+						}
+					]
+				},
+				{
+					"id": 105,
+					"name": "deepClone",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "object-util.ts",
+							"line": 13,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/object-util.ts#L13"
+						}
+					],
+					"signatures": [
+						{
+							"id": 106,
+							"name": "deepClone",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Deep clone object. Returned object will have no references to the object passed through params"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": []
+									}
+								]
+							},
+							"typeParameter": [
+								{
+									"id": 107,
+									"name": "T",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 98,
+										"name": "ObjectType"
+									}
+								}
+							],
+							"parameters": [
+								{
+									"id": 108,
+									"name": "objectToClone",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 107,
+										"name": "T"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 107,
+								"name": "T"
+							}
+						}
+					]
+				},
+				{
+					"id": 128,
+					"name": "deepEqual",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "object-util.ts",
+							"line": 83,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/object-util.ts#L83"
+						}
+					],
+					"signatures": [
+						{
+							"id": 129,
+							"name": "deepEqual",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "We are converting objects to string (or null or undefined) and comparing if the result is equal"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": []
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 130,
+									"name": "a",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								},
+								{
+									"id": 131,
+									"name": "b",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					]
+				},
+				{
+					"id": 132,
+					"name": "deepNullToUndefined",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "object-util.ts",
+							"line": 95,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/object-util.ts#L95"
+						}
+					],
+					"signatures": [
+						{
+							"id": 133,
+							"name": "deepNullToUndefined",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "This function is going to convert any null to undefined in the object that is passed to it."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": []
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nconsole.log(new ObjectUtil().deepNullToUndefined({ a: null, b: { c: null } })) // { a: undefined, b: { c: undefined } }\n```"
+											}
+										]
+									}
+								]
+							},
+							"typeParameter": [
+								{
+									"id": 134,
+									"name": "T",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 98,
+										"name": "ObjectType"
+									}
+								}
+							],
+							"parameters": [
+								{
+									"id": 135,
+									"name": "objectWithNulls",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 134,
+										"name": "T"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 134,
+								"name": "T"
+							}
+						}
+					]
+				},
+				{
+					"id": 121,
+					"name": "deepStringify",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "object-util.ts",
+							"line": 64,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/object-util.ts#L64"
+						}
+					],
+					"signatures": [
+						{
+							"id": 122,
+							"name": "deepStringify",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "This function will do stringify deeper that JSON.stringify."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": []
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "text",
+												"text": "console.log(new ObjectUtil().deepStringify(null)) // 'null'\nconsole.log(new ObjectUtil().deepStringify(undefined)) // 'undefined'\nconsole.log(new ObjectUtil().deepStringify({ a: 1 })) // '{\\n\\ta: 1\\n}'\n// "
+											},
+											{
+												"kind": "code",
+												"text": "`{\n//   a:1\n// }`"
+											},
+											{
+												"kind": "text",
+												"text": "\nconsole.log(new ObjectUtil().deepStringify({ b: 1, a: 2 }, {isSorted:true, compact: true})) // { a: 2, b: 1 }"
+											}
+										]
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 123,
+									"name": "obj",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								},
+								{
+									"id": 124,
+									"name": "options",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 125,
+											"name": "__type",
+											"kind": 65536,
+											"kindString": "Type literal",
+											"flags": {},
+											"children": [
+												{
+													"id": 127,
+													"name": "compact",
+													"kind": 1024,
+													"kindString": "Property",
+													"flags": {
+														"isOptional": true
+													},
+													"sources": [
+														{
+															"fileName": "object-util.ts",
+															"line": 64,
+															"character": 58,
+															"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/object-util.ts#L64"
+														}
+													],
+													"type": {
+														"type": "union",
+														"types": [
+															{
+																"type": "intrinsic",
+																"name": "number"
+															},
+															{
+																"type": "intrinsic",
+																"name": "boolean"
+															}
+														]
+													}
+												},
+												{
+													"id": 126,
+													"name": "isSorted",
+													"kind": 1024,
+													"kindString": "Property",
+													"flags": {
+														"isOptional": true
+													},
+													"sources": [
+														{
+															"fileName": "object-util.ts",
+															"line": 64,
+															"character": 38,
+															"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/object-util.ts#L64"
+														}
+													],
+													"type": {
+														"type": "intrinsic",
+														"name": "boolean"
+													}
+												}
+											],
+											"groups": [
+												{
+													"title": "Properties",
+													"children": [
+														127,
+														126
+													]
+												}
+											],
+											"sources": [
+												{
+													"fileName": "object-util.ts",
+													"line": 64,
+													"character": 36,
+													"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/object-util.ts#L64"
+												}
+											]
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					]
+				},
+				{
+					"id": 109,
+					"name": "pickByList",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "object-util.ts",
+							"line": 25,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/object-util.ts#L25"
+						}
+					],
+					"signatures": [
+						{
+							"id": 110,
+							"name": "pickByList",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Pick only properties from the property list. It is only allowed to pick properties from the first level"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": []
+									}
+								]
+							},
+							"typeParameter": [
+								{
+									"id": 111,
+									"name": "T",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "object"
+									}
+								},
+								{
+									"id": 112,
+									"name": "L",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											},
+											{
+												"type": "intrinsic",
+												"name": "number"
+											},
+											{
+												"type": "intrinsic",
+												"name": "symbol"
+											}
+										]
+									}
+								}
+							],
+							"parameters": [
+								{
+									"id": 113,
+									"name": "obj",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 111,
+										"name": "T"
+									}
+								},
+								{
+									"id": 114,
+									"name": "keyList",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "union",
+											"types": [
+												{
+													"type": "intrinsic",
+													"name": "string"
+												},
+												{
+													"type": "reference",
+													"id": 112,
+													"name": "L"
+												}
+											]
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 111,
+										"name": "T"
+									},
+									{
+										"type": "reference",
+										"id": 112,
+										"name": "L"
+									}
+								],
+								"name": "Pick",
+								"qualifiedName": "Pick",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 115,
+					"name": "pickByObjectKeys",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "object-util.ts",
+							"line": 46,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/object-util.ts#L46"
+						}
+					],
+					"signatures": [
+						{
+							"id": 116,
+							"name": "pickByObjectKeys",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Pick objects properties using keys from the second object."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": []
+									}
+								]
+							},
+							"typeParameter": [
+								{
+									"id": 117,
+									"name": "T",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "object"
+									}
+								},
+								{
+									"id": 118,
+									"name": "L",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											},
+											{
+												"type": "intrinsic",
+												"name": "number"
+											},
+											{
+												"type": "intrinsic",
+												"name": "symbol"
+											}
+										]
+									}
+								}
+							],
+							"parameters": [
+								{
+									"id": 119,
+									"name": "obj",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 117,
+										"name": "T"
+									}
+								},
+								{
+									"id": 120,
+									"name": "objWithPickKeys",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"id": 98,
+												"name": "ObjectType"
+											},
+											{
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "reference",
+														"id": 117,
+														"name": "T"
+													}
+												],
+												"name": "Partial",
+												"qualifiedName": "Partial",
+												"package": "typescript"
+											}
+										]
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 117,
+										"name": "T"
+									},
+									{
+										"type": "reference",
+										"id": 118,
+										"name": "L"
+									}
+								],
+								"name": "Pick",
+								"qualifiedName": "Pick",
+								"package": "typescript"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						103
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						105,
+						128,
+						132,
+						121,
+						109,
+						115
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "object-util.ts",
+					"line": 6,
+					"character": 13,
+					"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/object-util.ts#L6"
+				}
+			]
+		},
+		{
+			"id": 139,
+			"name": "SingleThresholdPromise",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "SingleThresholdPromise returns a single promise, and subsequent calls made before the promise resolves will return the same promise."
+					}
+				],
+				"blockTags": [
+					{
+						"tag": "@example",
+						"content": [
+							{
+								"kind": "code",
+								"text": "```ts\nexport const refreshTokenSingleThreshold = new SingleThresholdPromise(async () => {\n  const oldRefreshToken = await refreshTokenService.get()\n  const { accessToken, refreshToken } = await authService.refreshToken({\n    refreshToken: oldRefreshToken,\n  })\n  return { accessToken, refreshToken }\n})\n\nexport const authService = {\n  refreshToken: async (): Promise<{ accessToken: string; refreshToken:string }> => {\n    return refreshTokenSingleThreshold.promise()\n  }\n}\n```"
+							}
+						]
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 140,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "single-threshold-promise.ts",
+							"line": 27,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/single-threshold-promise.ts#L27"
+						}
+					],
+					"signatures": [
+						{
+							"id": 141,
+							"name": "new SingleThresholdPromise",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"typeParameter": [
+								{
+									"id": 142,
+									"name": "T",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {}
+								}
+							],
+							"parameters": [
+								{
+									"id": 143,
+									"name": "factoryFn",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "reference",
+												"id": 142,
+												"name": "T"
+											}
+										],
+										"name": "AnyFunctionPromiseNoParams"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 139,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 142,
+										"name": "T"
+									}
+								],
+								"name": "SingleThresholdPromise"
+							}
+						}
+					]
+				},
+				{
+					"id": 144,
+					"name": "_cache",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isProtected": true
+					},
+					"sources": [
+						{
+							"fileName": "single-threshold-promise.ts",
+							"line": 21,
+							"character": 12,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/single-threshold-promise.ts#L21"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 145,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 146,
+									"name": "promises",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "single-threshold-promise.ts",
+											"line": 22,
+											"character": 4,
+											"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/single-threshold-promise.ts#L22"
+										}
+									],
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reflection",
+											"declaration": {
+												"id": 147,
+												"name": "__type",
+												"kind": 65536,
+												"kindString": "Type literal",
+												"flags": {},
+												"children": [
+													{
+														"id": 152,
+														"name": "reject",
+														"kind": 1024,
+														"kindString": "Property",
+														"flags": {},
+														"sources": [
+															{
+																"fileName": "single-threshold-promise.ts",
+																"line": 22,
+																"character": 63,
+																"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/single-threshold-promise.ts#L22"
+															}
+														],
+														"type": {
+															"type": "reflection",
+															"declaration": {
+																"id": 153,
+																"name": "__type",
+																"kind": 65536,
+																"kindString": "Type literal",
+																"flags": {},
+																"sources": [
+																	{
+																		"fileName": "single-threshold-promise.ts",
+																		"line": 22,
+																		"character": 71,
+																		"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/single-threshold-promise.ts#L22"
+																	}
+																],
+																"signatures": [
+																	{
+																		"id": 154,
+																		"name": "__type",
+																		"kind": 4096,
+																		"kindString": "Call signature",
+																		"flags": {},
+																		"parameters": [
+																			{
+																				"id": 155,
+																				"name": "reason",
+																				"kind": 32768,
+																				"kindString": "Parameter",
+																				"flags": {
+																					"isOptional": true
+																				},
+																				"type": {
+																					"type": "intrinsic",
+																					"name": "any"
+																				}
+																			}
+																		],
+																		"type": {
+																			"type": "intrinsic",
+																			"name": "void"
+																		}
+																	}
+																]
+															}
+														}
+													},
+													{
+														"id": 148,
+														"name": "resolve",
+														"kind": 1024,
+														"kindString": "Property",
+														"flags": {},
+														"sources": [
+															{
+																"fileName": "single-threshold-promise.ts",
+																"line": 22,
+																"character": 17,
+																"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/single-threshold-promise.ts#L22"
+															}
+														],
+														"type": {
+															"type": "reflection",
+															"declaration": {
+																"id": 149,
+																"name": "__type",
+																"kind": 65536,
+																"kindString": "Type literal",
+																"flags": {},
+																"sources": [
+																	{
+																		"fileName": "single-threshold-promise.ts",
+																		"line": 22,
+																		"character": 26,
+																		"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/single-threshold-promise.ts#L22"
+																	}
+																],
+																"signatures": [
+																	{
+																		"id": 150,
+																		"name": "__type",
+																		"kind": 4096,
+																		"kindString": "Call signature",
+																		"flags": {},
+																		"parameters": [
+																			{
+																				"id": 151,
+																				"name": "value",
+																				"kind": 32768,
+																				"kindString": "Parameter",
+																				"flags": {},
+																				"type": {
+																					"type": "union",
+																					"types": [
+																						{
+																							"type": "reference",
+																							"id": 142,
+																							"name": "T"
+																						},
+																						{
+																							"type": "reference",
+																							"typeArguments": [
+																								{
+																									"type": "reference",
+																									"id": 142,
+																									"name": "T"
+																								}
+																							],
+																							"name": "PromiseLike",
+																							"qualifiedName": "PromiseLike",
+																							"package": "typescript"
+																						}
+																					]
+																				}
+																			}
+																		],
+																		"type": {
+																			"type": "intrinsic",
+																			"name": "void"
+																		}
+																	}
+																]
+															}
+														}
+													}
+												],
+												"groups": [
+													{
+														"title": "Properties",
+														"children": [
+															152,
+															148
+														]
+													}
+												],
+												"sources": [
+													{
+														"fileName": "single-threshold-promise.ts",
+														"line": 22,
+														"character": 15,
+														"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/single-threshold-promise.ts#L22"
+													}
+												]
+											}
+										}
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										146
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "single-threshold-promise.ts",
+									"line": 21,
+									"character": 20,
+									"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/single-threshold-promise.ts#L21"
+								}
+							]
+						}
+					},
+					"defaultValue": "{}"
+				},
+				{
+					"id": 156,
+					"name": "_factoryFn",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isProtected": true
+					},
+					"sources": [
+						{
+							"fileName": "single-threshold-promise.ts",
+							"line": 25,
+							"character": 12,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/single-threshold-promise.ts#L25"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"id": 142,
+								"name": "T"
+							}
+						],
+						"name": "AnyFunctionPromiseNoParams"
+					}
+				},
+				{
+					"id": 157,
+					"name": "_rejectPromises",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isProtected": true
+					},
+					"sources": [
+						{
+							"fileName": "single-threshold-promise.ts",
+							"line": 31,
+							"character": 12,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/single-threshold-promise.ts#L31"
+						}
+					],
+					"signatures": [
+						{
+							"id": 158,
+							"name": "_rejectPromises",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 159,
+					"name": "promise",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "single-threshold-promise.ts",
+							"line": 36,
+							"character": 8,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/single-threshold-promise.ts#L36"
+						}
+					],
+					"signatures": [
+						{
+							"id": 160,
+							"name": "promise",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 142,
+										"name": "T"
+									}
+								],
+								"name": "Promise",
+								"qualifiedName": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						140
+					]
+				},
+				{
+					"title": "Properties",
+					"children": [
+						144,
+						156
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						157,
+						159
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "single-threshold-promise.ts",
+					"line": 20,
+					"character": 13,
+					"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/single-threshold-promise.ts#L20"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 161,
+					"name": "T",
+					"kind": 131072,
+					"kindString": "Type parameter",
+					"flags": {}
+				}
+			]
+		},
+		{
+			"id": 6,
+			"name": "SingletonAsync",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "This is a singleton wrapper that is used to wrap around async function. We have additional functionality to clear the cache\nand reject any subscriptions to initial promise. And we can also check if there is anything i cache"
+					}
+				],
+				"blockTags": [
+					{
+						"tag": "@example",
+						"content": [
+							{
+								"kind": "code",
+								"text": "```ts\nexport const configSingleton = new SingletonAsync(async () => {\n  await timeout(3000)\n  return {\n    env: process.env.NODE_ENV\n  } as const\n})\n\n// using\n// cache value before we call promise\nconsole.log(configSingleton().cache()) // undefined\nconsole.log('NODE_ENV: ', await configSingleton().promise().env) // NODE_ENV: prod\n// cache value after we call promise\nconsole.log(configSingleton().cache()) // { env: 'prod' }\n```"
+							}
+						]
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 7,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "singleton/async.ts",
+							"line": 29,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L29"
+						}
+					],
+					"signatures": [
+						{
+							"id": 8,
+							"name": "new SingletonAsync",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"typeParameter": [
+								{
+									"id": 9,
+									"name": "T",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {}
+								}
+							],
+							"parameters": [
+								{
+									"id": 10,
+									"name": "factory",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "reference",
+												"id": 9,
+												"name": "T"
+											}
+										],
+										"name": "AnyFunctionPromiseNoParams"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 6,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 9,
+										"name": "T"
+									}
+								],
+								"name": "SingletonAsync"
+							}
+						}
+					]
+				},
+				{
+					"id": 11,
+					"name": "_cache",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isProtected": true
+					},
+					"sources": [
+						{
+							"fileName": "singleton/async.ts",
+							"line": 22,
+							"character": 12,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L22"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 12,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 14,
+									"name": "promises",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "singleton/async.ts",
+											"line": 24,
+											"character": 4,
+											"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L24"
+										}
+									],
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reflection",
+											"declaration": {
+												"id": 15,
+												"name": "__type",
+												"kind": 65536,
+												"kindString": "Type literal",
+												"flags": {},
+												"children": [
+													{
+														"id": 20,
+														"name": "reject",
+														"kind": 1024,
+														"kindString": "Property",
+														"flags": {},
+														"sources": [
+															{
+																"fileName": "singleton/async.ts",
+																"line": 24,
+																"character": 63,
+																"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L24"
+															}
+														],
+														"type": {
+															"type": "reflection",
+															"declaration": {
+																"id": 21,
+																"name": "__type",
+																"kind": 65536,
+																"kindString": "Type literal",
+																"flags": {},
+																"sources": [
+																	{
+																		"fileName": "singleton/async.ts",
+																		"line": 24,
+																		"character": 71,
+																		"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L24"
+																	}
+																],
+																"signatures": [
+																	{
+																		"id": 22,
+																		"name": "__type",
+																		"kind": 4096,
+																		"kindString": "Call signature",
+																		"flags": {},
+																		"parameters": [
+																			{
+																				"id": 23,
+																				"name": "reason",
+																				"kind": 32768,
+																				"kindString": "Parameter",
+																				"flags": {
+																					"isOptional": true
+																				},
+																				"type": {
+																					"type": "intrinsic",
+																					"name": "any"
+																				}
+																			}
+																		],
+																		"type": {
+																			"type": "intrinsic",
+																			"name": "void"
+																		}
+																	}
+																]
+															}
+														}
+													},
+													{
+														"id": 16,
+														"name": "resolve",
+														"kind": 1024,
+														"kindString": "Property",
+														"flags": {},
+														"sources": [
+															{
+																"fileName": "singleton/async.ts",
+																"line": 24,
+																"character": 17,
+																"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L24"
+															}
+														],
+														"type": {
+															"type": "reflection",
+															"declaration": {
+																"id": 17,
+																"name": "__type",
+																"kind": 65536,
+																"kindString": "Type literal",
+																"flags": {},
+																"sources": [
+																	{
+																		"fileName": "singleton/async.ts",
+																		"line": 24,
+																		"character": 26,
+																		"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L24"
+																	}
+																],
+																"signatures": [
+																	{
+																		"id": 18,
+																		"name": "__type",
+																		"kind": 4096,
+																		"kindString": "Call signature",
+																		"flags": {},
+																		"parameters": [
+																			{
+																				"id": 19,
+																				"name": "value",
+																				"kind": 32768,
+																				"kindString": "Parameter",
+																				"flags": {},
+																				"type": {
+																					"type": "union",
+																					"types": [
+																						{
+																							"type": "reference",
+																							"id": 9,
+																							"name": "T"
+																						},
+																						{
+																							"type": "reference",
+																							"typeArguments": [
+																								{
+																									"type": "reference",
+																									"id": 9,
+																									"name": "T"
+																								}
+																							],
+																							"name": "PromiseLike",
+																							"qualifiedName": "PromiseLike",
+																							"package": "typescript"
+																						}
+																					]
+																				}
+																			}
+																		],
+																		"type": {
+																			"type": "intrinsic",
+																			"name": "void"
+																		}
+																	}
+																]
+															}
+														}
+													}
+												],
+												"groups": [
+													{
+														"title": "Properties",
+														"children": [
+															20,
+															16
+														]
+													}
+												],
+												"sources": [
+													{
+														"fileName": "singleton/async.ts",
+														"line": 24,
+														"character": 15,
+														"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L24"
+													}
+												]
+											}
+										}
+									}
+								},
+								{
+									"id": 13,
+									"name": "singleton",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "singleton/async.ts",
+											"line": 23,
+											"character": 4,
+											"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L23"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 9,
+										"name": "T"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										14,
+										13
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "singleton/async.ts",
+									"line": 22,
+									"character": 20,
+									"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L22"
+								}
+							]
+						}
+					},
+					"defaultValue": "{}"
+				},
+				{
+					"id": 24,
+					"name": "_factory",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isProtected": true
+					},
+					"sources": [
+						{
+							"fileName": "singleton/async.ts",
+							"line": 27,
+							"character": 12,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L27"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"id": 9,
+								"name": "T"
+							}
+						],
+						"name": "AnyFunctionPromiseNoParams"
+					}
+				},
+				{
+					"id": 27,
+					"name": "_rejectPromises",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isProtected": true
+					},
+					"sources": [
+						{
+							"fileName": "singleton/async.ts",
+							"line": 41,
+							"character": 12,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L41"
+						}
+					],
+					"signatures": [
+						{
+							"id": 28,
+							"name": "_rejectPromises",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 29,
+									"name": "params",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 30,
+											"name": "__type",
+											"kind": 65536,
+											"kindString": "Type literal",
+											"flags": {},
+											"children": [
+												{
+													"id": 31,
+													"name": "error",
+													"kind": 1024,
+													"kindString": "Property",
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "singleton/async.ts",
+															"line": 41,
+															"character": 38,
+															"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L41"
+														}
+													],
+													"type": {
+														"type": "reference",
+														"name": "Error",
+														"qualifiedName": "Error",
+														"package": "typescript"
+													}
+												}
+											],
+											"groups": [
+												{
+													"title": "Properties",
+													"children": [
+														31
+													]
+												}
+											],
+											"sources": [
+												{
+													"fileName": "singleton/async.ts",
+													"line": 41,
+													"character": 36,
+													"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L41"
+												}
+											]
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 34,
+					"name": "cached",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "singleton/async.ts",
+							"line": 79,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L79"
+						}
+					],
+					"signatures": [
+						{
+							"id": 35,
+							"name": "cached",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Return cached value, if there is no value cached return undefined."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": []
+									}
+								]
+							},
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "reference",
+										"id": 9,
+										"name": "T"
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"id": 25,
+					"name": "cleanCache",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "singleton/async.ts",
+							"line": 36,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L36"
+						}
+					],
+					"signatures": [
+						{
+							"id": 26,
+							"name": "cleanCache",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Empty cached value and reject any subscribed promise that is waiting for the initial promise to be resolved."
+									}
+								]
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 32,
+					"name": "promise",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "singleton/async.ts",
+							"line": 53,
+							"character": 8,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L53"
+						}
+					],
+					"signatures": [
+						{
+							"id": 33,
+							"name": "promise",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Return singleton value in a promise. If there is no cached value then try to get it from factory."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": []
+									}
+								]
+							},
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 9,
+										"name": "T"
+									}
+								],
+								"name": "Promise",
+								"qualifiedName": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						7
+					]
+				},
+				{
+					"title": "Properties",
+					"children": [
+						11,
+						24
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						27,
+						34,
+						25,
+						32
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "singleton/async.ts",
+					"line": 21,
+					"character": 13,
+					"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/async.ts#L21"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 36,
+					"name": "T",
+					"kind": 131072,
+					"kindString": "Type parameter",
+					"flags": {}
+				}
+			]
+		},
+		{
+			"id": 177,
+			"name": "TimeUtil",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"children": [
+				{
+					"id": 178,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 179,
+							"name": "new TimeUtil",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"id": 177,
+								"name": "TimeUtil"
+							}
+						}
+					]
+				},
+				{
+					"id": 194,
+					"name": "addToDate",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "time-util.ts",
+							"line": 90,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L90"
+						}
+					],
+					"signatures": [
+						{
+							"id": 195,
+							"name": "addToDate",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Change the value of date by unit/value pare."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": []
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\n// timeUtil.now().toISOString() === 2023-03-08T19:45:01.991Z\nconst timeUtil = new TimeUtil()\nconsole.log(timeUtil.addToDate({date: timeUtil.now(), unit: 'DAY', value: 1 }).toISOString()) // 2023-03-09T19:45:01.991Z\nconsole.log(timeUtil.addToDate({date: timeUtil.now(), unit: DurationUnit.MONTH, value: -1 }).toISOString()) //2023-02-08T19:45:01.991Z\n```"
+											}
+										]
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 196,
+									"name": "params",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 197,
+											"name": "__type",
+											"kind": 65536,
+											"kindString": "Type literal",
+											"flags": {},
+											"children": [
+												{
+													"id": 200,
+													"name": "date",
+													"kind": 1024,
+													"kindString": "Property",
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "time-util.ts",
+															"line": 90,
+															"character": 76,
+															"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L90"
+														}
+													],
+													"type": {
+														"type": "reference",
+														"name": "Date",
+														"qualifiedName": "Date",
+														"package": "typescript"
+													}
+												},
+												{
+													"id": 198,
+													"name": "unit",
+													"kind": 1024,
+													"kindString": "Property",
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "time-util.ts",
+															"line": 90,
+															"character": 22,
+															"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L90"
+														}
+													],
+													"type": {
+														"type": "union",
+														"types": [
+															{
+																"type": "reference",
+																"id": 167,
+																"name": "DurationUnit"
+															},
+															{
+																"type": "literal",
+																"value": "MILLISECOND"
+															},
+															{
+																"type": "literal",
+																"value": "SECOND"
+															},
+															{
+																"type": "literal",
+																"value": "MINUTE"
+															},
+															{
+																"type": "literal",
+																"value": "HOUR"
+															},
+															{
+																"type": "literal",
+																"value": "DAY"
+															},
+															{
+																"type": "literal",
+																"value": "WEEK"
+															},
+															{
+																"type": "literal",
+																"value": "MONTH"
+															},
+															{
+																"type": "literal",
+																"value": "YEAR"
+															}
+														]
+													}
+												},
+												{
+													"id": 199,
+													"name": "value",
+													"kind": 1024,
+													"kindString": "Property",
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "time-util.ts",
+															"line": 90,
+															"character": 61,
+															"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L90"
+														}
+													],
+													"type": {
+														"type": "intrinsic",
+														"name": "number"
+													}
+												}
+											],
+											"groups": [
+												{
+													"title": "Properties",
+													"children": [
+														200,
+														198,
+														199
+													]
+												}
+											],
+											"sources": [
+												{
+													"fileName": "time-util.ts",
+													"line": 90,
+													"character": 20,
+													"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L90"
+												}
+											]
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Date",
+								"qualifiedName": "Date",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 182,
+					"name": "dateToUnix",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "time-util.ts",
+							"line": 39,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L39"
+						}
+					],
+					"signatures": [
+						{
+							"id": 183,
+							"name": "dateToUnix",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Convert date object to unix timestamp (milliseconds)"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": []
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\n// timeUtil.now().toISOString() === 2023-03-08T19:45:01.991Z\nconst timeUtil = new TimeUtil()\nconsole.log(timeUtil.dateToUnix(timeUtil.now())) // 1678304701991\n```"
+											}
+										]
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 184,
+									"name": "date",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "Date",
+										"qualifiedName": "Date",
+										"package": "typescript"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					]
+				},
+				{
+					"id": 185,
+					"name": "dateToUnixSec",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "time-util.ts",
+							"line": 52,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L52"
+						}
+					],
+					"signatures": [
+						{
+							"id": 186,
+							"name": "dateToUnixSec",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Convert date object to unix timestamp (seconds)"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": []
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\n// timeUtil.now().toISOString() === 2023-03-08T19:45:01.991Z\nconst timeUtil = new TimeUtil()\nconsole.log(timeUtil.dateToUnix(timeUtil.now())) // 1678304701\n```"
+											}
+										]
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 187,
+									"name": "date",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "Date",
+										"qualifiedName": "Date",
+										"package": "typescript"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					]
+				},
+				{
+					"id": 180,
+					"name": "now",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "time-util.ts",
+							"line": 26,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L26"
+						}
+					],
+					"signatures": [
+						{
+							"id": 181,
+							"name": "now",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "return date object with the current time"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": []
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nconsole.log(new TimeUtil().now().toISOString()) // 2023-03-08T19:45:01.991Z\n```"
+											}
+										]
+									}
+								]
+							},
+							"type": {
+								"type": "reference",
+								"name": "Date",
+								"qualifiedName": "Date",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 191,
+					"name": "unixSecToDate",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "time-util.ts",
+							"line": 76,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L76"
+						}
+					],
+					"signatures": [
+						{
+							"id": 192,
+							"name": "unixSecToDate",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Convert unix timestamp (seconds) to date object"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": []
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nconst timeUtil = new TimeUtil()\nconsole.log(timeUtil.unixToDate(1678304701).toISOString()) // 2023-03-08T19:45:01.000Z\n```"
+											}
+										]
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 193,
+									"name": "unix",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Date",
+								"qualifiedName": "Date",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 188,
+					"name": "unixToDate",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "time-util.ts",
+							"line": 64,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L64"
+						}
+					],
+					"signatures": [
+						{
+							"id": 189,
+							"name": "unixToDate",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Convert unix timestamp (milliseconds) to date object"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": []
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nconst timeUtil = new TimeUtil()\nconsole.log(timeUtil.unixToDate(1678304701991).toISOString()) // 2023-03-08T19:45:01.991Z\n```"
+											}
+										]
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 190,
+									"name": "unix",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Date",
+								"qualifiedName": "Date",
+								"package": "typescript"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						178
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						194,
+						182,
+						185,
+						180,
+						191,
+						188
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "time-util.ts",
+					"line": 19,
+					"character": 13,
+					"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L19"
+				}
+			]
+		},
+		{
+			"id": 56,
+			"name": "JoiLogger",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {},
+			"children": [
+				{
+					"id": 57,
+					"name": "warn",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "joi-util.ts",
+							"line": 5,
+							"character": 2,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/joi-util.ts#L5"
+						}
+					],
+					"signatures": [
+						{
+							"id": 58,
+							"name": "warn",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 59,
+									"name": "msg",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 60,
+									"name": "obj",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 98,
+										"name": "ObjectType"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Methods",
+					"children": [
+						57
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "joi-util.ts",
+					"line": 4,
+					"character": 17,
+					"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/joi-util.ts#L4"
+				}
+			]
+		},
+		{
+			"id": 41,
+			"name": "ClassType",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "class-factory-pattern.ts",
+					"line": 1,
+					"character": 12,
+					"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/class-factory-pattern.ts#L1"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 48,
+					"name": "T",
+					"kind": 131072,
+					"kindString": "Type parameter",
+					"flags": {},
+					"default": {
+						"type": "intrinsic",
+						"name": "object"
+					}
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 42,
+					"name": "__type",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "class-factory-pattern.ts",
+							"line": 1,
+							"character": 36,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/class-factory-pattern.ts#L1"
+						}
+					],
+					"signatures": [
+						{
+							"id": 43,
+							"name": "__type",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 44,
+									"name": "args",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isRest": true
+									},
+									"type": {
+										"type": "conditional",
+										"checkType": {
+											"type": "reference",
+											"id": 48,
+											"name": "T"
+										},
+										"extendsType": {
+											"type": "reflection",
+											"declaration": {
+												"id": 45,
+												"name": "__type",
+												"kind": 65536,
+												"kindString": "Type literal",
+												"flags": {},
+												"sources": [
+													{
+														"fileName": "class-factory-pattern.ts",
+														"line": 1,
+														"character": 60,
+														"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/class-factory-pattern.ts#L1"
+													}
+												],
+												"signatures": [
+													{
+														"id": 46,
+														"name": "new args",
+														"kind": 16384,
+														"kindString": "Constructor signature",
+														"flags": {},
+														"parameters": [
+															{
+																"id": 47,
+																"name": "args",
+																"kind": 32768,
+																"kindString": "Parameter",
+																"flags": {
+																	"isRest": true
+																},
+																"type": {
+																	"type": "reference",
+																	"name": "P"
+																}
+															}
+														],
+														"type": {
+															"type": "intrinsic",
+															"name": "any"
+														}
+													}
+												]
+											}
+										},
+										"trueType": {
+											"type": "reference",
+											"name": "P"
+										},
+										"falseType": {
+											"type": "array",
+											"elementType": {
+												"type": "intrinsic",
+												"name": "never"
+											}
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 48,
+								"name": "T"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"id": 176,
+			"name": "DurationUnitType",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "time-util.ts",
+					"line": 17,
+					"character": 12,
+					"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/time-util.ts#L17"
+				}
+			],
+			"type": {
+				"type": "template-literal",
+				"head": "",
+				"tail": [
+					[
+						{
+							"type": "reference",
+							"id": 167,
+							"name": "DurationUnit"
+						},
+						""
+					]
+				]
+			}
+		},
+		{
+			"id": 98,
+			"name": "ObjectType",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "object-util.ts",
+					"line": 4,
+					"character": 12,
+					"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/object-util.ts#L4"
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 99,
+					"name": "__type",
+					"kind": 65536,
+					"kindString": "Type literal",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "object-util.ts",
+							"line": 4,
+							"character": 25,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/object-util.ts#L4"
+						}
+					],
+					"indexSignature": {
+						"id": 100,
+						"name": "__index",
+						"kind": 8192,
+						"kindString": "Index signature",
+						"flags": {},
+						"parameters": [
+							{
+								"id": 101,
+								"name": "k",
+								"kind": 32768,
+								"flags": {},
+								"type": {
+									"type": "intrinsic",
+									"name": "string"
+								}
+							}
+						],
+						"type": {
+							"type": "intrinsic",
+							"name": "any"
+						}
+					}
+				}
+			}
+		},
+		{
+			"id": 61,
+			"name": "joiUtilOptions",
+			"kind": 4194304,
+			"kindString": "Type alias",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "joi-util.ts",
+					"line": 8,
+					"character": 12,
+					"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/joi-util.ts#L8"
+				}
+			],
+			"type": {
+				"type": "intersection",
+				"types": [
+					{
+						"type": "reference",
+						"name": "ValidationOptions",
+						"qualifiedName": "Joi.ValidationOptions",
+						"package": "joi"
+					},
+					{
+						"type": "reflection",
+						"declaration": {
+							"id": 62,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 63,
+									"name": "logger",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "joi-util.ts",
+											"line": 9,
+											"character": 2,
+											"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/joi-util.ts#L9"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 56,
+										"name": "JoiLogger"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										63
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "joi-util.ts",
+									"line": 8,
+									"character": 49,
+									"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/joi-util.ts#L8"
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"id": 136,
+			"name": "regexUtil",
+			"kind": 32,
+			"kindString": "Variable",
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "regex-util.ts",
+					"line": 1,
+					"character": 13,
+					"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/regex-util.ts#L1"
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 137,
+					"name": "__type",
+					"kind": 65536,
+					"kindString": "Type literal",
+					"flags": {},
+					"children": [
+						{
+							"id": 138,
+							"name": "uuid",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "This is a UUID regex expression. This is usually used in express router to constrict the values passed as a path parameter (if you are using UUID as your identifier)."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@returns",
+										"content": []
+									},
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "text",
+												"text": "const { uuid } = regexUtil\nrouter.route("
+											},
+											{
+												"kind": "code",
+												"text": "`/users/:userId(${uuid})`"
+											},
+											{
+												"kind": "text",
+												"text": ").get(getUsersById)\n//..."
+											}
+										]
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "regex-util.ts",
+									"line": 10,
+									"character": 2,
+									"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/regex-util.ts#L10"
+								}
+							],
+							"type": {
+								"type": "literal",
+								"value": "\\b[0-9a-f]{8}\\b-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-\\b[0-9a-f]{12}\\b"
+							},
+							"defaultValue": "..."
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"children": [
+								138
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "regex-util.ts",
+							"line": 1,
+							"character": 25,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/regex-util.ts#L1"
+						}
+					]
+				}
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 162,
+			"name": "stringUtil",
+			"kind": 32,
+			"kindString": "Variable",
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "string-util.ts",
+					"line": 1,
+					"character": 13,
+					"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/string-util.ts#L1"
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 163,
+					"name": "__type",
+					"kind": 65536,
+					"kindString": "Type literal",
+					"flags": {},
+					"children": [
+						{
+							"id": 164,
+							"name": "generateUUID",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "string-util.ts",
+									"line": 8,
+									"character": 2,
+									"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/string-util.ts#L8"
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 165,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "string-util.ts",
+											"line": 8,
+											"character": 16,
+											"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/string-util.ts#L8"
+										}
+									],
+									"signatures": [
+										{
+											"id": 166,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "Generate random UUID"
+													}
+												],
+												"blockTags": [
+													{
+														"tag": "@returns",
+														"content": []
+													},
+													{
+														"tag": "@example",
+														"content": [
+															{
+																"kind": "code",
+																"text": "```ts\nconsole.log(stringUtil.uuid()) // \"69bfda25-df3f-46b4-8bbb-955cf5193426\"\n```"
+															}
+														]
+													}
+												]
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									]
+								}
+							},
+							"defaultValue": "..."
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"children": [
+								164
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "string-util.ts",
+							"line": 1,
+							"character": 26,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/string-util.ts#L1"
+						}
+					]
+				}
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 204,
+			"name": "typeUtil",
+			"kind": 32,
+			"kindString": "Variable",
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "type-util.ts",
+					"line": 1,
+					"character": 13,
+					"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/type-util.ts#L1"
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 205,
+					"name": "__type",
+					"kind": 65536,
+					"kindString": "Type literal",
+					"flags": {},
+					"children": [
+						{
+							"id": 211,
+							"name": "exhaustiveError",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "type-util.ts",
+									"line": 51,
+									"character": 2,
+									"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/type-util.ts#L51"
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 212,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "type-util.ts",
+											"line": 51,
+											"character": 19,
+											"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/type-util.ts#L51"
+										}
+									],
+									"signatures": [
+										{
+											"id": 213,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "This is the similar to exhaustiveMessage, but instead of message we are returning error so we can throw it"
+													}
+												],
+												"blockTags": [
+													{
+														"tag": "@returns",
+														"content": []
+													},
+													{
+														"tag": "@example",
+														"content": [
+															{
+																"kind": "code",
+																"text": "```ts\nexport type Animal = 'cat' | 'dog' | 'bird';\n\nexport const makeSound = (animal: Animal): string => {\n  switch (animal) {\n    case 'cat':\n      return 'Meow'\n    case 'dog':\n      return 'Woof'\n    case 'bird':\n      return 'Tweet'\n    default:\n      throw typeUtil.exhaustiveError('Unknown animal [animal]', animal)\n  }\n}\n```"
+															}
+														]
+													}
+												]
+											},
+											"parameters": [
+												{
+													"id": 214,
+													"name": "message",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												},
+												{
+													"id": 215,
+													"name": "_",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "never"
+													}
+												}
+											],
+											"type": {
+												"type": "reference",
+												"name": "Error",
+												"qualifiedName": "Error",
+												"package": "typescript"
+											}
+										}
+									]
+								}
+							},
+							"defaultValue": "..."
+						},
+						{
+							"id": 206,
+							"name": "exhaustiveMessage",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "type-util.ts",
+									"line": 26,
+									"character": 2,
+									"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/type-util.ts#L26"
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 207,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "type-util.ts",
+											"line": 26,
+											"character": 21,
+											"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/type-util.ts#L26"
+										}
+									],
+									"signatures": [
+										{
+											"id": 208,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "In TypeScript, exhaustiveMessage is a technique that can be used with switch statements to ensure that all possible cases are handled.\n\nWhen using switch statements, it is common to have a default case that handles any unanticipated cases. However, sometimes it is important to ensure that all cases are explicitly handled to avoid potential errors or bugs in the code."
+													}
+												],
+												"blockTags": [
+													{
+														"tag": "@returns",
+														"content": []
+													},
+													{
+														"tag": "@example",
+														"content": [
+															{
+																"kind": "code",
+																"text": "```ts\nexport type Animal = 'cat' | 'dog' | 'bird';\n\nexport const makeSound = (animal: Animal): string => {\n  switch (animal) {\n    case 'cat':\n      return 'Meow'\n    case 'dog':\n      return 'Woof'\n    case 'bird':\n      return 'Tweet'\n    default:\n      console.error(new TypeUtil().exhaustiveMessage('Unknown animal [animal]', animal))\n      return 'unknown sound'\n  }\n}\n```"
+															}
+														]
+													}
+												]
+											},
+											"parameters": [
+												{
+													"id": 209,
+													"name": "message",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												},
+												{
+													"id": 210,
+													"name": "_",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "never"
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									]
+								}
+							},
+							"defaultValue": "..."
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"children": [
+								211,
+								206
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "type-util.ts",
+							"line": 1,
+							"character": 24,
+							"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/type-util.ts#L1"
+						}
+					]
+				}
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 49,
+			"name": "classFactoryPattern",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "class-factory-pattern.ts",
+					"line": 23,
+					"character": 13,
+					"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/class-factory-pattern.ts#L23"
+				}
+			],
+			"signatures": [
+				{
+					"id": 50,
+					"name": "classFactoryPattern",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "This is a wrapper that easily converts class constructor call ("
+							},
+							{
+								"kind": "code",
+								"text": "`new className(..constructorParams)`"
+							},
+							{
+								"kind": "text",
+								"text": ") into function call ("
+							},
+							{
+								"kind": "code",
+								"text": "`classNameFactory(..constructorParams)`"
+							},
+							{
+								"kind": "text",
+								"text": ")"
+							}
+						],
+						"blockTags": [
+							{
+								"tag": "@returns",
+								"content": []
+							},
+							{
+								"tag": "@example",
+								"content": [
+									{
+										"kind": "code",
+										"text": "```ts\nexport class SomeClass {\n  protected _a: string\n\n  constructor(params: { a: string }) {\n    const { a } = params\n    this._a = a\n  }\n}\n\nexport const someClassFactory = classFactoryPattern(SomeClass)\n\n// using\nconst someClassInstance = someClassFactory({ a: 'test' })\n```"
+									}
+								]
+							}
+						]
+					},
+					"typeParameter": [
+						{
+							"id": 51,
+							"name": "C",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"id": 41,
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "object"
+									}
+								],
+								"name": "ClassType"
+							}
+						}
+					],
+					"parameters": [
+						{
+							"id": 52,
+							"name": "classType",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"id": 51,
+								"name": "C"
+							}
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 53,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "class-factory-pattern.ts",
+									"line": 25,
+									"character": 4,
+									"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/class-factory-pattern.ts#L25"
+								}
+							],
+							"signatures": [
+								{
+									"id": 54,
+									"name": "__type",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"parameters": [
+										{
+											"id": 55,
+											"name": "args",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isRest": true
+											},
+											"type": {
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "reference",
+														"id": 51,
+														"name": "C"
+													}
+												],
+												"name": "ConstructorParameters",
+												"qualifiedName": "ConstructorParameters",
+												"package": "typescript"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "reference",
+												"id": 51,
+												"name": "C"
+											}
+										],
+										"name": "InstanceType",
+										"qualifiedName": "InstanceType",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"id": 1,
+			"name": "expressErrorHandler",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "express/error-handler.ts",
+					"line": 16,
+					"character": 13,
+					"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/express/error-handler.ts#L16"
+				}
+			],
+			"signatures": [
+				{
+					"id": 2,
+					"name": "expressErrorHandler",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Wrap async express http request end return promise or call next on catch"
+							}
+						],
+						"blockTags": [
+							{
+								"tag": "@example",
+								"content": [
+									{
+										"kind": "code",
+										"text": "```ts\nexport class RootController {\n /@expressErrorHandler\n  async login(req: Request, res: Response): Promise<void> {\n    const { username, password } = validationUtil().sanitize(req.body, postLoginBodySchema)\n    const result = await authorizationUseCase.login({ username, password })\n    res.json(result)\n  }\n}\n```"
+									}
+								]
+							}
+						]
+					},
+					"parameters": [
+						{
+							"id": 3,
+							"name": "_target",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						},
+						{
+							"id": 4,
+							"name": "_key",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 5,
+							"name": "descriptor",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "any"
+									}
+								],
+								"name": "TypedPropertyDescriptor",
+								"qualifiedName": "TypedPropertyDescriptor",
+								"package": "typescript"
+							}
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "any"
+					}
+				}
+			]
+		},
+		{
+			"id": 93,
+			"name": "memoizeFactory",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "memoize-factory.ts",
+					"line": 16,
+					"character": 13,
+					"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/memoize-factory.ts#L16"
+				}
+			],
+			"signatures": [
+				{
+					"id": 94,
+					"name": "memoizeFactory",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "This is a simple implementation of memoize function that caches result against the parameter passed that are passed to the\nfunction so it never runs the same calculation twice."
+							}
+						],
+						"blockTags": [
+							{
+								"tag": "@returns",
+								"content": []
+							},
+							{
+								"tag": "@example",
+								"content": [
+									{
+										"kind": "code",
+										"text": "```ts\nexport const sumTwoNumbersMemoize = memoizeFactory((a:number, b:number): number => a + b)\n\n// using\nsumTwoNumbersMemoize(5 + 10) // 15\n```"
+									}
+								]
+							}
+						]
+					},
+					"typeParameter": [
+						{
+							"id": 95,
+							"name": "F",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 96,
+										"name": "R"
+									}
+								],
+								"name": "AnyFunction"
+							}
+						},
+						{
+							"id": 96,
+							"name": "R",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {}
+						}
+					],
+					"parameters": [
+						{
+							"id": 97,
+							"name": "factoryFn",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"id": 95,
+								"name": "F"
+							}
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 95,
+						"name": "F"
+					}
+				}
+			]
+		},
+		{
+			"id": 37,
+			"name": "singletonPattern",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "singleton/pattern.ts",
+					"line": 34,
+					"character": 13,
+					"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/singleton/pattern.ts#L34"
+				}
+			],
+			"signatures": [
+				{
+					"id": 38,
+					"name": "singletonPattern",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Singleton patter wrapper function"
+							}
+						],
+						"blockTags": [
+							{
+								"tag": "@returns",
+								"content": [
+									{
+										"kind": "text",
+										"text": "Function result that returns cached value."
+									}
+								]
+							},
+							{
+								"tag": "@example",
+								"content": [
+									{
+										"kind": "code",
+										"text": "```ts\nexport class SomeClass {\n  constructor(protected _param: string){ }\n  get param(): string {\n    return this._param\n  }\n}\nexport const someClassSingleton = singletonPattern((): SomeClass => {\n  return new SomeClass('some param value')\n})\n\n// using\nconsole.log('param: ', someClassSingleton().param) // param: some param value\n\n///////////////////////////////////////////\n// Or we can use it with simple function //\n///////////////////////////////////////////\nexport const config = singletonPattern(() => {\n  return {\n    env: process.NODE_ENV,\n  } as const\n})\n\n// using\nconsole.log('NODE_ENV: ', config().env) // NODE_ENV: prod\n```"
+									}
+								]
+							}
+						]
+					},
+					"typeParameter": [
+						{
+							"id": 39,
+							"name": "R",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {}
+						}
+					],
+					"parameters": [
+						{
+							"id": 40,
+							"name": "factoryFn",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Factory function that is used to generate value that is going to be cached and return by\nsingleton."
+									}
+								]
+							},
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"id": 39,
+										"name": "R"
+									}
+								],
+								"name": "AnyFunctionNoParams"
+							}
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"id": 39,
+								"name": "R"
+							}
+						],
+						"name": "AnyFunctionNoParams"
+					}
+				}
+			]
+		},
+		{
+			"id": 201,
+			"name": "timeout",
+			"kind": 64,
+			"kindString": "Function",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "timeout.ts",
+					"line": 14,
+					"character": 13,
+					"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/timeout.ts#L14"
+				}
+			],
+			"signatures": [
+				{
+					"id": 202,
+					"name": "timeout",
+					"kind": 4096,
+					"kindString": "Call signature",
+					"flags": {},
+					"comment": {
+						"summary": [],
+						"blockTags": [
+							{
+								"tag": "@returns",
+								"content": []
+							},
+							{
+								"tag": "@example",
+								"content": [
+									{
+										"kind": "code",
+										"text": "```ts\nconst lightBlink = (): void => {\n  turnLightOn()\n  timeout(3000) // wait for 3 seconds\n  turnLightOff()\n  timeout(3000) // wait for 3 seconds\n  turnLightOn()\n}\n```"
+									}
+								]
+							}
+						]
+					},
+					"parameters": [
+						{
+							"id": 203,
+							"name": "ms",
+							"kind": 32768,
+							"kindString": "Parameter",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "The time, in milliseconds that the timer should wait before the specified function or code is executed. If this parameter is omitted, a value of 0 is used, meaning execute \"immediately\", or more accurately, the next event cycle."
+									}
+								]
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "void"
+							}
+						],
+						"name": "Promise",
+						"qualifiedName": "Promise",
+						"package": "typescript"
+					}
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Enumerations",
+			"children": [
+				167
+			]
+		},
+		{
+			"title": "Classes",
+			"children": [
+				64,
+				72,
+				102,
+				139,
+				6,
+				177
+			]
+		},
+		{
+			"title": "Interfaces",
+			"children": [
+				56
+			]
+		},
+		{
+			"title": "Type Aliases",
+			"children": [
+				41,
+				176,
+				98,
+				61
+			]
+		},
+		{
+			"title": "Variables",
+			"children": [
+				136,
+				162,
+				204
+			]
+		},
+		{
+			"title": "Functions",
+			"children": [
+				49,
+				1,
+				93,
+				37,
+				201
+			]
+		}
+	],
+	"sources": [
+		{
+			"fileName": "index.ts",
+			"line": 1,
+			"character": 0,
+			"url": "https://github.com/beecode-rs/msh-util/blob/d220fbb/src/index.ts#L1"
+		}
+	]
+}

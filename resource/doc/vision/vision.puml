@@ -1,166 +1,157 @@
 @startuml
-    object "Subject" as subject_6f9d8abf {
-      rxjs.ts
-    }
-    object "ValidationOptions" as validation_options_7f808940 {
-      joi.ts
-    }
     object "cloneDeep" as clone_deep_91af3a80 {
       lodash.clonedeep.ts
     }
-    object "add" as add_b4d4e82e {
-      date-fns.ts
-    }
-    object "parse" as parse_b4d4e82e {
-      date-fns.ts
+    object "util" as util_6f8bd708 {
+      util.ts
     }
     folder "src" as src_b874d07 {
-      object "asyncUtil" as async_util_8c3dccae {
-        + httpErrorHandler(_target: any,\n _key: string,\n descriptor: TypedPropertyDescriptor<any>): any
-        + timeout(t: number): Promise<void>
-      }
-      card any_function_514a3aa4 [
-        AnyFunction
+      card class_type_e4ba24f3 [
+        ClassType
         ---
-        (...args: any[]) => R
+        new (...args: T extends { new (...args: infer P): any } ? P : never[]) => T
       ]
-      card any_function_no_params_514a3aa4 [
-        AnyFunctionNoParams
-        ---
-        () => R
-      ]
-      object "cacheUtil" as cache_util_514a3aa4 {
-        + memoize(fun: T): T
-        + singleton(fun: AnyFunctionNoParams<R>): AnyFunctionNoParams<R>
+      object "classFactoryPattern" as class_factory_pattern_e4ba24f3 {
       }
       interface "JoiLogger" as joi_logger_68a048a4 {
-        + warn(msg: string,\n obj: ObjectType): void
+        + warn(msg: string,\n     obj: ObjectType): void
       }
       card joi_util_options_68a048a4 [
         joiUtilOptions
         ---
-        {
+        ValidationOptions & {
           logger?: JoiLogger
         }
       ]
-      object "joiUtil" as joi_util_68a048a4 {
-        # _validate(objectToValidate: Partial<T>,\n schema: Schema | ObjectSchema<T>,\n validationOptions: ValidationOptions,\n options?: joiUtilOptions): T
-        + sanitize(objectToValidate: Partial<T>,\n schema: Schema | ObjectSchema<T>,\n joiUtilOptions?: joiUtilOptions): T
-        + validate(objectToValidate: Partial<T>,\n schema: Schema | ObjectSchema<T>,\n joiUtilOptions?: joiUtilOptions): T
+      class "ErrorWithPayload" as error_with_payload_68a048a4 {
+        constructor(message: string,\n     payload: T)
+        payload: T
+      }
+      class "JoiUtil" as joi_util_68a048a4 {
+        # _validate(objectToValidate: any,\n     schema: Schema | ObjectSchema<T>,\n     options?: joiUtilOptions): T
+        sanitize(objectToValidate: any,\n     schema: Schema | ObjectSchema<T>,\n     joiUtilOptions?: joiUtilOptions): T
+        validate(objectToValidate: any,\n     schema: Schema | ObjectSchema<T>,\n     joiUtilOptions?: joiUtilOptions): T
+      }
+      object "memoizeFactory" as memoize_factory_7591f384 {
       }
       card object_type_a28a167d [
         ObjectType
         ---
         { [k: string]: any }
       ]
-      object "objectUtil" as object_util_a28a167d {
-        + deepClone(objectToClone: T): T
-        + stringifyOrNullUndefined(obj?: ObjectType | null): string | null | undefined
+      class "ObjectUtil" as object_util_a28a167d {
+        deepClone(objectToClone: T): T
+        deepEqual(a: any,\n     b: any): boolean
+        deepNullToUndefined(objectWithNulls: T): T
+        deepStringify(obj: any,\n     options?: {\n     isSorted?: boolean;\n     compact?: boolean | number \n}): string
+        pickByList(obj: T,\n     keyList: (L | string)[]): Pick<T,\n     L>
+        pickByObjectKeys(obj: T,\n     objWithPickKeys: Partial<T> | ObjectType): Pick<T,\n     L>
       }
       object "regexUtil" as regex_util_4ac1c785 {
-        + uuid: string
+        + uuid: const
       }
-      card duration_unit_c35fc59d [
-        DurationUnit
+      class "SingleThresholdPromise" as single_threshold_promise_174db0f3 {
+        # _cache: {\n    promises?: { resolve: (value: T | PromiseLike<T>) => void; reject: (reason?: any) => void }[]\n  }
+        # _factoryFn: AnyFunctionPromiseNoParams<T>
+        # _rejectPromises: void
+        constructor(factoryFn: AnyFunctionPromiseNoParams<T>)
+        promise: Promise<T>
+      }
+      object "stringUtil" as string_util_12a47d9d {
+        + generateUUID: string
+      }
+      enum "DurationUnit" as duration_unit_c35fc59d {
+        DAY = 'DAY'
+        HOUR = 'HOUR'
+        MILLISECOND = 'MILLISECOND'
+        MINUTE = 'MINUTE'
+        MONTH = 'MONTH'
+        SECOND = 'SECOND'
+        WEEK = 'WEEK'
+        YEAR = 'YEAR'
+      }
+      card duration_unit_type_c35fc59d [
+        DurationUnitType
         ---
-        "'seconds' | 'minutes' | 'hours' | 'days' | 'weeks' | 'months' | 'years'"
+        `${DurationUnit}`
       ]
-      card add_by_options_c35fc59d [
-        AddByOptions
-        ---
-        {
-          unit: DurationUnit
-          value: number
-        }
-      ]
-      object "timeUtil" as time_util_c35fc59d {
-        + addToDate(addBy: AddByOptions,\n date = new Date()): Date
-        + dateToUnix(date = new Date()): number
-        + dateToUnixSec(date = new Date()): number
-        + unixSecToDate(unix: number): Date
-        + unixToDate(unix: number): Date
+      class "TimeUtil" as time_util_c35fc59d {
+        addToDate(params: {\n     unit: DurationUnitType | DurationUnit;\n     value: number;\n     date: Date \n}): Date
+        dateToUnix(date: Date): number
+        dateToUnixSec(date: Date): number
+        now: Date
+        unixSecToDate(unix: number): Date
+        unixToDate(unix: number): Date
+      }
+      object "timeout" as timeout_67d0ec7a {
       }
       object "typeUtil" as type_util_3bdc4f90 {
-        + exhaustiveCheck(message: string,\n _: never): Error
+        + exhaustiveError(message: string,\n     _: never): Error
+        + exhaustiveMessage(message: string,\n     _: never): string
       }
-      folder "cache" as cache_ea5c2344 {
-        card any_function_no_params_promise_e3e67746 [
-          AnyFunctionNoParamsPromise
-          ---
-          () => Promise<R>
-        ]
-        class "SingletonAsync" as singleton_async_e3e67746 {
-          # _cache: { singleton?: R ; resolvers?: ((value: R | PromiseLike<R>) => void)[] }
-          # _factory: AnyFunctionNoParamsPromise<R>
-          + cached: R | undefined
-          + cleanCache: void
-          + constructor(factory: AnyFunctionNoParamsPromise<R>)
-          + promise: Promise<R>
-        }
-        object "singletonAsyncFactory" as singleton_async_factory_e3e67746 {
+      folder "express" as express_4db1312 {
+        object "expressErrorHandler" as express_error_handler_63417b19 {
         }
       }
-      folder "entity-cache" as entity_cache_c60ace52 {
-        card cache_entity_592f4e2 [
-          CacheEntity
-          ---
-          { id: string; entity: ENTITY }
-        ]
-        card call_back_cache_entity_592f4e2 [
-          CallBackCacheEntity
-          ---
-          (cbParams: CacheEntity<ENTITY>) => void
-        ]
-        card cache_subscription_592f4e2 [
-          CacheSubscription
-          ---
-          { unsubscribe: () => void }
-        ]
-        class "EntityCacheMemory" as entity_cache_memory_592f4e2 {
-          # _calculateTimeout(timeoutOffsetMs?: number): number | undefined
-          # _memory: {\n [k: string]: {\n entity?: ENTITY;\n timeoutMs?: number \n} \n}
-          # _subject
-          # _timeoutExpired(timeoutMs?: number): boolean
-          + get(id: string): {\n needToFetch?: boolean;\n entity?: ENTITY \n}
-          + set(params: CacheEntity<ENTITY>,\n timeoutOffsetMs?: number): void
-          + subscribe(id: string,\n callback: (par: CacheEntity<ENTITY>) => void): CacheSubscription
+      folder "singleton" as singleton_4e675d67 {
+        class "SingletonAsync" as singleton_async_d88be747 {
+          # _cache: {\n    singleton?: T\n    promises?: { resolve: (value: T | PromiseLike<T>) => void; reject: (reason?: any) => void }[]\n  }
+          # _factory: AnyFunctionPromiseNoParams<T>
+          # _rejectPromises(params: { error: Error }): void
+          cached: T | undefined
+          cleanCache: void
+          constructor(factory: AnyFunctionPromiseNoParams<T>)
+          promise: Promise<T>
         }
-        abstract "EntityPromiseCacheService" as entity_promise_cache_service_eb0ef50c {
-          # _dao: EntityCacheMemory<ENTITY>
-          # {abstract} _entityAsync(id: ID): Promise<ENTITY>
-          # {abstract} _timeoutOffsetMs: number
-          # constructor(dao: EntityCacheMemory<ENTITY>)
-          + forceRefresh(id: ID): void
-          + subscribeToEntityChange(id: ID,\n callback: CallBackCacheEntity<ENTITY>): CacheSubscription
+        object "singletonPattern" as singleton_pattern_9ffe3d49 {
+        }
+      }
+      folder "types" as types_b9f6c763 {
+        artifact "types.d.ts" as types_d_ts_c7688ce4 {
+        }
+        folder "any-function" as any_function_b59e1615 {
+          card any_function_14fe44ed [
+            AnyFunction
+            ---
+            (...args: any[]) => T
+          ]
+          card any_function_no_params_57476943 [
+            AnyFunctionNoParams
+            ---
+            () => T
+          ]
+          card any_function_promise_no_params_e08eab31 [
+            AnyFunctionPromiseNoParams
+            ---
+            () => Promise<T>
+          ]
+          card any_function_promise_7353b62c [
+            AnyFunctionPromise
+            ---
+            (...args: any[]) => Promise<T>
+          ]
         }
       }
     }
-    folder "rxjs" as rxjs_7c7990f6 {
-      object "filter" as filter_69308583 {
-        rxjs/operators.ts
+    folder "date-fns" as date_fns_5b922ce7 {
+      object "add" as add_ad2961c0 {
+        date-fns/add.ts
+      }
+      object "addMilliseconds" as add_milliseconds_713d12ee {
+        date-fns/addMilliseconds.ts
+      }
+      object "parse" as parse_1c089414 {
+        date-fns/parse.ts
       }
     }
-    folder "@beecode" as beecode_583ca8ca {
-      object "error" as error_be941202 {
-        @beecode/msh-node-error.ts
-      }
-    }
-  cache_util_514a3aa4 -up-> any_function_no_params_514a3aa4
-  singleton_async_e3e67746 -up-> any_function_no_params_promise_e3e67746
-  singleton_async_factory_e3e67746 -up-> singleton_async_e3e67746
-  entity_cache_memory_592f4e2 -up-> subject_6f9d8abf
-  entity_cache_memory_592f4e2 -up-> filter_69308583
-  entity_cache_memory_592f4e2 -up-> cache_entity_592f4e2
-  entity_cache_memory_592f4e2 -up-> cache_subscription_592f4e2
-  entity_promise_cache_service_eb0ef50c -up-> cache_subscription_592f4e2
-  entity_promise_cache_service_eb0ef50c -up-> call_back_cache_entity_592f4e2
-  entity_promise_cache_service_eb0ef50c -up-> entity_cache_memory_592f4e2
-  joi_util_68a048a4 -up-> error_be941202
-  joi_util_68a048a4 -up-> validation_options_7f808940
   joi_util_68a048a4 -up-> joi_util_options_68a048a4
-  joi_util_68a048a4 -up-> joi_util_68a048a4
+  joi_util_68a048a4 -up-> error_with_payload_68a048a4
   object_util_a28a167d -up-> clone_deep_91af3a80
-  time_util_c35fc59d -up-> add_b4d4e82e
-  time_util_c35fc59d -up-> parse_b4d4e82e
-  time_util_c35fc59d -up-> add_by_options_c35fc59d
+  object_util_a28a167d -up-> util_6f8bd708
+  single_threshold_promise_174db0f3 -up-> any_function_promise_no_params_e08eab31
+  singleton_async_d88be747 -up-> any_function_promise_no_params_e08eab31
+  singleton_pattern_9ffe3d49 -up-> any_function_no_params_57476943
+  time_util_c35fc59d -up-> add_ad2961c0
+  time_util_c35fc59d -up-> add_milliseconds_713d12ee
+  time_util_c35fc59d -up-> parse_1c089414
 @enduml

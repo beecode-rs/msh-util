@@ -1,11 +1,15 @@
 {
-  "maxConcurrency": 1,
-  "moduleFileExtensions": ["js", "ts"],
   "collectCoverage": true,
-  "collectCoverageFrom": ["src/**/*.ts", "!src/**/*.{contract,d}.ts"],
+  "collectCoverageFrom": ["src/**/*.ts", "!src/**/*.{contract,d}.ts", "!src/index.ts"],
+  "maxConcurrency": 1,
+  "moduleNameMapper": {
+    "^src/(.*)$": "<rootDir>/src/$1"
+  },
+  "moduleFileExtensions": ["js", "ts"],
   "preset": "ts-jest",
   "roots": ["<rootDir>/src"],
-  "testMatch": ["<rootDir>/src/**/*.test.ts"],
+  "setupFilesAfterEnv": ["jest-extended/all"],
   "testEnvironment": "node",
-  "testPathIgnorePatterns": ["/node_modules/"]
+  "testMatch": ["<rootDir>/src/**/*.test.ts"],
+  "testPathIgnorePatterns": ["/node_modules/", "/test/"]
 }
