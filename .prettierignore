@@ -1,0 +1,8 @@
+/.idea
+/.semaphore
+/coverage
+/lib
+/node_modules
+/resource
+package.json
+package-lock.json
