@@ -28,18 +28,28 @@ export declare class ObjectUtil {
      */
     pickByObjectKeys<T extends object, L extends keyof T>(obj: T, objWithPickKeys: Partial<T> | ObjectType): Pick<T, L>;
     /**
-     * This function will do stringify deeper that JSON.stringify. If the object that you pass is null or undefined it will return that value (null or undefined) otherwise it will return string
-     * @param {ObjectType | null} obj
-     * @return {string | null | undefined}
+     * This function will do stringify deeper that JSON.stringify.
+     * @param {any} entity - entity thant needs to be stringify
+     * @param {object} [options] - available options
+     * @param {boolean} [options.isSortable=false] - if object property should be sorted
+     * @param {boolean} [options.isPrettyPrinted=false] - if object and array properties should be printed in a new row
+     * @param {number} [options.prettyPrintCompactLevel=0] - if pretty print is on define the level of deepest children that are not
+     * going to be pretty. It doesn't matter if the siblings doesn't have the same depth.
+     * @return {string} - strung result
      * @example
-     * console.log(new ObjectUtil().stringifySortOrNullOrUndefined(null)) // null
-     * console.log(new ObjectUtil().stringifySortOrNullOrUndefined(undefined)) // undefined
-     * console.log(new ObjectUtil().stringifySortOrNullOrUndefined({ a: 1 })) // '{\n\ta: 1\n}'
+     * console.log(new ObjectUtil().deepStringify(null)) // 'null'
+     * console.log(new ObjectUtil().deepStringify(undefined)) // 'undefined'
+     * console.log(new ObjectUtil().deepStringify({ a: 1 })) // '{\n\ta: 1\n}'
      * // `{
      * //   a:1
      * // }`
+     * console.log(new ObjectUtil().deepStringify({ b: 1, a: 2 }, {isSorted:true, compact: true})) // { a: 2, b: 1 }
      */
-    stringifySortOrNullOrUndefined(obj?: ObjectType | null): string | null | undefined;
+    deepStringify(entity: any, options?: {
+        isSorted?: boolean;
+        isPrettyPrinted?: boolean;
+        prettyPrintCompactLevel?: number;
+    }): string;
     /**
      * We are converting objects to string (or null or undefined) and comparing if the result is equal
      * @param a

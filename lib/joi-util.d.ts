@@ -1,11 +1,4 @@
 import { ObjectSchema, Schema, ValidationOptions } from 'joi';
-import { ObjectType } from './object-util';
-export interface JoiLogger {
-    warn(msg: string, obj: ObjectType): void;
-}
-export type joiUtilOptions = ValidationOptions & {
-    logger?: JoiLogger;
-};
 export declare class ErrorWithPayload<T> extends Error {
     payload: T;
     constructor(message: string, payload: T);
@@ -35,20 +28,20 @@ export declare class JoiUtil {
      * @template Joi
      * @param {any} objectToValidate
      * @param {Joi.Schema | Joi.ObjectSchema<T>} schema
-     * @param {joiUtilOptions | undefined} joiUtilOptions
+     * @param {validationOptions} [validationOptions]
      * @returns {T} expected object after validation
      */
-    sanitize<T>(objectToValidate: any, schema: Schema | ObjectSchema<T>, joiUtilOptions?: joiUtilOptions): T;
+    sanitize<T>(objectToValidate: any, schema: Schema | ObjectSchema<T>, validationOptions?: ValidationOptions): T;
     /**
      * Only validate properties specified in validation schema
      * @template T
      * @template Joi
      * @param {any} objectToValidate
      * @param {Joi.Schema | Joi.ObjectSchema<T>} schema
-     * @param {joiUtilOptions | undefined} joiUtilOptions
+     * @param {validationOptions} [validationOptions]
      * @returns {T} expected object after validation
      */
-    validate<T>(objectToValidate: any, schema: Schema | ObjectSchema<T>, joiUtilOptions?: joiUtilOptions): T;
-    protected _validate<T>(objectToValidate: any, schema: Schema | ObjectSchema<T>, options?: joiUtilOptions): T;
+    validate<T>(objectToValidate: any, schema: Schema | ObjectSchema<T>, validationOptions?: ValidationOptions): T;
+    protected _validate<T>(objectToValidate: any, schema: Schema | ObjectSchema<T>, validationOptions?: ValidationOptions): T;
 }
 //# sourceMappingURL=joi-util.d.ts.map

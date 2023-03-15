@@ -1,5 +1,3 @@
-export * from './entity-cache/promise-service';
-export * from './entity-cache/memory';
 export * from './express/error-handler';
 export * from './singleton/async';
 export * from './singleton/pattern';
