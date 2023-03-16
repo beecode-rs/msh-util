@@ -24,6 +24,6 @@ blocks:
             - git remote add origin https://$GH_USER:$GH_TOKEN@github.com/beecode-rs/msh-util.git
             - git checkout tags/v$VERSION -b tmp-alpha-branch
             - docker build -f .docker/Dockerfile -t bc-msh-util-deploy .
-            - docker run --rm -e CI bc-msh-util-deploy sh -c "npm config set '//registry.npmjs.org/:_authToken' $NPM_TOKEN && npm run bump-version -- $VERSION-alpha && git tag v$VERSION-alpha && git push origin --tags && npm publish --access public -tag alpha"
+            - docker run --rm -e CI bc-msh-util-deploy sh -c "npm config set '//registry.npmjs.org/:_authToken' $NPM_TOKEN && npm run bump-version $VERSION-alpha && npm publish --access public -tag alpha && git tag v$VERSION-alpha && git push origin --tags"
     skip:
       when: branch != 'main'
