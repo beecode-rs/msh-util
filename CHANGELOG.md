@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/beecode-rs/msh-util/compare/v1.0.0...v1.0.1) (2023-03-16)
+
+
+### Bug Fixes
+
+* build script ([d62ad34](https://github.com/beecode-rs/msh-util/commit/d62ad342c40210f4bd973222ec059ba72e6138ea))
+
 # 1.0.0 (2023-03-15)
 
 
