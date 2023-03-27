@@ -1,12 +1,12 @@
 import { ObjectSchema, Schema, ValidationOptions } from 'joi'
 
 export class ErrorWithPayload<T> extends Error {
-  payload: T
+	payload: T
 
-  constructor(message: string, payload: T) {
-    super(message)
-    this.payload = payload
-  }
+	constructor(message: string, payload: T) {
+		super(message)
+		this.payload = payload
+	}
 }
 
 /**
@@ -28,38 +28,38 @@ export class ErrorWithPayload<T> extends Error {
  * const validObject = joiUtil.validate({ a: 'a', b: 1 }, someSchema)
  */
 export class JoiUtil {
-  /**
-   * Validate and clean object
-   * @template T
-   * @template Joi
-   * @param {any} objectToValidate
-   * @param {Joi.Schema | Joi.ObjectSchema<T>} schema
-   * @param {validationOptions} [validationOptions]
-   * @returns {T} expected object after validation
-   */
-  sanitize<T>(objectToValidate: any, schema: Schema | ObjectSchema<T>, validationOptions?: ValidationOptions): T {
-    return this._validate<T>(objectToValidate, schema, { ...validationOptions, stripUnknown: true })
-  }
+	/**
+	 * Validate and clean object
+	 * @template T
+	 * @template Joi
+	 * @param {any} objectToValidate
+	 * @param {Joi.Schema | Joi.ObjectSchema<T>} schema
+	 * @param {validationOptions} [validationOptions]
+	 * @returns {T} expected object after validation
+	 */
+	sanitize<T>(objectToValidate: any, schema: Schema | ObjectSchema<T>, validationOptions?: ValidationOptions): T {
+		return this._validate<T>(objectToValidate, schema, { ...validationOptions, stripUnknown: true })
+	}
 
-  /**
-   * Only validate properties specified in validation schema
-   * @template T
-   * @template Joi
-   * @param {any} objectToValidate
-   * @param {Joi.Schema | Joi.ObjectSchema<T>} schema
-   * @param {validationOptions} [validationOptions]
-   * @returns {T} expected object after validation
-   */
-  validate<T>(objectToValidate: any, schema: Schema | ObjectSchema<T>, validationOptions?: ValidationOptions): T {
-    return this._validate<T>(objectToValidate, schema, validationOptions)
-  }
+	/**
+	 * Only validate properties specified in validation schema
+	 * @template T
+	 * @template Joi
+	 * @param {any} objectToValidate
+	 * @param {Joi.Schema | Joi.ObjectSchema<T>} schema
+	 * @param {validationOptions} [validationOptions]
+	 * @returns {T} expected object after validation
+	 */
+	validate<T>(objectToValidate: any, schema: Schema | ObjectSchema<T>, validationOptions?: ValidationOptions): T {
+		return this._validate<T>(objectToValidate, schema, validationOptions)
+	}
 
-  protected _validate<T>(objectToValidate: any, schema: Schema | ObjectSchema<T>, validationOptions?: ValidationOptions): T {
-    const { error: validationError, value } = schema.validate(objectToValidate, validationOptions)
-    if (validationError) {
-      throw new ErrorWithPayload(validationError.message.split('"').join("'"), validationError)
-    }
+	protected _validate<T>(objectToValidate: any, schema: Schema | ObjectSchema<T>, validationOptions?: ValidationOptions): T {
+		const { error: validationError, value } = schema.validate(objectToValidate, validationOptions)
+		if (validationError) {
+			throw new ErrorWithPayload(validationError.message.split('"').join("'"), validationError)
+		}
 
-    return value as T
-  }
+		return value as T
+	}
 }

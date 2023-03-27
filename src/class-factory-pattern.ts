@@ -21,9 +21,9 @@ export type ClassType<T = object> = new (...args: T extends { new (...args: infe
  * const someClassInstance = someClassFactory({ a: 'test' })
  */
 export const classFactoryPattern = <C extends ClassType>(
-  classType: C
+	classType: C
 ): ((...args: ConstructorParameters<C>) => InstanceType<C>) => {
-  return (...args: ConstructorParameters<C>): InstanceType<C> => {
-    return new classType(...args) as InstanceType<C>
-  }
+	return (...args: ConstructorParameters<C>): InstanceType<C> => {
+		return new classType(...args) as InstanceType<C>
+	}
 }

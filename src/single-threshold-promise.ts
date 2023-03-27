@@ -18,39 +18,39 @@ import { AnyFunctionPromiseNoParams } from 'src/types/any-function/promise-no-pa
  * }
  */
 export class SingleThresholdPromise<T> {
-  protected _cache: {
-    promises?: { resolve: (value: T | PromiseLike<T>) => void; reject: (reason?: any) => void }[]
-  } = {}
+	protected _cache: {
+		promises?: { resolve: (value: T | PromiseLike<T>) => void; reject: (reason?: any) => void }[]
+	} = {}
 
-  protected _factoryFn: AnyFunctionPromiseNoParams<T>
+	protected _factoryFn: AnyFunctionPromiseNoParams<T>
 
-  constructor(factoryFn: AnyFunctionPromiseNoParams<T>) {
-    this._factoryFn = factoryFn
-  }
+	constructor(factoryFn: AnyFunctionPromiseNoParams<T>) {
+		this._factoryFn = factoryFn
+	}
 
-  protected _rejectPromises(): void {
-    if (this._cache.promises) {
-      this._cache.promises.forEach((promise) => promise.reject(new Error('Cache was cleaned')))
-    }
-    delete this._cache.promises
-  }
+	protected _rejectPromises(): void {
+		if (this._cache.promises) {
+			this._cache.promises.forEach((promise) => promise.reject(new Error('Cache was cleaned')))
+		}
+		delete this._cache.promises
+	}
 
-  async promise(): Promise<T> {
-    if ('promises' in this._cache) {
-      return new Promise<T>((resolve, reject) => {
-        this._cache.promises!.push({ resolve, reject })
-      })
-    }
+	async promise(): Promise<T> {
+		if ('promises' in this._cache) {
+			return new Promise<T>((resolve, reject) => {
+				this._cache.promises!.push({ reject, resolve })
+			})
+		}
 
-    this._cache.promises = []
-    const result = await this._factoryFn().catch((err) => {
-      this._rejectPromises()
-      throw err
-    })
+		this._cache.promises = []
+		const result = await this._factoryFn().catch((err) => {
+			this._rejectPromises()
+			throw err
+		})
 
-    this._cache.promises.forEach((promise) => promise.resolve(result))
-    delete this._cache.promises
+		this._cache.promises.forEach((promise) => promise.resolve(result))
+		delete this._cache.promises
 
-    return result
-  }
+		return result
+	}
 }

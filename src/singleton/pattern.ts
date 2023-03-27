@@ -32,13 +32,13 @@ import { AnyFunctionNoParams } from 'src/types/any-function/no-params'
  * console.log('NODE_ENV: ', config().env) // NODE_ENV: prod
  */
 export const singletonPattern = <R>(factoryFn: AnyFunctionNoParams<R>): AnyFunctionNoParams<R> => {
-  const cache: { singleton?: R } = {}
+	const cache: { singleton?: R } = {}
 
-  return (): R => {
-    if ('singleton' in cache) {
-      return cache.singleton!
-    }
+	return (): R => {
+		if ('singleton' in cache) {
+			return cache.singleton!
+		}
 
-    return (cache.singleton = factoryFn())
-  }
+		return (cache.singleton = factoryFn())
+	}
 }

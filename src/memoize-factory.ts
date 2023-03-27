@@ -14,14 +14,14 @@ import { AnyFunction } from 'src/types/any-function'
  * sumTwoNumbersMemoize(5 + 10) // 15
  */
 export const memoizeFactory = <F extends AnyFunction<R>, R>(factoryFn: F): F => {
-  const cache: { [k: string]: R } = {}
+	const cache: { [k: string]: R } = {}
 
-  return ((...args: Parameters<F>): R => {
-    const key = JSON.stringify(args)
-    if (key in cache) {
-      return cache[key]
-    }
+	return ((...args: Parameters<F>): R => {
+		const key = JSON.stringify(args)
+		if (key in cache) {
+			return cache[key]
+		}
 
-    return (cache[key] = factoryFn(...args))
-  }) as F
+		return (cache[key] = factoryFn(...args))
+	}) as F
 }

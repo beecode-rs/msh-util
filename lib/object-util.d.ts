@@ -1,6 +1,4 @@
-export type ObjectType = {
-    [k: string]: any;
-};
+export type ObjectType = Record<string, any>;
 export declare class ObjectUtil {
     /**
      * Deep clone object. Returned object will have no references to the object passed through params
@@ -50,6 +48,10 @@ export declare class ObjectUtil {
         isPrettyPrinted?: boolean;
         prettyPrintCompactLevel?: number;
     }): string;
+    protected _deepStringifyCompact(params: {
+        isPrettyPrinted: boolean;
+        prettyPrintCompactLevel: number;
+    }): number | boolean;
     /**
      * We are converting objects to string (or null or undefined) and comparing if the result is equal
      * @param a

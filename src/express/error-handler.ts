@@ -14,12 +14,12 @@
  * }
  */
 export const expressErrorHandler = (_target: any, _key: string, descriptor: TypedPropertyDescriptor<any>): any => {
-  const originalMethod = descriptor.value
-  descriptor.value = function (): any {
-    const next = arguments[2] // eslint-disable-line prefer-rest-params
+	const originalMethod = descriptor.value
+	descriptor.value = function (): any {
+		const next = arguments[2] // eslint-disable-line prefer-rest-params
 
-    return Promise.resolve(originalMethod.apply(this, arguments)).catch(next) // eslint-disable-line prefer-rest-params
-  }
+		return Promise.resolve(originalMethod.apply(this, arguments)).catch(next) // eslint-disable-line prefer-rest-params
+	}
 
-  return descriptor
+	return descriptor
 }
