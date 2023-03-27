@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/beecode-rs/msh-util/compare/v1.0.1...v1.0.2) (2023-03-27)
+
+
+### Bug Fixes
+
+* update eslint/prettier settings ([5aa8e8e](https://github.com/beecode-rs/msh-util/commit/5aa8e8e05416a3787ac152f4bb46f2618c328c0f))
+
 ## [1.0.1](https://github.com/beecode-rs/msh-util/compare/v1.0.0...v1.0.1) (2023-03-16)
 
 
