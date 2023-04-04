@@ -8,7 +8,7 @@
 /packages
 .*.js
 .*.json
-jest.config.json
 package-lock.json
 tsconfig*.json
 typedoc.json
+/jest*.config.js
