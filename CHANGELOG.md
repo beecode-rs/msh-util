@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/beecode-rs/msh-util/compare/v1.0.2...v1.1.0) (2023-04-04)
+
+
+### Bug Fixes
+
+* update eslint/prettier and update package.json ([ab14098](https://github.com/beecode-rs/msh-util/commit/ab14098a638eff1bcf8f9263c4a2024625f66968))
+
+
+### Features
+
+* add array util ([fdb6a44](https://github.com/beecode-rs/msh-util/commit/fdb6a4484afa6faa2e0e3c3a581515d59204f64f))
+
 ## [1.0.2](https://github.com/beecode-rs/msh-util/compare/v1.0.1...v1.0.2) (2023-03-27)
 
 
