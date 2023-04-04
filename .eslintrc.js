@@ -130,42 +130,11 @@ module.exports = {
 		'no-only-tests/no-only-tests': 'error',
 
 		// SORT_KEYS_FIX
-		// 'sort-keys': ['error', 'asc', { caseSensitive: false, natural: true }], // disabled because it doesn't have fix functionality
 		'sort-keys-fix/sort-keys-fix': ['error', 'asc', { caseSensitive: false, natural: true }],
 
 		// PRETTIER
+		'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
 		curly: 'error',
 		'no-mixed-spaces-and-tabs': 'error',
-
-		// 'function-call-argument-newline': ["error", "consistent"],
-		// 'brace-style': ['error', 'stroustrup'],
-		// 'space-before-blocks': 'error',
-		// 'computed-property-spacing': ['error', 'never'],
-		// 'object-curly-spacing': ['error', 'always'],
-		// 'array-bracket-spacing': ['error', 'never'],
-
-		// indent: ['error', 'tab', {SwitchCase: 1}],
-		// 'comma-dangle': ["error", "only-multiline"],
-		// 'arrow-spacing': "error",
-		// 'arrow-body-style': ['error', 'always'],
-		// 'arrow-parens': 'error',
-		//
-		// 'max-len': ['error', {
-		//   code: 130,
-		//   ignoreComments: true,
-		//   ignoreTrailingComments: true,
-		//   ignoreStrings: true,
-		//   ignoreTemplateLiterals: true,
-		//   ignoreRegExpLiterals: true
-		// }],
-		// quotes: [
-		//   'error',
-		//   'single',
-		//   {
-		//     avoidEscape: true,
-		//     allowTemplateLiterals: true
-		//   }
-		// ],
-		// semi: ['error', 'never']
 	},
 }
