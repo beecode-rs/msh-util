@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/beecode-rs/msh-util/compare/v1.1.0...v1.2.0) (2023-04-05)
+
+
+### Features
+
+* add arrayUtil.notFalsy ([a14c1e3](https://github.com/beecode-rs/msh-util/commit/a14c1e3f39f955de798ad5c8a2a36358cc2f5621))
+
 # [1.1.0](https://github.com/beecode-rs/msh-util/compare/v1.0.2...v1.1.0) (2023-04-04)
 
 
