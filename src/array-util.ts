@@ -5,7 +5,7 @@ export const arrayUtil = {
 	 * @param {T | null | undefined} value
 	 * @return {value is T}
 	 * @example
-	 * const notEmptyArray = [0, 1, 2, null, undefined, ''].filter(arrayUtil.notEmpty))
+	 * const notEmptyArray = [0, 1, 2, null, undefined, ''].filter(arrayUtil.notEmpty)
 	 * console.log(notEmptyArray)// [0, 1, 2, '']
 	 */
 	notEmpty: <T>(value: T | null | undefined): value is T => {
@@ -17,7 +17,7 @@ export const arrayUtil = {
 	 * @param {T | null | undefined} value
 	 * @return {value is T}
 	 * @example
-	 * const notFalsyArray = [0, 1, 2, null, undefined, ''].filter(arrayUtil.notFalsy))
+	 * const notFalsyArray = [0, 1, 2, null, undefined, ''].filter(arrayUtil.notFalsy)
 	 * console.log(notFalsyArray)// [1, 2]
 	 */
 	notFalsy: <T>(value: T | null | undefined): value is T => {

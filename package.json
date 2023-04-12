@@ -1,7 +1,4 @@
 {
-	"_moduleAliases": {
-		"src": "./lib"
-	},
 	"author": "Milos Bugarinovic <milos.bugarinovic@gmail.com>",
 	"bugs": {
 		"url": "https://github.com/beecode-rs/msh-util/issues"
@@ -110,7 +107,8 @@
 		"prettier:fix": "prettier --write {**/*,*}.{js,json,jsx,ts,tsx}",
 		"semantic-release": "semantic-release",
 		"semantic-release:check": "npm run semantic-release --dry-run --no-ci",
-		"test": "npm run test:unit && npm run test:int ",
+		"test": "npm run test:unit && npm run test:int  && npm run test:e2e",
+		"test:e2e": "# TZ=utc jest --config=./test/jest.config.js",
 		"test:int": "# TZ=utc jest --config=./jest-int.config.js",
 		"test:unit": "TZ=utc jest --config=./jest-unit.config.js",
 		"test:unit:coverage": "npm run test:unit --coverage",
