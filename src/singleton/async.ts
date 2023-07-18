@@ -1,4 +1,4 @@
-import { AnyFunctionPromiseNoParams } from 'src/types/any-function/promise-no-params'
+import { AnyFunctionPromiseNoParams } from '#/types/any-function/promise-no-params'
 
 /**
  * This is a singleton wrapper that is used to wrap around async function. We have additional functionality to clear the cache
@@ -21,6 +21,7 @@ import { AnyFunctionPromiseNoParams } from 'src/types/any-function/promise-no-pa
 export class SingletonAsync<T> {
 	protected _cache: {
 		singleton?: T
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		promises?: { resolve: (value: T | PromiseLike<T>) => void; reject: (reason?: any) => void }[]
 	} = {}
 
