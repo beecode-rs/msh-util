@@ -1,10 +1,12 @@
-import { SingletonAsync } from 'src/singleton/async'
-import { timeout } from 'src/timeout'
+import { jest } from '@jest/globals'
+
+import { SingletonAsync } from '#/singleton/async.js'
+import { timeout } from '#/timeout.js'
 
 describe('SingletonAsync', () => {
 	const fakeResult = { sucessful: true }
-	const fake_asyncFactoryFn = jest.fn()
-	const fake_asyncRejectFactoryFn = jest.fn()
+	const fake_asyncFactoryFn = jest.fn<() => Promise<unknown>>()
+	const fake_asyncRejectFactoryFn = jest.fn<() => Promise<unknown>>()
 	beforeEach(() => {
 		jest.useFakeTimers()
 		fake_asyncFactoryFn.mockImplementation(async (): Promise<{ sucessful: boolean }> => {

@@ -13,8 +13,10 @@
  *   }
  * }
  */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const expressErrorHandler = (_target: any, _key: string, descriptor: TypedPropertyDescriptor<any>): any => {
 	const originalMethod = descriptor.value
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	descriptor.value = function (): any {
 		const next = arguments[2] // eslint-disable-line prefer-rest-params
 

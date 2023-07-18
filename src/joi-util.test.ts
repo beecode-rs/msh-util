@@ -1,5 +1,6 @@
 import Joi from 'joi'
-import { JoiUtil } from 'src/joi-util'
+
+import { JoiUtil } from '#/joi-util.js'
 
 describe('JoiUtil', () => {
 	const joiUtil = new JoiUtil()
@@ -28,6 +29,7 @@ describe('JoiUtil', () => {
 			try {
 				joiUtil.sanitize(invalidObject, joiSchema)
 				expect.fail('test failed')
+				// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			} catch (err: any) {
 				expect(err.message).toEqual("'a' is required")
 				expect(err.payload.details).toEqual([
@@ -47,6 +49,7 @@ describe('JoiUtil', () => {
 			try {
 				joiUtil.sanitize(invalidObject, joiSchema, { abortEarly: false })
 				expect.fail('test failed')
+				// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			} catch (err: any) {
 				expect(err.message).toEqual("'a' is required. 'b' is required. 'c' is required. 'd' is required")
 				expect(err.payload.details).toEqual([
@@ -101,6 +104,7 @@ describe('JoiUtil', () => {
 			try {
 				joiUtil.validate({ ...validObject, test: true }, joiSchema)
 				expect.fail('test failed')
+				// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			} catch (err: any) {
 				expect(err.message).toEqual("'test' is not allowed")
 			}
@@ -109,6 +113,7 @@ describe('JoiUtil', () => {
 			try {
 				joiUtil.validate(invalidObject, joiSchema)
 				expect.fail('test failed')
+				// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			} catch (err: any) {
 				expect(err.message).toEqual("'a' is required")
 				expect(err.payload.details).toEqual([
@@ -128,6 +133,7 @@ describe('JoiUtil', () => {
 			try {
 				joiUtil.validate(invalidObject, joiSchema, { abortEarly: false })
 				expect.fail('test failed')
+				// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			} catch (err: any) {
 				expect(err.message).toEqual(
 					"'a' is required. 'b' is required. 'c' is required. 'd' is required. 'invalid' is not allowed"
