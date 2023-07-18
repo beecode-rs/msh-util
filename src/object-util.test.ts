@@ -1,4 +1,4 @@
-import { ObjectUtil } from 'src/object-util'
+import { ObjectUtil } from '#/object-util'
 
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 describe('objectUtil', () => {
