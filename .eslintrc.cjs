@@ -41,7 +41,7 @@ module.exports = {
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		ecmaVersion: 'ESNext',
-		project: './tsconfig-eslint.json',
+		project: './tsconfig.eslint.json',
 		sourceType: 'module',
 	},
 	plugins: ['@typescript-eslint', 'eslint-plugin-import', 'import', 'no-only-tests', 'no-loops', 'jest', 'sort-keys-fix'],
