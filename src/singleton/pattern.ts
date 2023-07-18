@@ -1,4 +1,4 @@
-import { AnyFunctionNoParams } from 'src/types/any-function/no-params'
+import { AnyFunctionNoParams } from '#types/any-function/no-params.js'
 
 /**
  * Singleton patter wrapper function

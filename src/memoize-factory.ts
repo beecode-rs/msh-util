@@ -1,4 +1,4 @@
-import { AnyFunction } from 'src/types/any-function'
+import { AnyFunction } from '#types/any-function/index.js'
 
 /**
  * This is a simple implementation of memoize function that caches result against the parameter passed that are passed to the
@@ -14,12 +14,12 @@ import { AnyFunction } from 'src/types/any-function'
  * sumTwoNumbersMemoize(5 + 10) // 15
  */
 export const memoizeFactory = <F extends AnyFunction<R>, R>(factoryFn: F): F => {
-	const cache: { [k: string]: R } = {}
+	const cache: Record<string, R> = {}
 
 	return ((...args: Parameters<F>): R => {
 		const key = JSON.stringify(args)
 		if (key in cache) {
-			return cache[key]
+			return cache[key]!
 		}
 
 		return (cache[key] = factoryFn(...args))
