@@ -1,4 +1,4 @@
-import { regexUtil } from 'src/regex-util'
+import { regexUtil } from '#/regex-util'
 
 describe('regexUtil', () => {
 	it.each([
