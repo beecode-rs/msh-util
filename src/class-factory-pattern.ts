@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ClassType<T = object> = new (...args: T extends { new (...args: infer P): any } ? P : never[]) => T
 
 /**
