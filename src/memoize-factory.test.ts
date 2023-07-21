@@ -1,7 +1,9 @@
-import { memoizeFactory } from 'src/memoize-factory'
+import { jest } from '@jest/globals'
+
+import { memoizeFactory } from '#/memoize-factory.js'
 
 describe('memoizeFactory', () => {
-	const fake_factoryFn = jest.fn()
+	const fake_factoryFn = jest.fn<(a: number, b: number) => number>()
 
 	beforeEach(() => {
 		fake_factoryFn.mockImplementation((a: number, b: number): number => {

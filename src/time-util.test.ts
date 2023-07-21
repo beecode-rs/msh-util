@@ -1,4 +1,6 @@
-import { DurationUnit, DurationUnitType, TimeUtil } from 'src/time-util'
+import { jest } from '@jest/globals'
+
+import { DurationUnit, DurationUnitType, TimeUtil } from '#/time-util.js'
 
 describe('TimeUtil', () => {
 	const constantNowDate = new Date('2022-01-01T00:00:00.000Z')
@@ -7,6 +9,7 @@ describe('TimeUtil', () => {
 	const timeUtil = new TimeUtil()
 
 	beforeAll(() => {
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		jest.useFakeTimers('modern' as any)
 		jest.setSystemTime(constantNowDate.getTime())
 	})
