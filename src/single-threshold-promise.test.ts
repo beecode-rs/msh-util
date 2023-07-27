@@ -1,11 +1,12 @@
+import { jest } from '@jest/globals'
 import { SingleThresholdPromise } from 'src/single-threshold-promise'
 import { timeout } from 'src/timeout'
 
 describe('SingleThresholdPromise', () => {
 	describe('promise', () => {
 		let callCounter = 0
-		const fake_asyncFactoryFn = jest.fn()
-		const fake_asyncRejectFactoryFn = jest.fn()
+		const fake_asyncFactoryFn = jest.fn<() => Promise<unknown>>()
+		const fake_asyncRejectFactoryFn = jest.fn<() => Promise<unknown>>()
 
 		beforeEach(() => {
 			callCounter = 0

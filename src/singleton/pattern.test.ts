@@ -1,3 +1,4 @@
+import { jest } from '@jest/globals'
 import { singletonPattern } from 'src/singleton/pattern'
 
 describe('singletonPattern', () => {
