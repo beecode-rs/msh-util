@@ -1,7 +1,6 @@
 import { jest } from '@jest/globals'
-
-import { SingletonAsync } from '#/singleton/async.js'
-import { timeout } from '#/timeout.js'
+import { SingletonAsync } from 'src/singleton/async'
+import { timeout } from 'src/timeout'
 
 describe('SingletonAsync', () => {
 	const fakeResult = { sucessful: true }
