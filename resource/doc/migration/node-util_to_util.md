@@ -15,7 +15,7 @@ export const cliShellServiceSingleton = cacheUtil.singleton((): CliShellService 
 to
 
 ```ts
-import { singletonPattern } from '@beecode/msh-util/lib/singleton/pattern.js'
+import { singletonPattern } from '@beecode/msh-util/dist/singleton/pattern'
 // ...
 export const cliShellServiceSingleton = singletonPattern((): CliShellService => new CliShellService())
 ```
