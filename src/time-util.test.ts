@@ -1,3 +1,4 @@
+import { jest } from '@jest/globals'
 import { DurationUnit, DurationUnitType, TimeUtil } from 'src/time-util'
 
 describe('TimeUtil', () => {
@@ -7,6 +8,7 @@ describe('TimeUtil', () => {
 	const timeUtil = new TimeUtil()
 
 	beforeAll(() => {
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		jest.useFakeTimers('modern' as any)
 		jest.setSystemTime(constantNowDate.getTime())
 	})
