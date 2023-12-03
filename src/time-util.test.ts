@@ -1,14 +1,25 @@
-import { DurationUnit, DurationUnitType, TimeUtil } from 'src/time-util'
+import { jest } from '@jest/globals'
+
+import { DurationUnit, DurationUnitType, TimeUtil } from '#/time-util'
 
 describe('TimeUtil', () => {
 	const constantNowDate = new Date('2022-01-01T00:00:00.000Z')
 	const constantNowUnix = 1640995200000 // 2022-01-01T00:00:00 UTC
-	const constantNowUnixSec = 1640995200 // 2022-01-01T00:00:00 UTC
 	const timeUtil = new TimeUtil()
 
+	const summerTimeUnix = 1698537600000 // 2023-10-29T00:00:00 UTC
+	const winterTimeUnix = 1698541200000 // 2023-10-29T01:00:00 UTC
+	const summerTimeUtcDate = new Date('2023-10-29T00:00:00.000Z')
+	const winterTimeUtcDate = new Date('2023-10-29T01:00:00.000Z')
+
+	const eachTestParams = [
+		[constantNowDate, constantNowUnix],
+		[summerTimeUtcDate, summerTimeUnix],
+		[winterTimeUtcDate, winterTimeUnix],
+	] as [Date, number][]
+
 	beforeAll(() => {
-		jest.useFakeTimers('modern' as any)
-		jest.setSystemTime(constantNowDate.getTime())
+		jest.useFakeTimers({ now: constantNowDate.getTime() })
 	})
 
 	afterAll(() => {
@@ -22,26 +33,26 @@ describe('TimeUtil', () => {
 	})
 
 	describe('dateToUnix', () => {
-		it('should convert constant date to constant unix', () => {
-			expect(timeUtil.dateToUnix(timeUtil.now())).toEqual(constantNowUnix)
+		it.each(eachTestParams)('%#. should convert date %s to unix %s', (date, unix) => {
+			expect(timeUtil.dateToUnix(date)).toEqual(unix)
 		})
 	})
 
 	describe('dateToUnixSec', () => {
-		it('should convert constant date to constant unixSec', () => {
-			expect(timeUtil.dateToUnixSec(timeUtil.now())).toEqual(constantNowUnixSec)
+		it.each(eachTestParams)('%#. should convert date %s to unixSec %s', (date, unix) => {
+			expect(timeUtil.dateToUnixSec(date)).toEqual(unix / 1000)
 		})
 	})
 
 	describe('unixToDate', () => {
-		it('should convert constant date to constant unix', () => {
-			expect(timeUtil.unixToDate(constantNowUnix)).toEqual(timeUtil.now())
+		it.each(eachTestParams)('%#. should return %s from converting unix %s', (date, unix) => {
+			expect(timeUtil.unixToDate(unix)).toEqual(date)
 		})
 	})
 
 	describe('unixSecToDate', () => {
-		it('should convert constant date to constant unixSec', () => {
-			expect(timeUtil.unixSecToDate(constantNowUnixSec)).toEqual(timeUtil.now())
+		it.each(eachTestParams)('%#. should return %s from converting unix sec %s', (date, unix) => {
+			expect(timeUtil.unixSecToDate(unix / 1000)).toEqual(date)
 		})
 	})
 
