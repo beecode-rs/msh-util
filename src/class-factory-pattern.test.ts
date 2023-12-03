@@ -1,5 +1,6 @@
 import { jest } from '@jest/globals'
-import { classFactoryPattern } from 'src/class-factory-pattern'
+
+import { classFactoryPattern } from '#/class-factory-pattern'
 
 describe('factoryPattern', () => {
 	const fakeClassMock = jest.fn<(a: string) => { a: string }>()

@@ -1,17 +1,17 @@
 const namingConvention = () => {
 	// prettier-ignore
 	return [
-    { selector: ['default'], format: null, modifiers: ['public'], leadingUnderscore: 'forbid' },
-    { selector: ['default'], format: ['camelCase'], modifiers: ['protected'], leadingUnderscore: 'require' },
-    { selector: ['default'], format: ['camelCase'], modifiers: ['private'], prefix: ['__'] },
+		{ selector: ['default'], 								 format: null,           modifiers: ['public'],    leadingUnderscore: 'forbid' },
+		{ selector: ['default'], 								 format: ['camelCase'],  modifiers: ['protected'], leadingUnderscore: 'require' },
+		{ selector: ['default'], 								 format: ['camelCase'],  modifiers: ['private'],   prefix: ['__'] },
 		{ selector: ['accessor'], 							 format: ['camelCase'],  modifiers: ['public'],    leadingUnderscore: 'forbid' },
 		{ selector: ['accessor'], 							 format: ['camelCase'],  modifiers: ['protected'], leadingUnderscore: 'require' },
 		{ selector: ['accessor'], 							 format: ['camelCase'],  modifiers: ['private'],   prefix: ['__'] },
-    { selector: ['enum'], format: ['PascalCase'] },
-    { selector: ['enumMember'], format: ['UPPER_CASE'] },
+		{ selector: ['enum'], 									 format: ['PascalCase'] },
+		{ selector: ['enumMember'], 						 format: ['UPPER_CASE'] },
 		{ selector: ['classMethod', 'accessor'], format: ['PascalCase'], modifiers: ['public', 'static'] },
 		{ selector: ['classProperty'], 					 format: ['UPPER_CASE'], modifiers: ['public', 'static'] },
-  ]
+	]
 }
 
 module.exports = {

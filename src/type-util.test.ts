@@ -1,4 +1,4 @@
-import { typeUtil } from 'src/type-util'
+import { typeUtil } from '#/type-util'
 
 describe('typeUtil', () => {
 	describe('exhaustiveMessage', () => {

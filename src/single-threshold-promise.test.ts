@@ -1,6 +1,7 @@
 import { jest } from '@jest/globals'
-import { SingleThresholdPromise } from 'src/single-threshold-promise'
-import { timeout } from 'src/timeout'
+
+import { SingleThresholdPromise } from '#/single-threshold-promise'
+import { timeout } from '#/timeout'
 
 describe('SingleThresholdPromise', () => {
 	describe('promise', () => {

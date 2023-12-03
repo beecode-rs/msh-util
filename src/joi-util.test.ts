@@ -1,5 +1,6 @@
 import Joi from 'joi'
-import { JoiUtil } from 'src/joi-util'
+
+import { JoiUtil } from '#/joi-util'
 
 describe('JoiUtil', () => {
 	const joiUtil = new JoiUtil()

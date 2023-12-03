@@ -1,5 +1,5 @@
-import { regexUtil } from 'src/regex-util'
-import { stringUtil } from 'src/string-util'
+import { regexUtil } from '#/regex-util'
+import { stringUtil } from '#/string-util'
 
 describe('stringUtil', () => {
 	it.each([

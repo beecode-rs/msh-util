@@ -1,4 +1,4 @@
-import { arrayUtil } from 'src/array-util'
+import { arrayUtil } from '#/array-util'
 
 describe('arrayUtil', () => {
 	describe('notEmpty', () => {

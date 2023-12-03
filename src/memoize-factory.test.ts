@@ -1,5 +1,6 @@
 import { jest } from '@jest/globals'
-import { memoizeFactory } from 'src/memoize-factory'
+
+import { memoizeFactory } from '#/memoize-factory'
 
 describe('memoizeFactory', () => {
 	const fake_factoryFn = jest.fn<(a: number, b: number) => number>()
