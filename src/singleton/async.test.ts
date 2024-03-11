@@ -1,10 +1,12 @@
-import { SingletonAsync } from 'src/singleton/async'
-import { timeout } from 'src/timeout'
+import { jest } from '@jest/globals'
+
+import { SingletonAsync } from '#/singleton/async'
+import { timeout } from '#/timeout'
 
 describe('SingletonAsync', () => {
 	const fakeResult = { sucessful: true }
-	const fake_asyncFactoryFn = jest.fn()
-	const fake_asyncRejectFactoryFn = jest.fn()
+	const fake_asyncFactoryFn = jest.fn<() => Promise<unknown>>()
+	const fake_asyncRejectFactoryFn = jest.fn<() => Promise<unknown>>()
 	beforeEach(() => {
 		jest.useFakeTimers()
 		fake_asyncFactoryFn.mockImplementation(async (): Promise<{ sucessful: boolean }> => {
@@ -68,8 +70,8 @@ describe('SingletonAsync', () => {
 			expect(fake_asyncRejectFactoryFn).toHaveBeenCalledTimes(1)
 
 			jest.runAllTimers()
-			await promise1.then(() => expect.fail('test failed')).catch(() => undefined)
-			await promise2.then(() => expect.fail('test failed')).catch(() => undefined)
+			await promise1.then(() => throw new Error('test failed')).catch(() => undefined)
+			await promise2.then(() => throw new Error('test failed')).catch(() => undefined)
 		})
 	})
 	describe('cached', () => {
@@ -98,8 +100,8 @@ describe('SingletonAsync', () => {
 			expect(fake_asyncFactoryFn).toHaveBeenCalledTimes(1)
 			singletonImplementation.cleanCache()
 			jest.runAllTimers()
-			await promise1.then(() => expect.fail('test failed'))
-			await promise2.then(() => expect.fail('test failed'))
+			await promise1.then(() => throw new Error('test failed'))
+			await promise2.then(() => throw new Error('test failed'))
 		})
 
 		it('should clean cache and after the clean cache factory should be called again on promise', async () => {
