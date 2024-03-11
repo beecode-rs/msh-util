@@ -17,7 +17,9 @@ describe('expressErrorHandler', () => {
 	}
 	const fakeExpressControllerInstance = new FakeExpressController()
 
-	afterEach(() => jest.resetAllMocks())
+	afterEach(() => {
+		jest.resetAllMocks()
+	})
 
 	it('should call next with error if async function throws error', async () => {
 		const error = new Error()

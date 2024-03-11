@@ -28,7 +28,7 @@ describe('JoiUtil', () => {
 		it('should throw error if object is not valid, return first error', () => {
 			try {
 				joiUtil.sanitize(invalidObject, joiSchema)
-				expect.fail('test failed')
+				throw new Error('test failed')
 				// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			} catch (err: any) {
 				expect(err.message).toEqual("'a' is required")
@@ -48,7 +48,7 @@ describe('JoiUtil', () => {
 		it('should throw error if object is not valid, return all errors', () => {
 			try {
 				joiUtil.sanitize(invalidObject, joiSchema, { abortEarly: false })
-				expect.fail('test failed')
+				throw new Error('test failed')
 				// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			} catch (err: any) {
 				expect(err.message).toEqual("'a' is required. 'b' is required. 'c' is required. 'd' is required")
@@ -103,7 +103,7 @@ describe('JoiUtil', () => {
 		it('should throw error if there are unknown properties', () => {
 			try {
 				joiUtil.validate({ ...validObject, test: true }, joiSchema)
-				expect.fail('test failed')
+				throw new Error('test failed')
 				// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			} catch (err: any) {
 				expect(err.message).toEqual("'test' is not allowed")
@@ -112,7 +112,7 @@ describe('JoiUtil', () => {
 		it('should throw error if object is not valid, return first error', () => {
 			try {
 				joiUtil.validate(invalidObject, joiSchema)
-				expect.fail('test failed')
+				throw new Error('test failed')
 				// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			} catch (err: any) {
 				expect(err.message).toEqual("'a' is required")
@@ -132,7 +132,7 @@ describe('JoiUtil', () => {
 		it('should throw error if object is not valid, return all errors', () => {
 			try {
 				joiUtil.validate(invalidObject, joiSchema, { abortEarly: false })
-				expect.fail('test failed')
+				throw new Error('test failed')
 				// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			} catch (err: any) {
 				expect(err.message).toEqual(

@@ -70,8 +70,8 @@ describe('SingletonAsync', () => {
 			expect(fake_asyncRejectFactoryFn).toHaveBeenCalledTimes(1)
 
 			jest.runAllTimers()
-			await promise1.then(() => expect.fail('test failed')).catch(() => undefined)
-			await promise2.then(() => expect.fail('test failed')).catch(() => undefined)
+			await promise1.then(() => throw new Error('test failed')).catch(() => undefined)
+			await promise2.then(() => throw new Error('test failed')).catch(() => undefined)
 		})
 	})
 	describe('cached', () => {
@@ -100,8 +100,8 @@ describe('SingletonAsync', () => {
 			expect(fake_asyncFactoryFn).toHaveBeenCalledTimes(1)
 			singletonImplementation.cleanCache()
 			jest.runAllTimers()
-			await promise1.then(() => expect.fail('test failed'))
-			await promise2.then(() => expect.fail('test failed'))
+			await promise1.then(() => throw new Error('test failed'))
+			await promise2.then(() => throw new Error('test failed'))
 		})
 
 		it('should clean cache and after the clean cache factory should be called again on promise', async () => {

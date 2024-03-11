@@ -11,7 +11,9 @@ describe('factoryPattern', () => {
 		})
 	})
 
-	afterEach(() => jest.resetAllMocks())
+	afterEach(() => {
+		jest.resetAllMocks()
+	})
 
 	it('should return result from factory function', () => {
 		const expectedAValue = 'test'
