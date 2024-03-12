@@ -1,20 +1,25 @@
-import { expressErrorHandler } from 'src/express/error-handler'
+import { expressErrorHandler } from './error-handler'
+import { jest } from '@jest/globals'
 
 describe('expressErrorHandler', () => {
-	const fake_fn = jest.fn()
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const fake_fn = jest.fn<() => Promise<any>>()
 	const fake_req = jest.fn()
 	const fake_res = jest.fn()
 	const fake_next = jest.fn()
 
 	class FakeExpressController {
 		@expressErrorHandler
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		async login(_req: any, _res: any, _next: any): Promise<any> {
-			return await fake_fn()
+			return fake_fn()
 		}
 	}
 	const fakeExpressControllerInstance = new FakeExpressController()
 
-	afterEach(() => jest.resetAllMocks())
+	afterEach(() => {
+		jest.resetAllMocks()
+	})
 
 	it('should call next with error if async function throws error', async () => {
 		const error = new Error()
@@ -26,7 +31,7 @@ describe('expressErrorHandler', () => {
 		expect(fake_req).not.toHaveBeenCalled()
 		expect(fake_res).not.toHaveBeenCalled()
 		expect(fake_next).toHaveBeenCalledTimes(1)
-		expect(fake_next).toHaveBeenCalledOnceWith(error)
+		expect(fake_next).toHaveBeenCalledWith(error)
 	})
 
 	it('should work as usual if async function resolves promise', async () => {
