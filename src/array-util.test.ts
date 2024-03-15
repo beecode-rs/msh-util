@@ -1,4 +1,6 @@
-import { arrayUtil } from 'src/array-util'
+import { describe, expect, it } from '@jest/globals'
+
+import { arrayUtil } from '#src/array-util'
 
 describe('arrayUtil', () => {
 	describe('notEmpty', () => {
@@ -21,6 +23,7 @@ describe('arrayUtil', () => {
 				[{ a: 1 }, { a: 2 }, { a: undefined }, { a: 4 }, { a: null }, { a: 5 }],
 				[{ a: 1 }, { a: 2 }, { a: undefined }, { a: 4 }, { a: null }, { a: 5 }],
 			],
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		])('%#. should filter not empty values from array %s to be %s', (arr: any, expected) => {
 			expect(arr.filter(arrayUtil.notEmpty)).toEqual(expected)
 		})
@@ -43,6 +46,7 @@ describe('arrayUtil', () => {
 				[{ a: 1 }, { a: 2 }, { a: undefined }, { a: 4 }, { a: null }, { a: 5 }],
 				[{ a: 1 }, { a: 2 }, { a: undefined }, { a: 4 }, { a: null }, { a: 5 }],
 			],
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		])('%#. should filter not empty values from array %s to be %s', (arr: any, expected) => {
 			expect(arr.filter(arrayUtil.notFalsy)).toEqual(expected)
 		})
