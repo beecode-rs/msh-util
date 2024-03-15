@@ -1,11 +1,13 @@
-import { SingleThresholdPromise } from 'src/single-threshold-promise'
-import { timeout } from 'src/timeout'
+import { afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals'
+
+import { SingleThresholdPromise } from '#src/single-threshold-promise'
+import { timeout } from '#src/timeout'
 
 describe('SingleThresholdPromise', () => {
 	describe('promise', () => {
 		let callCounter = 0
-		const fake_asyncFactoryFn = jest.fn()
-		const fake_asyncRejectFactoryFn = jest.fn()
+		const fake_asyncFactoryFn = jest.fn<() => Promise<unknown>>()
+		const fake_asyncRejectFactoryFn = jest.fn<() => Promise<unknown>>()
 
 		beforeEach(() => {
 			callCounter = 0
@@ -82,9 +84,21 @@ describe('SingleThresholdPromise', () => {
 			const promise3 = singleThresholdPromiseImplementation.promise()
 			expect(fake_asyncRejectFactoryFn).toHaveBeenCalledTimes(1)
 			jest.runAllTimers()
-			await promise1.then(() => expect.fail('test failed')).catch(() => undefined)
-			await promise2.then(() => expect.fail('test failed')).catch(() => undefined)
-			await promise3.then(() => expect.fail('test failed')).catch(() => undefined)
+			await promise1
+				.then(() => {
+					throw new Error('test failed')
+				})
+				.catch(() => undefined)
+			await promise2
+				.then(() => {
+					throw new Error('test failed')
+				})
+				.catch(() => undefined)
+			await promise3
+				.then(() => {
+					throw new Error('test failed')
+				})
+				.catch(() => undefined)
 			expect(fake_asyncRejectFactoryFn).toHaveBeenCalledTimes(1)
 		})
 	})
