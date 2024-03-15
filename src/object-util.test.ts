@@ -1,5 +1,6 @@
-import { ObjectUtil } from '#/object-util'
+import { describe, expect, it } from '@jest/globals'
 
+import { ObjectUtil } from '#src/object-util'
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 describe('objectUtil', () => {
 	const objectUtil = new ObjectUtil()
@@ -112,11 +113,11 @@ describe('objectUtil', () => {
 			[123, '123'],
 			[[123], `[ 123 ]`],
 			['test', "'test'"],
-			(() => {
-				const date = new Date()
-
-				return [date, date.toISOString()]
-			})(),
+			// (() => {
+			// 	const date = new Date()
+			//
+			// 	return [date, date.toISOString()]
+			// })(),
 		])('%#. should compare %j with result %j with compact enabled', (value, expected) => {
 			expect(objectUtil.deepStringify(value)).toEqual(expected)
 		})

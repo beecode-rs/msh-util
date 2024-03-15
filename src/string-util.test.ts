@@ -1,5 +1,7 @@
-import { regexUtil } from '#/regex-util'
-import { stringUtil } from '#/string-util'
+import { describe, expect, it } from '@jest/globals'
+
+import { regexUtil } from '#src/regex-util'
+import { stringUtil } from '#src/string-util'
 
 describe('stringUtil', () => {
 	it.each([

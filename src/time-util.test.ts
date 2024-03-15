@@ -1,6 +1,6 @@
-import { jest } from '@jest/globals'
+import { afterAll, beforeAll, describe, expect, it, jest } from '@jest/globals'
 
-import { DurationUnit, DurationUnitType, TimeUtil } from '#/time-util'
+import { DurationUnit, DurationUnitType, TimeUtil } from '#src/time-util'
 
 describe('TimeUtil', () => {
 	const constantNowDate = new Date('2022-01-01T00:00:00.000Z')

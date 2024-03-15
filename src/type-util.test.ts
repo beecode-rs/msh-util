@@ -1,4 +1,6 @@
-import { typeUtil } from '#/type-util'
+import { describe, expect, it } from '@jest/globals'
+
+import { typeUtil } from '#src/type-util'
 
 describe('typeUtil', () => {
 	describe('exhaustiveMessage', () => {

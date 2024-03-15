@@ -1,4 +1,6 @@
-import { arrayUtil } from '#/array-util'
+import { describe, expect, it } from '@jest/globals'
+
+import { arrayUtil } from '#src/array-util'
 
 describe('arrayUtil', () => {
 	describe('notEmpty', () => {

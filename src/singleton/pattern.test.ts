@@ -1,6 +1,6 @@
-import { jest } from '@jest/globals'
+import { describe, expect, it, jest } from '@jest/globals'
 
-import { singletonPattern } from '#/singleton/pattern'
+import { singletonPattern } from '#src/singleton/pattern'
 
 describe('singletonPattern', () => {
 	it('should call factory function only once', () => {
