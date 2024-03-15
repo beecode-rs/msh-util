@@ -100,7 +100,7 @@ describe('SingletonAsync', () => {
 		})
 	})
 	describe('cleanCache', () => {
-		// TODO check this failing test
+		// TODO: ESM: check this failing test
 		it('should reject all subscribers to the promise if cleanCache is called before promise is resolved', async () => {
 			const singletonImplementation = new SingletonAsync(fake_asyncFactoryFn)
 			expect(fake_asyncFactoryFn).not.toHaveBeenCalled()

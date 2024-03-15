@@ -1,5 +1,5 @@
 import { expressErrorHandler } from './error-handler'
-import { jest } from '@jest/globals'
+import { afterEach, describe, expect, it, jest } from '@jest/globals'
 
 describe('expressErrorHandler', () => {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -9,6 +9,7 @@ describe('expressErrorHandler', () => {
 	const fake_next = jest.fn()
 
 	class FakeExpressController {
+		// @ts-ignore TODO: EMS: check this error
 		@expressErrorHandler
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		async login(_req: any, _res: any, _next: any): Promise<any> {
