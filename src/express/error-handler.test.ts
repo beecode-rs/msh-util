@@ -1,5 +1,6 @@
-import { expressErrorHandler } from './error-handler'
 import { afterEach, describe, expect, it, jest } from '@jest/globals'
+
+import { expressErrorHandler } from '#src/express/error-handler'
 
 describe('expressErrorHandler', () => {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -1,3 +1,6 @@
 {
-	"reject": ["semantic-release", "typescript", "date-fns"]
+	"reject": [
+		"semantic-release",
+		"date-fns"
+	]
 }

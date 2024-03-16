@@ -100,21 +100,24 @@ describe('SingletonAsync', () => {
 		})
 	})
 	describe('cleanCache', () => {
-		// TODO: ESM: check this failing test
 		it('should reject all subscribers to the promise if cleanCache is called before promise is resolved', async () => {
 			const singletonImplementation = new SingletonAsync(fake_asyncFactoryFn)
 			expect(fake_asyncFactoryFn).not.toHaveBeenCalled()
-			const promise1 = singletonImplementation.promise().catch(() => undefined)
-			const promise2 = singletonImplementation.promise().catch(() => undefined)
+			const promise1 = singletonImplementation.promise()
+			const promise2 = singletonImplementation.promise()
 			expect(fake_asyncFactoryFn).toHaveBeenCalledTimes(1)
 			singletonImplementation.cleanCache()
 			jest.runAllTimers()
-			await promise1.then(() => {
-				throw new Error('test failed')
-			})
-			await promise2.then(() => {
-				throw new Error('test failed')
-			})
+			await promise1
+				.then(() => {
+					throw new Error('test failed')
+				})
+				.catch(() => undefined)
+			await promise2
+				.then(() => {
+					throw new Error('test failed')
+				})
+				.catch(() => undefined)
 		})
 
 		it('should clean cache and after the clean cache factory should be called again on promise', async () => {
