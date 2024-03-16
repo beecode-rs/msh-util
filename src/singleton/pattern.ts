@@ -1,4 +1,4 @@
-import { AnyFunctionNoParams } from 'src/types/any-function/no-params'
+export type AnyFunctionNoParams<T> = () => T
 
 /**
  * Singleton patter wrapper function
