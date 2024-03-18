@@ -1,4 +1,4 @@
-import { AnyFunctionPromiseNoParams } from 'src/types/any-function/promise-no-params'
+export type AnyFunctionPromiseNoParams<T> = () => Promise<T>
 
 /**
  * SingleThresholdPromise returns a single promise, and subsequent calls made before the promise resolves will return the same promise.
@@ -19,6 +19,7 @@ import { AnyFunctionPromiseNoParams } from 'src/types/any-function/promise-no-pa
  */
 export class SingleThresholdPromise<T> {
 	protected _cache: {
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		promises?: { resolve: (value: T | PromiseLike<T>) => void; reject: (reason?: any) => void }[]
 	} = {}
 
