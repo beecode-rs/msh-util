@@ -1,6 +1,7 @@
 import cloneDeep from 'lodash.clonedeep'
 import util from 'util'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ObjectType = Record<string, any>
 
 export class ObjectUtil {
@@ -23,13 +24,16 @@ export class ObjectUtil {
 	 * @return {Pick<T, L>}
 	 */
 	pickByList<T extends object, L extends keyof T>(obj: T, keyList: (L | string)[]): Pick<T, L> {
-		return keyList.reduce((pickedObj, key) => {
-			if (Object.prototype.hasOwnProperty.call(obj, key)) {
-				pickedObj[key as L] = obj[key as L]
-			}
+		return keyList.reduce(
+			(pickedObj, key) => {
+				if (Object.prototype.hasOwnProperty.call(obj, key)) {
+					pickedObj[key as L] = obj[key as L]
+				}
 
-			return pickedObj
-		}, {} as Pick<T, L>) // eslint-disable-line @typescript-eslint/prefer-reduce-type-parameter
+				return pickedObj
+			},
+			{} as Pick<T, L>
+		) // eslint-disable-line @typescript-eslint/prefer-reduce-type-parameter
 	}
 
 	/**
@@ -65,6 +69,7 @@ export class ObjectUtil {
 	 * console.log(new ObjectUtil().deepStringify({ b: 1, a: 2 }, {isSorted:true, compact: true})) // { a: 2, b: 1 }
 	 */
 	deepStringify(
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		entity: any,
 		options?: { isSorted?: boolean; isPrettyPrinted?: boolean; prettyPrintCompactLevel?: number }
 	): string {
@@ -98,6 +103,7 @@ export class ObjectUtil {
 	 * @param b
 	 * @return {boolean}
 	 */
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	deepEqual(a: any, b: any): boolean {
 		return this.deepStringify(a, { isSorted: true }) === this.deepStringify(b, { isSorted: true })
 	}
@@ -111,6 +117,7 @@ export class ObjectUtil {
 	 * console.log(new ObjectUtil().deepNullToUndefined({ a: null, b: { c: null } })) // { a: undefined, b: { c: undefined } }
 	 */
 	deepNullToUndefined<T extends ObjectType>(objectWithNulls: T): T {
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		return Object.entries(objectWithNulls).reduce<any>((acc, cur) => {
 			const [key, value] = cur
 			if (value === null) {
