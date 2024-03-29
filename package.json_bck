@@ -23,23 +23,36 @@
 	},
 	"exports": {
 		".": {
-			"types": "./dist/esm/index.d.ts",
-			"require": "./dist/cjs/index.js",
-			"default": "./dist/esm/index.js"
+			"require": {
+				"types": "./dist/cjs/index.d.ts",
+				"default": "./dist/cjs/index.js"
+			},
+			"import": {
+				"types": "./dist/esm/index.d.ts",
+				"default": "./dist/esm/index.js"
+			}
 		},
 		"./*": {
-			"types": [
-				"./dist/esm/*.d.ts",
-				"./dist/esm/*/index.d.ts"
-			],
-			"require": [
-				"./dist/cjs/*.js",
-				"./dist/cjs/*/index.js"
-			],
-			"default": [
-				"./dist/esm/*.js",
-				"./dist/esm/*/index.js"
-			]
+			"require": {
+				"types": [
+					"./dist/cjs/*.d.ts",
+					"./dist/cjs/*/index.d.ts"
+				],
+				"default": [
+					"./dist/cjs/*.js",
+					"./dist/cjs/*/index.js"
+				]
+			},
+			"import": {
+				"types": [
+					"./dist/esm/*.d.ts",
+					"./dist/esm/*/index.d.ts"
+				],
+				"default": [
+					"./dist/esm/*.js",
+					"./dist/esm/*/index.js"
+				]
+			}
 		},
 		"./package.json": "./package.json"
 	},
