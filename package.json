@@ -23,35 +23,30 @@
 	},
 	"exports": {
 		".": {
-			"types": "./dist/esm/index.d.ts",
-			"require": "./dist/cjs/index.js",
-			"default": "./dist/esm/index.js"
+			"import": "./dist/esm/index.js",
+			"require": "./dist/cjs/index.js"
 		},
 		"./*": {
-			"types": [
-				"./dist/esm/*.d.ts",
-				"./dist/esm/*/index.d.ts"
+			"import": [
+				"./dist/esm/*.js",
+				"./dist/esm/*/index.js"
 			],
 			"require": [
 				"./dist/cjs/*.js",
 				"./dist/cjs/*/index.js"
-			],
-			"default": [
-				"./dist/esm/*.js",
-				"./dist/esm/*/index.js"
 			]
 		},
 		"./package.json": "./package.json"
 	},
 	"main": "./dist/cjs/index.js",
 	"module": "./dist/esm/index.js",
-	"types": "./dist/esm/index.d.ts",
+	"types": "./dist/cjs/index.d.ts",
 	"files": [
 		"./dist"
 	],
 	"scripts": {
-		"build": "npm run clean && npm run tsc",
-		"build-cjs": "npm run clean-cjs && npm run tsc-cjs",
+		"build": "npm run clean && npm run tsc && npm run tsc-esm-alias",
+		"build-cjs": "npm run clean-cjs && npm run tsc-cjs && npm run tsc-cjs-alias && npm run fix-hybrid-lib-cjs",
 		"clean": "rimraf ./dist/esm",
 		"clean-cjs": "rimraf ./dist/cjs",
 		"doc": "concurrently -c auto 'npm:doc:*'",
@@ -61,6 +56,7 @@
 		"docker-rmi": "docker rmi bc-msh-util",
 		"docker-run-package-lock-update": "docker run --rm -v ./:/usr/app/ milosbugarinovic/msh-lib-base:node20.11.1-alpine3.19 npm i --package-lock-only",
 		"docker-run-sh": "docker run --rm -it bc-msh-util sh",
+		"fix-hybrid-lib-cjs": "mkdir -p ./dist/cjs && echo '{\"type\": \"commonjs\"}' > ./dist/cjs/package.json",
 		"init": "concurrently -c auto 'npm:init:*'",
 		"init:git-config": "git config include.path ./.git-config",
 		"init:husky": "npx husky install",
@@ -86,11 +82,13 @@
 		"test:e2e": "npm run jest -- --config=./test/jest.config.ts",
 		"test:int": "npm run jest -- --config=./jest.config.int.ts",
 		"test:unit": "npm run jest -- --config=./jest.config.unit.ts",
-		"tsc": "tsc -p ./tsconfig.build.json",
-		"tsc-cjs": "tsc -p ./tsconfig.build.cjs.json",
+		"tsc": "tsc -p ./tsconfig.build.esm.json",
 		"tsc-check": "npm run tsc -- --noEmit",
+		"tsc-cjs": "tsc -p ./tsconfig.build.cjs.json",
+		"tsc-cjs-alias": "tsc-alias -p ./tsconfig.build.cjs.json",
 		"tsc-cleaner": "ts-cleaner --dist ./dist/esm",
 		"tsc-cleaner-watch": "npm run tsc-cleaner -- --watch",
+		"tsc-esm-alias": "tsc-alias -p ./tsconfig.build.esm.json",
 		"tsc-time": "npm run tsc -- --diagnostics",
 		"tsc-watch": "npm run tsc -- -w --preserveWatchOutput",
 		"watch": "concurrently -c auto -n build,clean 'npm run tsc-watch' 'npm run tsc-cleaner-watch'"
@@ -160,6 +158,7 @@
 		"ts-cleaner": "1.0.5",
 		"ts-jest": "29.1.2",
 		"ts-node": "10.9.2",
+		"tsc-alias": "1.8.8",
 		"tsc-watch": "6.0.4",
 		"typedoc": "0.25.12",
 		"typedoc-plugin-markdown": "3.17.1",

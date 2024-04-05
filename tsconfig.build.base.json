@@ -1,5 +1,10 @@
 {
 	"exclude": ["./**/*.test.ts", "./**/*.contract.ts", "./**/__mocks__/*", "./**/__tests__/*", "./**/__snapshots__/*"],
+	"compilerOptions": {
+		"paths": {
+			"#src/*": ["./src/*"]
+		}
+	},
 	"extends": "./tsconfig.json",
 	"include": ["./src"]
 }
