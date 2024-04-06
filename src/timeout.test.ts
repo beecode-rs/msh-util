@@ -1,4 +1,6 @@
-import { timeout } from 'src/timeout'
+import { afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals'
+
+import { timeout } from '#src/timeout'
 
 describe('timeout', () => {
 	const fn_one = jest.fn()

@@ -7,7 +7,7 @@
 from
 
 ```ts
-import { cacheUtil } from '@beecode/msh-node-util/lib/cache-util'
+import { cacheUtil } from '@beecode/msh-node-util/lib/cache-util.js'
 // ...
 export const cliShellServiceSingleton = cacheUtil.singleton((): CliShellService => new CliShellService())
 ```
@@ -15,7 +15,7 @@ export const cliShellServiceSingleton = cacheUtil.singleton((): CliShellService 
 to
 
 ```ts
-import { singletonPattern } from '@beecode/msh-util/lib/singleton/pattern'
+import { singletonPattern } from '@beecode/msh-util/dist/singleton/pattern'
 // ...
 export const cliShellServiceSingleton = singletonPattern((): CliShellService => new CliShellService())
 ```
