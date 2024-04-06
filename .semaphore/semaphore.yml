@@ -15,7 +15,7 @@ blocks:
           commands:
             - checkout
             - echo $DOCKER_PASSWORD | docker login --username "$DOCKER_USERNAME" --password-stdin
-            - docker build -f .docker/Dockerfile -t bc-msh-util .
+            - docker build -f ./resource/docker/Dockerfile -t bc-msh-util .
             - docker save -o bc-msh-util.tar bc-msh-util
             - cache store bc-msh-util-docker-image-$SEMAPHORE_GIT_SHA bc-msh-util.tar
 
@@ -29,7 +29,7 @@ blocks:
             - checkout
             - cache restore bc-msh-util-docker-image-$SEMAPHORE_GIT_SHA
             - docker load -i bc-msh-util.tar
-            - docker run --rm -e CODECOV_TOKEN bc-msh-util sh -c 'npm run test:unit:coverage && npm run test:unit:coverage:publish'
+            - docker run --rm -e CODECOV_TOKEN bc-msh-util sh -c 'npm run test-coverage-unit && npm run test-coverage-unit-publish'
 
   - name: Bump Version
     task:
@@ -43,7 +43,7 @@ blocks:
             - docker load -i bc-msh-util.tar
             - touch version.txt
             - sudo chown -R packer:packer version.txt
-            - docker run --rm -v ./version.txt:/usr/app/version.txt -e GH_TOKEN -e NPM_TOKEN -e GH_USER -e CI bc-msh-util npm run semantic-release
+            - docker run --rm -v ./version.txt:/usr/app/version.txt -e GH_TOKEN -e NPM_TOKEN -e GH_USER -e CI bc-msh-util npm run npm-semantic-release
             - cat version.txt
             - cache store bc-msh-util-version-$SEMAPHORE_GIT_SHA version.txt
     skip:
