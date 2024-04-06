@@ -1,5 +1,6 @@
 {
 	"compilerOptions": {
+		"allowJs": true,
 		"allowSyntheticDefaultImports": true,
 		"alwaysStrict": true,
 		"baseUrl": "./",
@@ -12,7 +13,9 @@
 		"forceConsistentCasingInFileNames": true,
 		"inlineSourceMap": true,
 		"inlineSources": true,
-		"lib": ["ESNext"],
+		"lib": [
+			"ESNext"
+		],
 		"module": "NodeNext",
 		"moduleResolution": "NodeNext",
 		"noFallthroughCasesInSwitch": true,
@@ -22,7 +25,16 @@
 		"noUncheckedIndexedAccess": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"outDir": "./dist/esm",
+		"outDir": "./dist",
+		"paths": {
+			"#src": [
+				"./src/index.ts"
+			],
+			"#src/*": [
+				"./src/*.ts",
+				"./src/*/index.ts"
+			]
+		},
 		"pretty": true,
 		"resolveJsonModule": true,
 		"resolvePackageJsonImports": true,
@@ -34,5 +46,9 @@
 		"target": "ESNext",
 		"traceResolution": false
 	},
-	"include": ["./*.*", "./src", "./test"]
+	"include": [
+		"./*.*",
+		"./src",
+		"./test"
+	]
 }
