@@ -1,3 +1,13 @@
+# [2.0.0](https://github.com/beecode-rs/msh-util/compare/v1.2.1...v2.0.0) (2024-04-06)
+
+
+* refactor!: es modules and commonjs build (#5) ([3e7c6e1](https://github.com/beecode-rs/msh-util/commit/3e7c6e1b7ef94b6d7faa7cdbd27382f0d0963caa)), closes [#5](https://github.com/beecode-rs/msh-util/issues/5)
+
+
+### BREAKING CHANGES
+
+* changed file structure
+
 ## [1.2.1](https://github.com/beecode-rs/msh-util/compare/v1.2.0...v1.2.1) (2023-05-22)
 
 
