@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/beecode-rs/msh-util/compare/v2.0.0...v2.0.1) (2024-04-07)
+
+
+### Bug Fixes
+
+* esmodule build output alias path to relative ([020132f](https://github.com/beecode-rs/msh-util/commit/020132fb9a7356b05c64f2f7878d6896cb744719))
+
 # [2.0.0](https://github.com/beecode-rs/msh-util/compare/v1.2.1...v2.0.0) (2024-04-06)
 
 
