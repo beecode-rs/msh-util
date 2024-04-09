@@ -1,6 +1,6 @@
 {
 	"reject": [
-		"semantic-release",
-		"date-fns"
+		"eslint",
+		"eslint-config-prettier"
 	]
 }

@@ -1,7 +1,7 @@
-import add from 'date-fns/add/index.js'
-import addMilliseconds from 'date-fns/addMilliseconds/index.js'
-import format from 'date-fns/format/index.js'
-import parse from 'date-fns/parse/index.js'
+import { add } from 'date-fns/add'
+import { addMilliseconds } from 'date-fns/addMilliseconds'
+import { format } from 'date-fns/format'
+import { parse } from 'date-fns/parse'
 
 export enum DurationUnit {
 	MILLISECOND = 'MILLISECOND',
