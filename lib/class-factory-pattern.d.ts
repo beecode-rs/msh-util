@@ -21,5 +21,5 @@ export type ClassType<T = object> = new (...args: T extends {
  * // using
  * const someClassInstance = someClassFactory({ a: 'test' })
  */
-export declare const classFactoryPattern: <C extends ClassType<object>>(classType: C) => (...args: ConstructorParameters<C>) => InstanceType<C>;
+export declare const classFactoryPattern: <C extends ClassType<object>>(classType: C) => ((...args: ConstructorParameters<C>) => InstanceType<C>);
 //# sourceMappingURL=class-factory-pattern.d.ts.map
