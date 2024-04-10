@@ -5,6 +5,9 @@ updates:
     schedule:
       interval: "weekly"
     assignees:
-      - "milosbugarinovic"      
+      - "milosbugarinovic"
     commit-message:
       prefix: "fix"
+    ignore:
+      - dependency-name: "eslint"
+      - dependency-name: "eslint-config-prettier"
