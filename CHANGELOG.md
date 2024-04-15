@@ -1,3 +1,10 @@
+## [2.0.4](https://github.com/beecode-rs/msh-util/compare/v2.0.3...v2.0.4) (2024-04-15)
+
+
+### Bug Fixes
+
+* update package.json ([#16](https://github.com/beecode-rs/msh-util/issues/16)) ([fb54ca9](https://github.com/beecode-rs/msh-util/commit/fb54ca9c76240dbb0ea2b5be05261b18e669912f))
+
 ## [2.0.3](https://github.com/beecode-rs/msh-util/compare/v2.0.2...v2.0.3) (2024-04-09)
 
 
