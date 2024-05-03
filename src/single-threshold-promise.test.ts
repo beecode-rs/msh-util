@@ -1,4 +1,4 @@
-import { afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { SingleThresholdPromise } from '#src/single-threshold-promise'
 import { timeout } from '#src/timeout'
@@ -6,12 +6,12 @@ import { timeout } from '#src/timeout'
 describe('SingleThresholdPromise', () => {
 	describe('promise', () => {
 		let callCounter = 0
-		const fake_asyncFactoryFn = jest.fn<() => Promise<unknown>>()
-		const fake_asyncRejectFactoryFn = jest.fn<() => Promise<unknown>>()
+		const fake_asyncFactoryFn = vi.fn()
+		const fake_asyncRejectFactoryFn = vi.fn()
 
 		beforeEach(() => {
 			callCounter = 0
-			jest.useFakeTimers()
+			vi.useFakeTimers()
 			fake_asyncFactoryFn.mockImplementation(async (): Promise<{ callCount: number }> => {
 				await timeout(1000)
 
@@ -24,9 +24,8 @@ describe('SingleThresholdPromise', () => {
 		})
 
 		afterEach(() => {
-			jest.clearAllTimers()
-			jest.useRealTimers()
-			jest.resetAllMocks()
+			vi.clearAllTimers()
+			vi.useRealTimers()
 		})
 
 		it('should return result of the factory function when promise called', async () => {
@@ -35,7 +34,7 @@ describe('SingleThresholdPromise', () => {
 
 			const promise = singleThresholdPromiseImplementation.promise()
 			expect(fake_asyncFactoryFn).toHaveBeenCalledTimes(1)
-			jest.runAllTimers()
+			vi.runAllTimers()
 			expect(await promise).toEqual({ callCount: 1 })
 			expect(fake_asyncFactoryFn).toHaveBeenCalledTimes(1)
 		})
@@ -49,7 +48,7 @@ describe('SingleThresholdPromise', () => {
 			const promise3 = singleThresholdPromiseImplementation.promise()
 
 			expect(fake_asyncFactoryFn).toHaveBeenCalledTimes(1)
-			jest.runAllTimers()
+			vi.runAllTimers()
 			expect(await promise1).toEqual(expected)
 			expect(await promise2).toEqual(expected)
 			expect(await promise3).toEqual(expected)
@@ -63,17 +62,17 @@ describe('SingleThresholdPromise', () => {
 
 			const promise1 = singleThresholdPromiseImplementation.promise()
 			expect(fake_asyncFactoryFn).toHaveBeenCalledTimes(1)
-			jest.runAllTimers()
+			vi.runAllTimers()
 			expect(await promise1).toEqual({ callCount: 1 })
 
 			const promise2 = singleThresholdPromiseImplementation.promise()
 			expect(fake_asyncFactoryFn).toHaveBeenCalledTimes(2)
-			jest.runAllTimers()
+			vi.runAllTimers()
 			expect(await promise2).toEqual({ callCount: 2 })
 
 			const promise3 = singleThresholdPromiseImplementation.promise()
 			expect(fake_asyncFactoryFn).toHaveBeenCalledTimes(3)
-			jest.runAllTimers()
+			vi.runAllTimers()
 			expect(await promise3).toEqual({ callCount: 3 })
 		})
 
@@ -83,7 +82,7 @@ describe('SingleThresholdPromise', () => {
 			const promise2 = singleThresholdPromiseImplementation.promise()
 			const promise3 = singleThresholdPromiseImplementation.promise()
 			expect(fake_asyncRejectFactoryFn).toHaveBeenCalledTimes(1)
-			jest.runAllTimers()
+			vi.runAllTimers()
 			await promise1
 				.then(() => {
 					throw new Error('test failed')

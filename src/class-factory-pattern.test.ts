@@ -1,18 +1,14 @@
-import { afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { classFactoryPattern } from '#src/class-factory-pattern'
 
 describe('factoryPattern', () => {
-	const fakeClassMock = jest.fn<(a: string) => { a: string }>()
+	const fakeClassMock = vi.fn()
 
 	beforeEach(() => {
 		fakeClassMock.mockImplementation((a: string) => {
 			return { a }
 		})
-	})
-
-	afterEach(() => {
-		jest.resetAllMocks()
 	})
 
 	it('should return result from factory function', () => {

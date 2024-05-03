@@ -1,14 +1,14 @@
-import { afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { SingletonAsync } from '#src/singleton/async'
 import { timeout } from '#src/timeout'
 
 describe('SingletonAsync', () => {
 	const fakeResult = { sucessful: true }
-	const fake_asyncFactoryFn = jest.fn<() => Promise<unknown>>()
-	const fake_asyncRejectFactoryFn = jest.fn<() => Promise<unknown>>()
+	const fake_asyncFactoryFn = vi.fn()
+	const fake_asyncRejectFactoryFn = vi.fn()
 	beforeEach(() => {
-		jest.useFakeTimers()
+		vi.useFakeTimers()
 		fake_asyncFactoryFn.mockImplementation(async (): Promise<{ sucessful: boolean }> => {
 			await timeout(1000)
 
@@ -21,9 +21,8 @@ describe('SingletonAsync', () => {
 	})
 
 	afterEach(() => {
-		jest.clearAllTimers()
-		jest.useRealTimers()
-		jest.resetAllMocks()
+		vi.clearAllTimers()
+		vi.useRealTimers()
 	})
 	describe('promise', () => {
 		it('should return promised value', async () => {
@@ -31,7 +30,7 @@ describe('SingletonAsync', () => {
 			expect(fake_asyncFactoryFn).not.toHaveBeenCalled()
 			const promise = singletonImplementation.promise()
 			expect(fake_asyncFactoryFn).toHaveBeenCalledTimes(1)
-			jest.runAllTimers()
+			vi.runAllTimers()
 			expect(await promise).toBe(fakeResult)
 		})
 
@@ -42,7 +41,7 @@ describe('SingletonAsync', () => {
 			const promise2 = singletonImplementation.promise()
 			expect(fake_asyncFactoryFn).toHaveBeenCalledTimes(1)
 
-			jest.runAllTimers()
+			vi.runAllTimers()
 			expect(await promise1).toBe(fakeResult)
 			expect(await promise2).toBe(fakeResult)
 		})
@@ -53,12 +52,12 @@ describe('SingletonAsync', () => {
 			const promise1 = singletonImplementation.promise()
 			expect(fake_asyncFactoryFn).toHaveBeenCalledTimes(1)
 
-			jest.runAllTimers()
+			vi.runAllTimers()
 			expect(await promise1).toBe(fakeResult)
 
 			const promise2 = singletonImplementation.promise()
 			expect(fake_asyncFactoryFn).toHaveBeenCalledTimes(1)
-			jest.runAllTimers()
+			vi.runAllTimers()
 			expect(await promise2).toBe(fakeResult)
 		})
 
@@ -69,7 +68,7 @@ describe('SingletonAsync', () => {
 			const promise2 = singletonImplementation.promise()
 			expect(fake_asyncRejectFactoryFn).toHaveBeenCalledTimes(1)
 
-			jest.runAllTimers()
+			vi.runAllTimers()
 			await promise1
 				.then(() => {
 					throw new Error('test failed')
@@ -94,7 +93,7 @@ describe('SingletonAsync', () => {
 
 			const promise = singletonImplementation.promise()
 			expect(fake_asyncFactoryFn).toHaveBeenCalledTimes(1)
-			jest.runAllTimers()
+			vi.runAllTimers()
 			expect(await promise).toBe(fakeResult)
 			expect(singletonImplementation.cached()).toBe(fakeResult)
 		})
@@ -107,7 +106,7 @@ describe('SingletonAsync', () => {
 			const promise2 = singletonImplementation.promise()
 			expect(fake_asyncFactoryFn).toHaveBeenCalledTimes(1)
 			singletonImplementation.cleanCache()
-			jest.runAllTimers()
+			vi.runAllTimers()
 			await promise1
 				.then(() => {
 					throw new Error('test failed')
@@ -125,7 +124,7 @@ describe('SingletonAsync', () => {
 			expect(fake_asyncFactoryFn).not.toHaveBeenCalled()
 			const promise1 = singletonImplementation.promise()
 			expect(fake_asyncFactoryFn).toHaveBeenCalledTimes(1)
-			jest.runAllTimers()
+			vi.runAllTimers()
 			expect(await promise1).toBe(fakeResult)
 			expect(singletonImplementation.cached()).toBe(fakeResult)
 			singletonImplementation.cleanCache()
@@ -133,7 +132,7 @@ describe('SingletonAsync', () => {
 
 			const promise2 = singletonImplementation.promise()
 			expect(fake_asyncFactoryFn).toHaveBeenCalledTimes(2)
-			jest.runAllTimers()
+			vi.runAllTimers()
 			expect(await promise2).toBe(fakeResult)
 		})
 	})
