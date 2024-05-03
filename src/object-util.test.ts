@@ -1,4 +1,4 @@
-import { describe, expect, it } from '@jest/globals'
+import { describe, expect, it } from 'vitest'
 
 import { ObjectUtil } from '#src/object-util'
 /* eslint-disable sort-keys-fix/sort-keys-fix */

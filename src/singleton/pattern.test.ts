@@ -1,11 +1,11 @@
-import { describe, expect, it, jest } from '@jest/globals'
+import { describe, expect, it, vi } from 'vitest'
 
 import { singletonPattern } from '#src/singleton/pattern'
 
 describe('singletonPattern', () => {
 	it('should call factory function only once', () => {
 		const factoryResult = { successful: true }
-		const factoryFn = jest.fn().mockImplementation(() => {
+		const factoryFn = vi.fn().mockImplementation(() => {
 			return factoryResult
 		})
 		const singletonImplementation = singletonPattern(factoryFn)

@@ -1,4 +1,4 @@
-import { afterAll, beforeAll, describe, expect, it, jest } from '@jest/globals'
+import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 
 import { DurationUnit, DurationUnitType, TimeUtil } from '#src/time-util'
 
@@ -19,11 +19,11 @@ describe('TimeUtil', () => {
 	] as [Date, number][]
 
 	beforeAll(() => {
-		jest.useFakeTimers({ now: constantNowDate.getTime() })
+		vi.useFakeTimers({ now: constantNowDate.getTime() })
 	})
 
 	afterAll(() => {
-		jest.useRealTimers()
+		vi.useRealTimers()
 	})
 
 	describe('now', () => {

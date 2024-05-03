@@ -1,12 +1,12 @@
-import { afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { timeout } from '#src/timeout'
 
 describe('timeout', () => {
-	const fn_one = jest.fn()
-	const fn_two = jest.fn()
-	const fn_three = jest.fn()
-	const fn_onResolve = jest.fn()
+	const fn_one = vi.fn()
+	const fn_two = vi.fn()
+	const fn_three = vi.fn()
+	const fn_onResolve = vi.fn()
 
 	const timeoutImplementation = async (): Promise<void> => {
 		fn_one()
@@ -17,13 +17,12 @@ describe('timeout', () => {
 	}
 
 	beforeEach(() => {
-		jest.useFakeTimers()
+		vi.useFakeTimers()
 	})
 
 	afterEach(() => {
-		jest.clearAllTimers()
-		jest.useRealTimers()
-		jest.resetAllMocks()
+		vi.clearAllTimers()
+		vi.useRealTimers()
 	})
 
 	it('should function one by one with pause of 1000ms', async () => {
@@ -41,7 +40,7 @@ describe('timeout', () => {
 		expect(fn_three).toHaveBeenCalledTimes(0)
 		expect(fn_onResolve).toHaveBeenCalledTimes(0)
 
-		jest.advanceTimersByTime(1000)
+		vi.advanceTimersByTime(1000)
 		await Promise.resolve()
 
 		expect(fn_one).toHaveBeenCalledTimes(1)
@@ -49,7 +48,7 @@ describe('timeout', () => {
 		expect(fn_three).toHaveBeenCalledTimes(0)
 		expect(fn_onResolve).toHaveBeenCalledTimes(0)
 
-		jest.advanceTimersByTime(1000)
+		vi.advanceTimersByTime(1000)
 		await Promise.resolve()
 
 		expect(fn_one).toHaveBeenCalledTimes(1)

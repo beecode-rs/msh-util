@@ -1,13 +1,13 @@
-import { afterEach, describe, expect, it, jest } from '@jest/globals'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 
 import { expressErrorHandler } from '#src/express/error-handler'
 
 describe('expressErrorHandler', () => {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	const fake_fn = jest.fn<() => Promise<any>>()
-	const fake_req = jest.fn()
-	const fake_res = jest.fn()
-	const fake_next = jest.fn()
+	const fake_fn = vi.fn()
+	const fake_req = vi.fn()
+	const fake_res = vi.fn()
+	const fake_next = vi.fn()
 
 	class FakeExpressController {
 		// @ts-ignore TODO: EMS: check this error
@@ -18,10 +18,6 @@ describe('expressErrorHandler', () => {
 		}
 	}
 	const fakeExpressControllerInstance = new FakeExpressController()
-
-	afterEach(() => {
-		jest.resetAllMocks()
-	})
 
 	it('should call next with error if async function throws error', async () => {
 		const error = new Error()

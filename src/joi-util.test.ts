@@ -1,5 +1,5 @@
-import { describe, expect, it } from '@jest/globals'
 import Joi from 'joi'
+import { describe, expect, it } from 'vitest'
 
 import { JoiUtil } from '#src/joi-util'
 
