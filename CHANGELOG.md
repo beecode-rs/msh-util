@@ -1,3 +1,11 @@
+## [2.0.6](https://github.com/beecode-rs/msh-util/compare/v2.0.5...v2.0.6) (2024-05-03)
+
+
+### Bug Fixes
+
+* test coverage with vitest ([004d64c](https://github.com/beecode-rs/msh-util/commit/004d64cc9fadd35c44ab10c6c0c7ea8df33362d2))
+* update package.json, esmodule remove alias, use vitest instead of jest ([433a56f](https://github.com/beecode-rs/msh-util/commit/433a56feb723a800aa75f42e5a45fc0b0e49bb96))
+
 ## [2.0.5](https://github.com/beecode-rs/msh-util/compare/v2.0.4...v2.0.5) (2024-04-15)
 
 
