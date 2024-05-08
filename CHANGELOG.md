@@ -1,3 +1,10 @@
+## [2.0.8](https://github.com/beecode-rs/msh-util/compare/v2.0.7...v2.0.8) (2024-05-08)
+
+
+### Bug Fixes
+
+* add shared semantic release config ([bbbbcfd](https://github.com/beecode-rs/msh-util/commit/bbbbcfd9b74fb6972dcf5e61250805fe3d4f66e9))
+
 ## [2.0.7](https://github.com/beecode-rs/msh-util/compare/v2.0.6...v2.0.7) (2024-05-04)
 
 
