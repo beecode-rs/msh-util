@@ -1,4 +1,4 @@
-import { ObjectSchema, Schema, ValidationOptions } from 'joi';
+import { type ObjectSchema, type Schema, type ValidationOptions } from 'joi';
 export declare class ErrorWithPayload<T> extends Error {
     payload: T;
     constructor(message: string, payload: T);

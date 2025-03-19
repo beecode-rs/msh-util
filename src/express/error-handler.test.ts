@@ -3,7 +3,6 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { expressErrorHandler } from '#src/express/error-handler'
 
 describe('expressErrorHandler', () => {
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const fake_fn = vi.fn()
 	const fake_req = vi.fn()
 	const fake_res = vi.fn()
@@ -12,7 +11,7 @@ describe('expressErrorHandler', () => {
 	class FakeExpressController {
 		// @ts-ignore TODO: EMS: check this error
 		@expressErrorHandler
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/require-await
 		async login(_req: any, _res: any, _next: any): Promise<any> {
 			return fake_fn()
 		}

@@ -1,1 +1,1 @@
-{"version":3,"file":"error-handler.d.ts","sourceRoot":"","sources":["../../src/express/error-handler.ts"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;GAcG;AAEH,eAAO,MAAM,mBAAmB,YAAa,GAAG,QAAQ,MAAM,cAAc,wBAAwB,GAAG,CAAC,KAAG,GAU1G,CAAA"}
+{"version":3,"file":"error-handler.d.ts","sourceRoot":"","sources":["../../src/express/error-handler.ts"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;GAcG;AAEH,eAAO,MAAM,mBAAmB,YAAa,GAAG,QAAQ,MAAM,cAAc,uBAAuB,CAAC,GAAG,CAAC,KAAG,GAU1G,CAAA"}

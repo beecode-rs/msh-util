@@ -18,6 +18,6 @@ export declare const arrayUtil: {
      * const notFalsyArray = [0, 1, 2, null, undefined, ''].filter(arrayUtil.notFalsy)
      * console.log(notFalsyArray)// [1, 2]
      */
-    notFalsy: <T_1>(value: T_1 | null | undefined) => value is T_1;
+    notFalsy: <T>(value: T | null | undefined) => value is T;
 };
 //# sourceMappingURL=array-util.d.ts.map

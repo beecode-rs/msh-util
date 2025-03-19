@@ -1,6 +1,6 @@
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 
-import { DurationUnit, DurationUnitType, TimeUtil } from '#src/time-util'
+import { DurationUnit, type DurationUnitType, TimeUtil } from '#src/time-util'
 
 describe('TimeUtil', () => {
 	const constantNowDate = new Date('2022-01-01T00:00:00.000Z')

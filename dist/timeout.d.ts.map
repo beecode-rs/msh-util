@@ -1,1 +1,1 @@
-{"version":3,"file":"timeout.d.ts","sourceRoot":"","sources":["../src/timeout.ts"],"names":[],"mappings":"AAAA;;;;;;;;;;;;GAYG;AACH,eAAO,MAAM,OAAO,OAAQ,MAAM,KAAG,QAAQ,IAAI,CAEhD,CAAA"}
+{"version":3,"file":"timeout.d.ts","sourceRoot":"","sources":["../src/timeout.ts"],"names":[],"mappings":"AAAA;;;;;;;;;;;;GAYG;AACH,eAAO,MAAM,OAAO,OAAQ,MAAM,KAAG,OAAO,CAAC,IAAI,CAEhD,CAAA"}

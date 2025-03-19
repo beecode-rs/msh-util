@@ -21,6 +21,7 @@ describe('regexUtil', () => {
 	it.each([['a'], ['test'], [123], [{}], [{ uuid: '3510e9f1-08f6-4c5a-86a9-66e91c6093b7' }], [new Date()]])(
 		'%#. should pass regex expression check %s',
 		(uuidString) => {
+			// eslint-disable-next-line @typescript-eslint/no-base-to-string
 			expect(new RegExp(regexUtil.uuid).test(uuidString.toString())).toBeFalsy()
 		}
 	)
