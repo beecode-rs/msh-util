@@ -1,3 +1,11 @@
+## [2.0.9](https://github.com/beecode-rs/msh-util/compare/v2.0.8...v2.0.9) (2025-03-20)
+
+
+### Bug Fixes
+
+* update Node.js version, add Prettier configuration, and adjust imports ([e96b62b](https://github.com/beecode-rs/msh-util/commit/e96b62bad41c94acdbb377175eebf5da6877332e))
+* update test to use 'any' type for duration unit in time-util tests, lint issue ([83c0c11](https://github.com/beecode-rs/msh-util/commit/83c0c11574b4605e43448289bf5581010d18a51c))
+
 ## [2.0.8](https://github.com/beecode-rs/msh-util/compare/v2.0.7...v2.0.8) (2024-05-08)
 
 
