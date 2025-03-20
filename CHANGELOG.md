@@ -1,3 +1,10 @@
+## [2.0.10](https://github.com/beecode-rs/msh-util/compare/v2.0.9...v2.0.10) (2025-03-20)
+
+
+### Bug Fixes
+
+* update dependencies to latest versions and clean up imports ([89fa24f](https://github.com/beecode-rs/msh-util/commit/89fa24fcf0610a44bf0afdfa4a2d88ff8ce09758))
+
 ## [2.0.9](https://github.com/beecode-rs/msh-util/compare/v2.0.8...v2.0.9) (2025-03-20)
 
 
