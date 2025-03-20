@@ -1,3 +1,10 @@
+## [2.0.11](https://github.com/beecode-rs/msh-util/compare/v2.0.10...v2.0.11) (2025-03-20)
+
+
+### Bug Fixes
+
+* update @beecode/msh-config to version 1.1.3 ([f10420f](https://github.com/beecode-rs/msh-util/commit/f10420f6c519636b7402a0e877be70af8f0a0a13))
+
 ## [2.0.10](https://github.com/beecode-rs/msh-util/compare/v2.0.9...v2.0.10) (2025-03-20)
 
 
