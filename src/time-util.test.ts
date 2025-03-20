@@ -90,11 +90,9 @@ describe('TimeUtil', () => {
 			['WEEK', -1, new Date('2021-12-25T00:00:00.000Z')],
 			['MONTH', -1, new Date('2021-12-01T00:00:00.000Z')],
 			['YEAR', -1, new Date('2021-01-01T00:00:00.000Z')],
-		] as [DurationUnitType | DurationUnit, number, Date][])(
-			'%#. should increase date by unit %s and value %s and get date $s',
-			(unit, value, expected) => {
-				expect(timeUtil.addToDate({ date: timeUtil.now(), unit, value })).toEqual(expected)
-			}
-		)
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		] as [any, number, Date][])('%#. should increase date by unit %s and value %s and get date $s', (unit, value, expected) => {
+			expect(timeUtil.addToDate({ date: timeUtil.now(), unit, value })).toEqual(expected)
+		})
 	})
 })
