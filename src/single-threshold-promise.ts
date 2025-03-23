@@ -31,7 +31,9 @@ export class SingleThresholdPromise<T> {
 
 	protected _rejectPromises(): void {
 		if (this._cache.promises) {
-			this._cache.promises.forEach((promise) => promise.reject(new Error('Cache was cleaned')))
+			this._cache.promises.forEach((promise) => {
+				promise.reject(new Error('Cache was cleaned'))
+			})
 		}
 		delete this._cache.promises
 	}
@@ -44,12 +46,14 @@ export class SingleThresholdPromise<T> {
 		}
 
 		this._cache.promises = []
-		const result = await this._factoryFn().catch((err) => {
+		const result = await this._factoryFn().catch((err: unknown) => {
 			this._rejectPromises()
 			throw err
 		})
 
-		this._cache.promises.forEach((promise) => promise.resolve(result))
+		this._cache.promises.forEach((promise) => {
+			promise.resolve(result)
+		})
 		delete this._cache.promises
 
 		return result

@@ -89,7 +89,7 @@ export class TimeUtil {
 	 */
 	addToDate(params: { unit: DurationUnitType | DurationUnit; value: number; date: Date }): Date {
 		const { date, unit, value } = params
-		if (`${unit}` === 'MILLISECOND') {
+		if (unit === 'MILLISECOND') {
 			return addMilliseconds(date, value)
 		}
 

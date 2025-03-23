@@ -43,7 +43,9 @@ export class SingletonAsync<T> {
 		const { error } = params
 
 		if (this._cache.promises) {
-			this._cache.promises.forEach((promise) => promise.reject(error))
+			this._cache.promises.forEach((promise) => {
+				promise.reject(error)
+			})
 		}
 		delete this._cache.promises
 	}
@@ -64,13 +66,17 @@ export class SingletonAsync<T> {
 		}
 
 		this._cache.promises = []
-		const result = await this._factory().catch((error) => {
-			this._rejectPromises({ error })
+		const result = await this._factory().catch((error: unknown) => {
+			if (error instanceof Error) {
+				this._rejectPromises({ error })
+			}
 			throw error
 		})
 		this._cache.singleton = result
 
-		this._cache.promises.forEach((promise) => promise.resolve(result))
+		this._cache.promises.forEach((promise) => {
+			promise.resolve(result)
+		})
 		delete this._cache.promises
 
 		return result

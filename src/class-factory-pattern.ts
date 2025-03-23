@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type ClassType<T = object> = new (...args: T extends { new (...args: infer P): any } ? P : never[]) => T
+export type ClassType<T = object> = new (...args: T extends new (...args: infer P) => any ? P : never[]) => T
 
 /**
  * This is a wrapper that easily converts class constructor call (`new className(..constructorParams)`) into function call (`classNameFactory(..constructorParams)`)
