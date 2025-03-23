@@ -1,3 +1,10 @@
+## [2.0.12](https://github.com/beecode-rs/msh-util/compare/v2.0.11...v2.0.12) (2025-03-23)
+
+
+### Bug Fixes
+
+* refactor ESLint configuration and update dependencies ([fec5988](https://github.com/beecode-rs/msh-util/commit/fec598814d2aac23192188e42230422b5920d119))
+
 ## [2.0.11](https://github.com/beecode-rs/msh-util/compare/v2.0.10...v2.0.11) (2025-03-20)
 
 
