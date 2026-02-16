@@ -1,31 +1,31 @@
-export { expressErrorHandler } from '#src/express/error-handler'
+export { expressErrorHandler } from '#src/express/error-handler.js'
 
-export { SingletonAsync } from '#src/singleton/async'
+export { SingletonAsync } from '#src/singleton/async.js'
 
-export { singletonPattern } from '#src/singleton/pattern'
+export { singletonPattern } from '#src/singleton/pattern.js'
 
-export { classFactoryPattern } from '#src/class-factory-pattern'
+export { classFactoryPattern } from '#src/class-factory-pattern.js'
 
-export type { ClassType } from '#src/class-factory-pattern'
+export type { ClassType } from '#src/class-factory-pattern.js'
 
-export { ErrorWithPayload, JoiUtil } from '#src/joi-util'
+export { ErrorWithPayload, JoiUtil } from '#src/joi-util.js'
 
-export { memoizeFactory } from '#src/memoize-factory'
+export { memoizeFactory } from '#src/memoize-factory.js'
 
-export { ObjectUtil } from '#src/object-util'
+export { ObjectUtil } from '#src/object-util.js'
 
-export type { ObjectType } from '#src/object-util'
+export type { ObjectType } from '#src/object-util.js'
 
-export { regexUtil } from '#src/regex-util'
+export { regexUtil } from '#src/regex-util.js'
 
-export { SingleThresholdPromise } from '#src/single-threshold-promise'
+export { SingleThresholdPromise } from '#src/single-threshold-promise.js'
 
-export { stringUtil } from '#src/string-util'
+export { stringUtil } from '#src/string-util.js'
 
-export { DurationUnit, TimeUtil } from '#src/time-util'
+export { DurationUnit, TimeUtil } from '#src/time-util.js'
 
-export type { DurationUnitType } from '#src/time-util'
+export type { DurationUnitType } from '#src/time-util.js'
 
-export { timeout } from '#src/timeout'
+export { timeout } from '#src/timeout.js'
 
-export { typeUtil } from '#src/type-util'
+export { typeUtil } from '#src/type-util.js'
