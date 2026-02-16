@@ -1,3 +1,10 @@
+## [2.0.14](https://github.com/beecode-rs/msh-util/compare/v2.0.13...v2.0.14) (2026-02-16)
+
+
+### Bug Fixes
+
+* update tooling and clean build artifacts ([16dcfa4](https://github.com/beecode-rs/msh-util/commit/16dcfa4758e414129e87e442e1457e06dd57bca7))
+
 ## [2.0.13](https://github.com/beecode-rs/msh-util/compare/v2.0.12...v2.0.13) (2025-03-27)
 
 
