@@ -87,7 +87,10 @@ export class ObjectUtil {
 		})
 	}
 
-	protected _deepStringifyCompact(params: { isPrettyPrinted: boolean; prettyPrintCompactLevel: number }): number | boolean {
+	protected _deepStringifyCompact(params: {
+		isPrettyPrinted: boolean
+		prettyPrintCompactLevel: number
+	}): number | boolean {
 		const { isPrettyPrinted, prettyPrintCompactLevel } = params
 
 		if (!isPrettyPrinted) {
