@@ -91,8 +91,11 @@ describe('TimeUtil', () => {
 			['MONTH', -1, new Date('2021-12-01T00:00:00.000Z')],
 			['YEAR', -1, new Date('2021-01-01T00:00:00.000Z')],
 			// eslint-disable-next-line @typescript-eslint/no-explicit-any
-		] as [any, number, Date][])('%#. should increase date by unit %s and value %s and get date $s', (unit, value, expected) => {
-			expect(timeUtil.addToDate({ date: timeUtil.now(), unit, value })).toEqual(expected)
-		})
+		] as [any, number, Date][])(
+			'%#. should increase date by unit %s and value %s and get date $s',
+			(unit, value, expected) => {
+				expect(timeUtil.addToDate({ date: timeUtil.now(), unit, value })).toEqual(expected)
+			}
+		)
 	})
 })

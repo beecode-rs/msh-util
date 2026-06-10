@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 
 import { ObjectUtil } from '#src/object-util'
-/* eslint-disable sort-keys-fix/sort-keys-fix */
+/* eslint-disable sort-keys */
 describe('objectUtil', () => {
 	const objectUtil = new ObjectUtil()
 
@@ -358,4 +358,4 @@ describe('objectUtil', () => {
 		})
 	})
 })
-/* eslint-enable sort-keys-fix/sort-keys-fix */
+/* eslint-enable sort-keys */

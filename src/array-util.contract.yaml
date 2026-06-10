@@ -1,0 +1,46 @@
+subject: arrayUtil
+module: ./array-util.js
+subjectType: function
+methods:
+  notEmpty:
+    terms:
+      # One: truthy number
+      - params: [1]
+        result: true
+      # One: truthy string
+      - params: ['hello']
+        result: true
+      # Zero: falsy but not null/undefined
+      - params: [0]
+        result: true
+      # Zero: empty string
+      - params: ['']
+        result: true
+      # Oops: null
+      - params: [null]
+        result: false
+      # Oops: undefined
+      - params:
+          - !undefined
+        result: false
+  notFalsy:
+    terms:
+      # One: truthy number
+      - params: [1]
+        result: true
+      # One: truthy string
+      - params: ['hello']
+        result: true
+      # Zero: falsy number
+      - params: [0]
+        result: false
+      # Zero: empty string
+      - params: ['']
+        result: false
+      # Oops: null
+      - params: [null]
+        result: false
+      # Oops: undefined
+      - params:
+          - !undefined
+        result: false

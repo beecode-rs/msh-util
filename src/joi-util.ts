@@ -57,7 +57,12 @@ export class JoiUtil {
 	}
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	protected _validate<T>(objectToValidate: any, schema: Schema | ObjectSchema<T>, validationOptions?: ValidationOptions): T {
+	protected _validate<T>(
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		objectToValidate: any,
+		schema: Schema | ObjectSchema<T>,
+		validationOptions?: ValidationOptions
+	): T {
 		const { error: validationError, value } = schema.validate(objectToValidate, validationOptions)
 		if (validationError) {
 			throw new ErrorWithPayload(validationError.message.split('"').join("'"), validationError)

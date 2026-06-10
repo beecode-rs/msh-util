@@ -1,0 +1,78 @@
+subject: TimeUtil
+module: ./time-util.js
+subjectType: class
+constructor:
+  terms:
+    - params: []
+      result: {}
+methods:
+  dateToUnix:
+    terms:
+      # One: specific date to unix ms
+      - constructorParams: []
+        params: [new Date("2020-01-01T00:00:00.000Z")]
+        result: 1577836800000
+      # Oops: epoch zero
+      - constructorParams: []
+        params: [new Date("1970-01-01T00:00:00.000Z")]
+        result: 0
+  dateToUnixSec:
+    terms:
+      # One: specific date to unix seconds
+      - constructorParams: []
+        params: [new Date("2020-01-01T00:00:00.000Z")]
+        result: 1577836800
+      # Oops: epoch zero
+      - constructorParams: []
+        params: [new Date("1970-01-01T00:00:00.000Z")]
+        result: 0
+  unixToDate:
+    terms:
+      # One: unix ms to date
+      - constructorParams: []
+        params: [1577836800000]
+        result: new Date("2020-01-01T00:00:00.000Z")
+      # Zero: epoch zero
+      - constructorParams: []
+        params: [0]
+        result: new Date("1970-01-01T00:00:00.000Z")
+  unixSecToDate:
+    terms:
+      # One: unix seconds to date
+      - constructorParams: []
+        params: [1577836800]
+        result: new Date("2020-01-01T00:00:00.000Z")
+      # Zero: epoch zero
+      - constructorParams: []
+        params: [0]
+        result: new Date("1970-01-01T00:00:00.000Z")
+  addToDate:
+    terms:
+      # One: add one day
+      - constructorParams: []
+        params:
+          - date: new Date("2020-01-01T00:00:00.000Z")
+            unit: DAY
+            value: 1
+        result: new Date("2020-01-02T00:00:00.000Z")
+      # Oops: subtract one month
+      - constructorParams: []
+        params:
+          - date: new Date("2020-01-01T00:00:00.000Z")
+            unit: MONTH
+            value: -1
+        result: new Date("2019-12-01T00:00:00.000Z")
+      # One: add milliseconds
+      - constructorParams: []
+        params:
+          - date: new Date("2020-01-01T00:00:00.000Z")
+            unit: MILLISECOND
+            value: 500
+        result: new Date("2020-01-01T00:00:00.500Z")
+      # Many: add one year
+      - constructorParams: []
+        params:
+          - date: new Date("2020-01-01T00:00:00.000Z")
+            unit: YEAR
+            value: 1
+        result: new Date("2021-01-01T00:00:00.000Z")

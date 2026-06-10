@@ -1,26 +1,26 @@
-@beecode/msh-util
+**@beecode/msh-util**
+
+***
 
 # @beecode/msh-util
 
-## Table of contents
+## Modules
 
-### Modules
-
-- [array-util](modules/array_util.md)
-- [class-factory-pattern](modules/class_factory_pattern.md)
-- [express/error-handler](modules/express_error_handler.md)
-- [index](modules/index.md)
-- [joi-util](modules/joi_util.md)
-- [memoize-factory](modules/memoize_factory.md)
-- [object-util](modules/object_util.md)
-- [regex-util](modules/regex_util.md)
-- [single-threshold-promise](modules/single_threshold_promise.md)
-- [singleton/async](modules/singleton_async.md)
-- [singleton/pattern](modules/singleton_pattern.md)
-- [string-util](modules/string_util.md)
-- [time-util](modules/time_util.md)
-- [time-zone](modules/time_zone.md)
-- [timeout](modules/timeout.md)
-- [type-util](modules/type_util.md)
-- [types/global](modules/types_global.md)
-- [types/types](modules/types_types.md)
+- [array-util](array-util/README.md)
+- [class-factory-pattern](class-factory-pattern/README.md)
+- [express/error-handler](express/error-handler/README.md)
+- [index](index/README.md)
+- [joi-util](joi-util/README.md)
+- [memoize-factory](memoize-factory/README.md)
+- [object-util](object-util/README.md)
+- [regex-util](regex-util/README.md)
+- [single-threshold-promise](single-threshold-promise/README.md)
+- [singleton/async](singleton/async/README.md)
+- [singleton/pattern](singleton/pattern/README.md)
+- [string-util](string-util/README.md)
+- [time-util](time-util/README.md)
+- [time-zone](time-zone/README.md)
+- [timeout](timeout/README.md)
+- [type-util](type-util/README.md)
+- [types/global](types/global/README.md)
+- [types/types](types/types/README.md)
