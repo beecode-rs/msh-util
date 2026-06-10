@@ -69,6 +69,7 @@
 		"test-coverage-unit-publish": "codecov",
 		"test:e2e": "cd test && npm run test",
 		"test:int": "vitest --config=./vitest.config.int.ts",
+		"test:contract": "vitest --config=./vitest.config.contract.ts",
 		"test:unit": "vitest --config=./vitest.config.unit.ts",
 		"tsc": "tsc -p tsconfig.build.json",
 		"tsc-check": "npm run tsc -- --noEmit",
@@ -87,7 +88,7 @@
 		}
 	},
 	"dependencies": {
-		"@beecode/msh-config": "^1.1.8",
+		"@beecode/msh-config": "^1.2.0",
 		"date-fns": "^4.4.0",
 		"date-fns-tz": "^3.2.0",
 		"joi": "^18.2.1",

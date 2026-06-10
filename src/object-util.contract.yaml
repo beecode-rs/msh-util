@@ -1,0 +1,181 @@
+subject: ObjectUtil
+module: ./object-util.js
+subjectType: class
+constructor:
+  terms:
+    - params: []
+      result: {}
+methods:
+  deepClone:
+    terms:
+      # One: simple object
+      - constructorParams: []
+        params:
+          - a: 1
+            b: hello
+        result:
+          a: 1
+          b: hello
+      # Many: nested object
+      - constructorParams: []
+        params:
+          - nested:
+              inner:
+                value: 42
+        result:
+          nested:
+            inner:
+              value: 42
+      # Zero: empty object
+      - constructorParams: []
+        params: [{}]
+        result: {}
+  pickByList:
+    terms:
+      # Many: pick existing keys
+      - constructorParams: []
+        params:
+          - a: 1
+            b: 2
+            c: 3
+          - ['a', 'c']
+        result:
+          a: 1
+          c: 3
+      # Oops: pick non-existent keys
+      - constructorParams: []
+        params:
+          - a: 1
+            b: 2
+          - ['x', 'y']
+        result: {}
+      # One: pick single key
+      - constructorParams: []
+        params:
+          - a: 1
+            b: 2
+            c: 3
+          - ['a']
+        result:
+          a: 1
+      # Many: mix of existing and non-existing keys
+      - constructorParams: []
+        params:
+          - a: 1
+            b: 2
+          - ['a', 'z']
+        result:
+          a: 1
+  pickByObjectKeys:
+    terms:
+      # Many: pick keys from second object
+      - constructorParams: []
+        params:
+          - a: 1
+            b: 2
+            c: 3
+          - a: 1
+            c: 3
+        result:
+          a: 1
+          c: 3
+      # Zero: empty picker object
+      - constructorParams: []
+        params:
+          - a: 1
+            b: 2
+          - {}
+        result: {}
+      # One: single key match
+      - constructorParams: []
+        params:
+          - a: 1
+            b: 2
+            c: 3
+          - b: null
+        result:
+          b: 2
+  deepStringify:
+    terms:
+      # One: null input
+      - constructorParams: []
+        params: [null]
+        result: 'null'
+      # One: undefined input
+      - constructorParams: []
+        params:
+          - !undefined
+        result: 'undefined'
+      # Many: simple object
+      - constructorParams: []
+        params:
+          - a: 1
+        result: '{ a: 1 }'
+      # Many: array
+      - constructorParams: []
+        params: [[1, 2, 3]]
+        result: '[ 1, 2, 3 ]'
+  deepEqual:
+    terms:
+      # One: identical simple objects
+      - constructorParams: []
+        params:
+          - a: 1
+          - a: 1
+        result: true
+      # Oops: different values
+      - constructorParams: []
+        params:
+          - a: 1
+          - a: 2
+        result: false
+      # Many: deeply nested equal objects
+      - constructorParams: []
+        params:
+          - a: 1
+            b:
+              c: 2
+          - a: 1
+            b:
+              c: 2
+        result: true
+      # Oops: deeply nested different
+      - constructorParams: []
+        params:
+          - a: 1
+            b:
+              c: 2
+          - a: 1
+            b:
+              c: 3
+        result: false
+      # Zero: both null
+      - constructorParams: []
+        params: [null, null]
+        result: true
+  deepNullToUndefined:
+    terms:
+      # One: single null value
+      - constructorParams: []
+        params:
+          - a: null
+            b: hello
+        result:
+          a: !undefined
+          b: hello
+      # Many: nested nulls
+      - constructorParams: []
+        params:
+          - a: null
+            b:
+              c: null
+              d: 42
+        result:
+          a: !undefined
+          b:
+            c: !undefined
+            d: 42
+      # Zero: empty object
+      - constructorParams: []
+        params: [{}]
+        result: {}

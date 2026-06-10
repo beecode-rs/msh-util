@@ -58,6 +58,7 @@ export class JoiUtil {
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	protected _validate<T>(
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		objectToValidate: any,
 		schema: Schema | ObjectSchema<T>,
 		validationOptions?: ValidationOptions

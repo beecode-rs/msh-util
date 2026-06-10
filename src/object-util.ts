@@ -1,5 +1,6 @@
-import cloneDeep from 'lodash.clonedeep'
 import util from 'util'
+
+import cloneDeep from 'lodash.clonedeep'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ObjectType = Record<string, any>

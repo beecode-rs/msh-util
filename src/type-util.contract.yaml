@@ -1,0 +1,15 @@
+subject: typeUtil
+module: ./type-util.js
+subjectType: function
+methods:
+  exhaustiveMessage:
+    terms:
+      # One: returns message string
+      - params: ['Unknown animal', 'never']
+        result: 'Unknown animal'
+      # One: another message
+      - params: ['Unhandled case', 'never']
+        result: 'Unhandled case'
+      # Zero: empty message
+      - params: ['', 'never']
+        result: ''
