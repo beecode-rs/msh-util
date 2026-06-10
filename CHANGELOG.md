@@ -1,3 +1,20 @@
+# [3.0.0](https://github.com/beecode-rs/msh-util/compare/v2.0.14...v3.0.0) (2026-06-10)
+
+
+* refactor!: remove babel and modernize toolchain ([#81](https://github.com/beecode-rs/msh-util/issues/81)) ([62bcc08](https://github.com/beecode-rs/msh-util/commit/62bcc084336b529cf70d1226dee0d75e0f5ef7ff))
+
+
+### BREAKING CHANGES
+
+* Drop Node.js < 22 support, remove babel transpilation layer, and remove `lib/` output directory. Projects consuming this package must use
+Node.js >= 22.22.1 and ESM.
+
+- Remove babel config and dev dependencies
+- Update minimum Node to v22.22.1
+- Upgrade CI runner to Ubuntu 24.04
+- Update typescript, vitest, commitlint
+- Remove lib output directory references
+
 ## [2.0.14](https://github.com/beecode-rs/msh-util/compare/v2.0.13...v2.0.14) (2026-02-16)
 
 
