@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/beecode-rs/msh-util/compare/v3.0.0...v3.0.1) (2026-07-01)
+
+
+### Bug Fixes
+
+* update dependencies and config paths ([3680b31](https://github.com/beecode-rs/msh-util/commit/3680b314556170120126337b55607db899748b56))
+
 # [3.0.0](https://github.com/beecode-rs/msh-util/compare/v2.0.14...v3.0.0) (2026-06-10)
 
 
